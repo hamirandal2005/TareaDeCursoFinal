@@ -50,12 +50,12 @@
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -211,6 +211,7 @@
             this.btnRegistrarSalidas.TabIndex = 14;
             this.btnRegistrarSalidas.Text = "Registrar";
             this.btnRegistrarSalidas.UseVisualStyleBackColor = true;
+            this.btnRegistrarSalidas.Click += new System.EventHandler(this.btnRegistrarSalidas_Click);
             // 
             // label7
             // 
@@ -298,6 +299,12 @@
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader3.Width = 75;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Costo Total";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 120;
+            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
@@ -349,12 +356,6 @@
             this.groupBox6.TabIndex = 17;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Resultados";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Costo Total";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 120;
             // 
             // frmIdentificacionEspecifica
             // 

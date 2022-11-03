@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\TareaDeCurso\\Clases\\Clases.csproj": {}
+    "G:\\TareaDeCursoFinal\\Clases\\Clases.csproj": {}
   },
   "projects": {
-    "F:\\TareaDeCurso\\Clases\\Clases.csproj": {
+    "G:\\TareaDeCursoFinal\\Clases\\Clases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\TareaDeCurso\\Clases\\Clases.csproj",
+        "projectUniqueName": "G:\\TareaDeCursoFinal\\Clases\\Clases.csproj",
         "projectName": "Clases",
-        "projectPath": "F:\\TareaDeCurso\\Clases\\Clases.csproj",
-        "packagesPath": "C:\\Users\\JADPA-19\\.nuget\\packages\\",
-        "outputPath": "F:\\TareaDeCurso\\Clases\\obj\\",
+        "projectPath": "G:\\TareaDeCursoFinal\\Clases\\Clases.csproj",
+        "packagesPath": "C:\\Users\\JADPA-26\\.nuget\\packages\\",
+        "outputPath": "G:\\TareaDeCursoFinal\\Clases\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JADPA-19\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JADPA-26\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
