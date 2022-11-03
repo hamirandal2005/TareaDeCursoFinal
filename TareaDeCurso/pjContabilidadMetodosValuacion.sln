@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pjContabilidadMetodosValuacion", "pjContabilidadMetodosValuacion.csproj", "{C70B5EDD-8C58-4EFB-A29E-8018BA40D738}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clases", "..\Clases\Clases.csproj", "{45998532-33BB-443C-ABF9-2945FAFF828E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C70B5EDD-8C58-4EFB-A29E-8018BA40D738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C70B5EDD-8C58-4EFB-A29E-8018BA40D738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C70B5EDD-8C58-4EFB-A29E-8018BA40D738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C70B5EDD-8C58-4EFB-A29E-8018BA40D738}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45998532-33BB-443C-ABF9-2945FAFF828E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45998532-33BB-443C-ABF9-2945FAFF828E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45998532-33BB-443C-ABF9-2945FAFF828E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45998532-33BB-443C-ABF9-2945FAFF828E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5303D7B9-78E5-4700-8D85-EE009E18A065}
+	EndGlobalSection
+EndGlobal
