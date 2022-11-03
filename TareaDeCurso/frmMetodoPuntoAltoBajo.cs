@@ -148,5 +148,6 @@ namespace pjContabilidadMetodosValuacion
             altoBajo = new PuntoBajoPuntoAlto();
             frmMetodoPuntoAltoBajo_Load(sender, e);
         }
+        //B
     }
 }
