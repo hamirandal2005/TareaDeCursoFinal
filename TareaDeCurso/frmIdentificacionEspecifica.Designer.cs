@@ -56,6 +56,8 @@
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -323,7 +325,9 @@
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader6,
-            this.columnHeader7});
+            this.columnHeader7,
+            this.columnHeader5,
+            this.columnHeader8});
             this.listView1.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(49, 34);
@@ -341,8 +345,9 @@
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "Unidades Utilizadas";
-            this.columnHeader7.Width = 160;
+            this.columnHeader7.Text = "Unidades Usadas";
+            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader7.Width = 130;
             // 
             // groupBox6
             // 
@@ -356,6 +361,18 @@
             this.groupBox6.TabIndex = 17;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Resultados";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "C/U x Fecha";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5.Width = 120;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Costo Total";
+            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader8.Width = 120;
             // 
             // frmIdentificacionEspecifica
             // 
@@ -418,5 +435,7 @@
         private ColumnHeader columnHeader7;
         private GroupBox groupBox6;
         private ColumnHeader columnHeader4;
+        private ColumnHeader columnHeader5;
+        private ColumnHeader columnHeader8;
     }
 }

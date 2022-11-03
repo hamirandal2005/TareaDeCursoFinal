@@ -54,7 +54,6 @@ namespace pjContabilidadMetodosValuacion
 
 
                 DateTime FechaSalida = DTPSalida.Value;
-                FechaSalida.ToShortDateString();
                 FechasSalidas[FechasSalidasCont] = FechaSalida;
 
 
@@ -68,7 +67,12 @@ namespace pjContabilidadMetodosValuacion
                     {
                         //Se hace el cálculo
                         CostoUnidadesUsadas = UnidadesUsadas[ContadorUnidadesSalidas] * ((double)UnidadesHashTable.Value);
+
                         ListViewItem fila = new ListViewItem(FechasSalidas[FechasSalidasCont].ToShortDateString());
+                        fila.SubItems.Add(UnidadesUsadas[ContadorUnidadesSalidas].ToString("C"));
+                        fila.SubItems.Add("N/A");
+                        fila.SubItems.Add(CostoUnidadesUsadas.ToString("C"));
+
                     }
                     else
                         MessageBox.Show("No se han registrado unidades en ese día");
