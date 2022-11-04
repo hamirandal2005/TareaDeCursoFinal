@@ -9,8 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Clases;
-
-
+using static Clases.IdentificacionEspecifica;
 
 namespace pjContabilidadMetodosValuacion
 {
@@ -21,7 +20,10 @@ namespace pjContabilidadMetodosValuacion
         //Haciendo uso de nuevos métodos para llevar a cabo el ejercicio
 
         //Creación de una "List" para guardar los datos de la clase
-        List<RegistroEntradas> RegistroentradasList = new List<RegistroEntradas>();
+
+        List<IdentificacionEspecifica> RegistroentradasList = new List<IdentificacionEspecifica>();
+        RegistroEntradas[] RegistroDeEntrada = new RegistroEntradas[100];
+        int ContadorRegistro=0;
         string Fechaentrada;
 
 
@@ -61,7 +63,7 @@ namespace pjContabilidadMetodosValuacion
                 if (txtUnidadesUsadas.Text.Trim().Length == 0)
                     UnidadesUsadas = 0;
                 else
-                    UnidadesUsadas = double.Parse(txtUnidadesUsadas.Text);
+                    UnidadesUsadas = int.Parse(txtUnidadesUsadas.Text);
 
 
                 DateTime FechaSalida = DTPSalida.Value;
@@ -136,20 +138,24 @@ namespace pjContabilidadMetodosValuacion
                 CostoUnidadesCompradas = UnidadesCompradas * CostoUnitario;
 
 
-
+                //Almacenando los datos en la instancia de la clase
+                RegistroDeEntrada[ContadorRegistro] = new RegistroEntradas(FechaEntrada, UnidadesCompradas, CostoUnitario);
                 //Almacenando los datos en la "List"
-                RegistroentradasList.Add( new RegistroEntradas() {FechaEntrada=FechaEntrada.ToShortDateString() , UnidadesCompradas, CostoUnitario});
+                
+                
 
                 //Almacenando las transacciones de compras en una HashTable
+
+                //**DEAD CODE
               //  UnidadesCompradasHash.Add(FechasEntradas[ContadorTransaccionesEntrada].ToShortDateString(), UnidadesCompradas[ContadorTransaccionesEntrada]);
 
 
 
 
                 //Presentando los datos de Compras en el lvDatosIngresados
-                ListViewItem fila = new ListViewItem(FechasEntradas[FechasEntradasCont].ToShortDateString());
-                fila.SubItems.Add(UnidadesCompradas[ContadorUnidadesCompradas].ToString());
-                fila.SubItems.Add(CostoUnitario.ToString("C"));
+                ListViewItem fila = new ListViewItem(RegistroDeEntrada[ContadorRegistro].FechaEntrada.ToShortDateString());
+                fila.SubItems.Add(RegistroDeEntrada[ContadorRegistro].UnidadesCompradas.ToString("C"));
+                fila.SubItems.Add(RegistroDeEntrada[ContadorRegistro].CostoUnitario.ToString("C"));
                 fila.SubItems.Add(CostoUnidadesCompradas.ToString("C"));
                 lvDatosIngresados.Items.Add(fila);
 
@@ -166,6 +172,7 @@ namespace pjContabilidadMetodosValuacion
                 ContadorUnidadesSalidas++;
                 ContadorTransaccionesEntrada++;
                 FechasEntradasCont++;
+                ContadorRegistro++;
             }
             else
             {
