@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\JADPA-31\\.nuget\\packages\\": {}
+    "C:\\Users\\JADPA-09\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JADPA-31\\source\\repos\\TareaDeCursoFinal\\Nueva carpeta\\Clases\\Clases.csproj",
+      "projectUniqueName": "C:\\Users\\JADPA-09\\Source\\Repos\\TareaDeCursoFinal\\Clases\\Clases.csproj",
       "projectName": "Clases",
-      "projectPath": "C:\\Users\\JADPA-31\\source\\repos\\TareaDeCursoFinal\\Nueva carpeta\\Clases\\Clases.csproj",
-      "packagesPath": "C:\\Users\\JADPA-31\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JADPA-31\\source\\repos\\TareaDeCursoFinal\\Nueva carpeta\\Clases\\obj\\",
+      "projectPath": "C:\\Users\\JADPA-09\\Source\\Repos\\TareaDeCursoFinal\\Clases\\Clases.csproj",
+      "packagesPath": "C:\\Users\\JADPA-09\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JADPA-09\\Source\\Repos\\TareaDeCursoFinal\\Clases\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\JADPA-31\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JADPA-09\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
