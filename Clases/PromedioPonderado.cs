@@ -10,8 +10,6 @@ namespace Clases
     {
         private int unidadesCompradas;
         private double precioDeCompra;
-        private DateTime fecha;
-
 
         public PromedioPonderado()
         {
@@ -21,11 +19,6 @@ namespace Clases
         {
             this.unidadesCompradas = compradas;
             this.precioDeCompra = precio;
-        }
-        public DateTime Fecha
-        {
-            get { return fecha; }
-            set { fecha = value; }
         }
 
         public int UnidadesCompradas
@@ -45,11 +38,11 @@ namespace Clases
             return unidadesCompradas * precioDeCompra;
         }
 
-        public double Calculo(PromedioPonderado[] a)
+        public double Calculo(List<PromedioPonderado> a)
         {
             double numerador = 0;
             double denominador = 0;
-            for (int i = 0; i < a.Length; i++)
+            for (int i = 0; i < a.Count; i++)
             {
                 numerador += a[i].Ponderado();
                 denominador += a[i].unidadesCompradas;

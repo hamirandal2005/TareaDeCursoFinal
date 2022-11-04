@@ -329,7 +329,7 @@
             // 
             this.btnFinalizar.AutoSize = true;
             this.btnFinalizar.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnFinalizar.Location = new System.Drawing.Point(951, 567);
+            this.btnFinalizar.Location = new System.Drawing.Point(957, 567);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(150, 30);
             this.btnFinalizar.TabIndex = 15;

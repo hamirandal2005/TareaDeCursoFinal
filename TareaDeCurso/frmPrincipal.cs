@@ -25,43 +25,6 @@
 
         }
 
-        //private void btnSiguiente_Click(object sender, EventArgs e)
-        //{
-
-        //    if (rbPuntoAltoBajo.Checked == true)
-        //    {
-        //        formularioPuntoAltoBajo.ShowDialog();
-        //        rbPuntoAltoBajo.Checked = false;
-        //    }
-        //    else if (rbEstadistico.Checked == true)
-        //    {
-
-        //        formularioMetodoEstadistico.ShowDialog();
-
-        //    }
-        //    else if (rbIdentificacionEspecifica.Checked == true)
-        //    {
-        //        formularioIdentificacionEspecifica.ShowDialog();
-        //    }
-        //    else if (rbPromedioSimple.Checked == true)
-        //    {
-        //        formularioValuacionPromedioSimple.ShowDialog();
-        //    }
-        //    else if (rbPromedioPonderado.Checked == true)
-        //    {
-        //        formularioPonderado.ShowDialog();
-        //    }
-        //    else if (rbPEPS.Checked == true)
-        //    {
-        //        formularioPEPS.ShowDialog();
-
-        //    }
-        //    else if (rbUEPS.Checked == true)
-        //    {
-        //        this.Close();
-        //    }
-
-        //}
         private void btnEspecifica_MouseLeave(object sender, EventArgs e)
         {
             btnEspecifica.BackColor = Color.DodgerBlue;

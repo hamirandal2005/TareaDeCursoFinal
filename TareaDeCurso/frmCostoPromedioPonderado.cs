@@ -14,8 +14,9 @@ namespace pjContabilidadMetodosValuacion
     public partial class frmCostoPromedioPonderado : Form
     {
         List<PromedioPonderado> ponderado = new List<PromedioPonderado>();
-        int num = 0;
+        int num = 1;
         double promedio;
+        int unidadesCompradas = 0;
         public frmCostoPromedioPonderado()
         {
             InitializeComponent();
@@ -23,35 +24,37 @@ namespace pjContabilidadMetodosValuacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (mtbCantidad.Text.Trim().Length != 0 && mtbCosto.Text.Trim().Length != 0)
             {
-                ponderado.Add(new PromedioPonderado(int.Parse(mtbCantidad.Text), double.Parse(mtbCosto.Text)));
-                PromedioPonderado[] listview = ponderado.ToArray();
-                ListViewItem a = new ListViewItem(num.ToString());
-                num++;
-                a.SubItems.Add(ponderado.Last().UnidadesCompradas.ToString());
-                a.SubItems.Add(ponderado.Last().PrecioDeCompra.ToString());
-                a.SubItems.Add(ponderado.Last().Calculo(listview).ToString("0.00"));
-                promedio = ponderado.Last().Calculo(listview);
-                lvPromedio.Items.Add(a);
+                if (int.Parse(mtbCantidad.Text) != 0 && int.Parse(mtbCosto.Text) != 0)
+                {
+                        ponderado.Add(new PromedioPonderado(int.Parse(mtbCantidad.Text), double.Parse(mtbCosto.Text)));
+                        ListViewItem a = new ListViewItem(num.ToString());
+                        num++;
+                        a.SubItems.Add(ponderado.Last().UnidadesCompradas.ToString());
+                        a.SubItems.Add(ponderado.Last().PrecioDeCompra.ToString());
+                        a.SubItems.Add(ponderado.Last().Calculo(ponderado).ToString("0.00"));
+                        promedio = ponderado.Last().Calculo(ponderado);
+                        lvPromedio.Items.Add(a);
+                        unidadesCompradas += ponderado.Last().UnidadesCompradas;
+                }
+                else
+                    MessageBox.Show("Ingrese un valor mayor a 0", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            catch (FormatException)
-            {
-                MessageBox.Show("Ingrese un valor entero", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-
+            else
+                MessageBox.Show("Rellene las casillas necesarias", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (mtbUsadas.Text.Trim().Length != 0 && mtbInvFinal.Text.Trim().Length != 0 && mtbCompradas.Text.Trim().Length != 0)
+            double prom = double.Parse(promedio.ToString("0.00"));
+            if (mtbUsadas.Text.Trim().Length != 0)
             {
                 lvCostos.Items.Clear();
                 String[] costos = new String[3];
-                costos[0] = (int.Parse(mtbUsadas.Text) * promedio).ToString("0.00");
-                costos[1] = (int.Parse(mtbInvFinal.Text) * promedio).ToString("0.00");
-                costos[2] = (int.Parse(mtbCompradas.Text) * promedio).ToString("0.00");
+                costos[0] = (int.Parse(mtbUsadas.Text) * prom).ToString("0.00");
+                costos[1] = ((unidadesCompradas - int.Parse(mtbUsadas.Text)) * prom).ToString("0.00");
+                costos[2] = (unidadesCompradas * prom).ToString("0.00");
                 ListViewItem info = new ListViewItem(costos);
                 lvCostos.Items.Add(info);
             }
@@ -63,7 +66,5 @@ namespace pjContabilidadMetodosValuacion
 
 
         }
-
-
     }
 }
