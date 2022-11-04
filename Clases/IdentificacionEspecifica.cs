@@ -9,25 +9,28 @@ namespace Clases
 {
     public class IdentificacionEspecifica
     {
-        public class RegistroEntradas
+    }
+    public class RegistroEntradas:IEquatable<RegistroEntradas>
+    {
+        public RegistroEntradas()
         {
-            public RegistroEntradas()
-            {
-            }
+        }
 
-            public RegistroEntradas(DateTime fechaEntrada, int materialesComprados, double costoUnitario)
-            {
-                FechaEntrada = fechaEntrada;
-                UnidadesCompradas = materialesComprados;
-                CostoUnitario = costoUnitario;
-            }
+        public RegistroEntradas(string fechaEntrada, int materialesComprados, double costoUnitario)
+        {
+            FechaEntrada = fechaEntrada;
+            MaterialesComprados = materialesComprados;
+            CostoUnitario = costoUnitario;
+        }
 
-            //Atributos de la clase
-            public DateTime FechaEntrada { get; set; }
-            public int UnidadesCompradas { get; set; }
-            public double CostoUnitario { get; set; }
+        //Atributos de la clase
+        public string FechaEntrada { get; set; }
+        public int MaterialesComprados { get; set; }
+        public double CostoUnitario { get; set; }
 
+        public bool Equals(RegistroEntradas? other)
+        {
+            throw new NotImplementedException();
         }
     }
-   
 }
