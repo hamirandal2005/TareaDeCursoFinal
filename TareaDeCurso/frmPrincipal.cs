@@ -122,17 +122,23 @@
 
         private void btnEspecifica_Click(object sender, EventArgs e)
         {
+            Visible = false; 
             formularioIdentificacionEspecifica.ShowDialog();
+            Visible = true;
         }
 
         private void btnPonderado_Click(object sender, EventArgs e)
         {
+            Visible = false;
             formularioPonderado.ShowDialog();
+            Visible = true;
         }
 
         private void btnSimple_Click(object sender, EventArgs e)
         {
+            Visible = false;
             formularioValuacionPromedioSimple.ShowDialog();
+            Visible = true;
         }
 
         private void btnUEPS_Click(object sender, EventArgs e)
@@ -142,17 +148,23 @@
 
         private void btnPEPS_Click(object sender, EventArgs e)
         {
+            Visible = false;
             formularioPEPS.ShowDialog();
+            Visible = true; 
         }
 
         private void btnAltoBajo_Click(object sender, EventArgs e)
         {
+            Visible = false;
             formularioPuntoAltoBajo.ShowDialog();
+            Visible = true;
         }
 
         private void btnEstadistico_Click(object sender, EventArgs e)
         {
+            Visible = false;
             formularioMetodoEstadistico.ShowDialog();
+            Visible = true;
         }
     }
 }
