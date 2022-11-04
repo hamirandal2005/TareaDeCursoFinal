@@ -163,6 +163,16 @@ namespace pjContabilidadMetodosValuacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FondoFranjaRoja {
+            get {
+                object obj = ResourceManager.GetObject("FondoFranjaRoja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondoos {
             get {
                 object obj = ResourceManager.GetObject("fondoos", resourceCulture);
