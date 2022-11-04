@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Clases;
 
 
 
@@ -17,9 +18,19 @@ namespace pjContabilidadMetodosValuacion
     {
         //Declaración de Variables Globalmente
 
+        //Haciendo uso de nuevos métodos para llevar a cabo el ejercicio
+
+        //Creación de una "List" para guardar los datos de la clase
+        List<RegistroEntradas> RegistroentradasList = new List<RegistroEntradas>();
+        string Fechaentrada;
+
+
+
+        //****************************************************************************************
+
         //Arrays sobre las unidades que se van comprando o utilizando (Cambiar por ArrayList o similar para más eficiencia)
-        double[] UnidadesCompradas = new double[100];
-        double[] UnidadesUsadas = new double[100];
+        int UnidadesCompradas;
+        int UnidadesUsadas;
         //Contadores para los arrays
         int ContadorUnidadesCompradas = 0, ContadorUnidadesSalidas = 0;
         //Variables para almacenar los costos
@@ -48,9 +59,9 @@ namespace pjContabilidadMetodosValuacion
                 //Validando los cuadro de textos de "Datos Salidas"
 
                 if (txtUnidadesUsadas.Text.Trim().Length == 0)
-                    UnidadesUsadas[ContadorUnidadesSalidas] = 0;
+                    UnidadesUsadas = 0;
                 else
-                    UnidadesUsadas[ContadorUnidadesSalidas] = double.Parse(txtUnidadesUsadas.Text);
+                    UnidadesUsadas = double.Parse(txtUnidadesUsadas.Text);
 
 
                 DateTime FechaSalida = DTPSalida.Value;
@@ -91,17 +102,11 @@ namespace pjContabilidadMetodosValuacion
             if (ValidaDatos() == "")
             {
                 
-                /*if (txtUnidadesUsadas.Text.Trim().Length == 0)
-                    UnidadesUsadas[ContadorUnidadesSalidas] = 0;
-                else
-                    UnidadesUsadas[ContadorUnidadesSalidas] = double.Parse(txtUnidadesUsadas.Text);
-                */
-
                 //Validando los cuadro de Texto de "Datos Ingresados"
                 if (txtUnidadesCompradas.Text.Trim().Length == 0)
-                    UnidadesCompradas[ContadorUnidadesCompradas] = 0;
+                    UnidadesCompradas = 0;
                 else
-                    UnidadesCompradas[ContadorUnidadesCompradas] = double.Parse(txtUnidadesCompradas.Text);
+                    UnidadesCompradas = int.Parse(txtUnidadesCompradas.Text);
 
 
 
@@ -114,9 +119,9 @@ namespace pjContabilidadMetodosValuacion
                 //Obteniendo los datos de los TextBox
 
                 //Obteniendo las fechas para comparar con las salidas
-                DateTime FechaEntrada = DTPEntrada.Value;
-                FechaEntrada.ToShortDateString();
+                DateTime FechaEntrada = DTPEntrada.Value;                
                 FechasEntradas[FechasEntradasCont] = FechaEntrada;
+                Fechaentrada = FechaEntrada.ToShortDateString();
                 
 
 
@@ -124,17 +129,19 @@ namespace pjContabilidadMetodosValuacion
 
                 //Haciendo las operaciones correspondientes...
                 //Para obtener las Unidades Disponibles
-                UnidadesDisponibles += (UnidadesCompradas[ContadorUnidadesCompradas] - UnidadesUsadas[ContadorUnidadesSalidas]);
+                UnidadesDisponibles += (UnidadesCompradas - UnidadesUsadas);
                 //Para obtener el costo total de las unidades Disponibles
-                CostoUnidadesDisponibles += (UnidadesCompradas[ContadorUnidadesCompradas] * CostoUnitario);
+                CostoUnidadesDisponibles += (UnidadesCompradas * CostoUnitario);
                 //Para obtener el costo de la unidades en cada transacción
-                CostoUnidadesCompradas = UnidadesCompradas[ContadorUnidadesCompradas] * CostoUnitario;
+                CostoUnidadesCompradas = UnidadesCompradas * CostoUnitario;
 
 
 
+                //Almacenando los datos en la "List"
+                RegistroentradasList.Add( new RegistroEntradas() {FechaEntrada=FechaEntrada.ToShortDateString() , UnidadesCompradas, CostoUnitario});
 
-                //Almacenando las transacciones de compras en una HashTablef
-                UnidadesCompradasHash.Add(FechasEntradas[ContadorTransaccionesEntrada].ToShortDateString(), UnidadesCompradas[ContadorTransaccionesEntrada]);
+                //Almacenando las transacciones de compras en una HashTable
+              //  UnidadesCompradasHash.Add(FechasEntradas[ContadorTransaccionesEntrada].ToShortDateString(), UnidadesCompradas[ContadorTransaccionesEntrada]);
 
 
 
