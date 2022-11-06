@@ -28,15 +28,18 @@ namespace pjContabilidadMetodosValuacion
             {
                 if (int.Parse(mtbCantidad.Text) != 0 && int.Parse(mtbCosto.Text) != 0)
                 {
-                        ponderado.Add(new PromedioPonderado(int.Parse(mtbCantidad.Text), double.Parse(mtbCosto.Text)));
-                        ListViewItem a = new ListViewItem(num.ToString());
-                        num++;
-                        a.SubItems.Add(ponderado.Last().UnidadesCompradas.ToString());
-                        a.SubItems.Add(ponderado.Last().PrecioDeCompra.ToString());
-                        a.SubItems.Add(ponderado.Last().Calculo(ponderado).ToString("0.00"));
-                        promedio = ponderado.Last().Calculo(ponderado);
-                        lvPromedio.Items.Add(a);
-                        unidadesCompradas += ponderado.Last().UnidadesCompradas;
+                    ponderado.Add(new PromedioPonderado(int.Parse(mtbCantidad.Text), double.Parse(mtbCosto.Text)));
+                    ListViewItem a = new ListViewItem(num.ToString());
+                    num++;
+                    a.SubItems.Add(ponderado.Last().UnidadesCompradas.ToString());
+                    a.SubItems.Add(ponderado.Last().PrecioDeCompra.ToString());
+                    a.SubItems.Add(ponderado.Last().Calculo(ponderado).ToString("0.00"));
+                    promedio = ponderado.Last().Calculo(ponderado);
+                    lvPromedio.Items.Add(a);
+                    unidadesCompradas += ponderado.Last().UnidadesCompradas;
+                    mtbCantidad.Clear();
+                    mtbCosto.Clear();
+                    mtbCantidad.Focus();
                 }
                 else
                     MessageBox.Show("Ingrese un valor mayor a 0", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

@@ -85,7 +85,7 @@
             this.btnRegistrarCompras.Location = new System.Drawing.Point(217, 219);
             this.btnRegistrarCompras.Name = "btnRegistrarCompras";
             this.btnRegistrarCompras.Size = new System.Drawing.Size(95, 30);
-            this.btnRegistrarCompras.TabIndex = 0;
+            this.btnRegistrarCompras.TabIndex = 4;
             this.btnRegistrarCompras.Text = "Registrar";
             this.btnRegistrarCompras.UseVisualStyleBackColor = true;
             this.btnRegistrarCompras.Click += new System.EventHandler(this.btnRegistrarCompras_Click);
@@ -121,7 +121,7 @@
             this.btnRegistrarUtilizados.Location = new System.Drawing.Point(518, 219);
             this.btnRegistrarUtilizados.Name = "btnRegistrarUtilizados";
             this.btnRegistrarUtilizados.Size = new System.Drawing.Size(95, 30);
-            this.btnRegistrarUtilizados.TabIndex = 4;
+            this.btnRegistrarUtilizados.TabIndex = 9;
             this.btnRegistrarUtilizados.Text = "Registrar";
             this.btnRegistrarUtilizados.UseVisualStyleBackColor = true;
             this.btnRegistrarUtilizados.Click += new System.EventHandler(this.btnRegistrarUtilizadas_Click);
@@ -155,7 +155,7 @@
             this.label3.Location = new System.Drawing.Point(45, 2);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 42);
-            this.label3.TabIndex = 8;
+            this.label3.TabIndex = 71;
             this.label3.Text = "Sistema V";
             // 
             // label4
@@ -167,7 +167,7 @@
             this.label4.Location = new System.Drawing.Point(-8, 2);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 42);
-            this.label4.TabIndex = 9;
+            this.label4.TabIndex = 72;
             this.label4.Text = "aluacion";
             // 
             // gbCompras
@@ -183,8 +183,8 @@
             this.gbCompras.ForeColor = System.Drawing.Color.White;
             this.gbCompras.Location = new System.Drawing.Point(77, 93);
             this.gbCompras.Name = "gbCompras";
-            this.gbCompras.Size = new System.Drawing.Size(312, 235);
-            this.gbCompras.TabIndex = 11;
+            this.gbCompras.Size = new System.Drawing.Size(312, 188);
+            this.gbCompras.TabIndex = 75;
             this.gbCompras.TabStop = false;
             this.gbCompras.Text = "Datos Compras";
             // 
@@ -215,7 +215,7 @@
             this.lvUnidadesCompradas.Location = new System.Drawing.Point(22, 35);
             this.lvUnidadesCompradas.Name = "lvUnidadesCompradas";
             this.lvUnidadesCompradas.Size = new System.Drawing.Size(290, 178);
-            this.lvUnidadesCompradas.TabIndex = 7;
+            this.lvUnidadesCompradas.TabIndex = 50;
             this.lvUnidadesCompradas.UseCompatibleStateImageBehavior = false;
             this.lvUnidadesCompradas.View = System.Windows.Forms.View.Details;
             // 
@@ -239,8 +239,8 @@
             this.gbSalidas.ForeColor = System.Drawing.Color.White;
             this.gbSalidas.Location = new System.Drawing.Point(413, 93);
             this.gbSalidas.Name = "gbSalidas";
-            this.gbSalidas.Size = new System.Drawing.Size(312, 235);
-            this.gbSalidas.TabIndex = 12;
+            this.gbSalidas.Size = new System.Drawing.Size(312, 188);
+            this.gbSalidas.TabIndex = 74;
             this.gbSalidas.TabStop = false;
             this.gbSalidas.Text = "Datos Salidas";
             // 
@@ -289,10 +289,10 @@
             this.gbDatosIngresados.Controls.Add(this.btnRegistrarUtilizados);
             this.gbDatosIngresados.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.gbDatosIngresados.ForeColor = System.Drawing.Color.White;
-            this.gbDatosIngresados.Location = new System.Drawing.Point(77, 348);
+            this.gbDatosIngresados.Location = new System.Drawing.Point(77, 303);
             this.gbDatosIngresados.Name = "gbDatosIngresados";
             this.gbDatosIngresados.Size = new System.Drawing.Size(648, 272);
-            this.gbDatosIngresados.TabIndex = 13;
+            this.gbDatosIngresados.TabIndex = 78;
             this.gbDatosIngresados.TabStop = false;
             this.gbDatosIngresados.Text = "Datos Ingresados";
             // 
@@ -307,7 +307,7 @@
             this.lvUnidadesUtilizadas.Location = new System.Drawing.Point(336, 35);
             this.lvUnidadesUtilizadas.Name = "lvUnidadesUtilizadas";
             this.lvUnidadesUtilizadas.Size = new System.Drawing.Size(277, 178);
-            this.lvUnidadesUtilizadas.TabIndex = 8;
+            this.lvUnidadesUtilizadas.TabIndex = 30;
             this.lvUnidadesUtilizadas.UseCompatibleStateImageBehavior = false;
             this.lvUnidadesUtilizadas.View = System.Windows.Forms.View.Details;
             // 
@@ -329,7 +329,7 @@
             // 
             this.btnFinalizar.AutoSize = true;
             this.btnFinalizar.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnFinalizar.Location = new System.Drawing.Point(957, 567);
+            this.btnFinalizar.Location = new System.Drawing.Point(944, 522);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(150, 30);
             this.btnFinalizar.TabIndex = 15;
@@ -364,7 +364,7 @@
             this.gbTotales.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbTotales.Name = "gbTotales";
             this.gbTotales.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbTotales.Size = new System.Drawing.Size(288, 405);
+            this.gbTotales.Size = new System.Drawing.Size(288, 296);
             this.gbTotales.TabIndex = 17;
             this.gbTotales.TabStop = false;
             this.gbTotales.Text = "Valores Totalizados";
@@ -427,7 +427,7 @@
             this.lblInvFinal.Location = new System.Drawing.Point(216, 46);
             this.lblInvFinal.Name = "lblInvFinal";
             this.lblInvFinal.Size = new System.Drawing.Size(56, 19);
-            this.lblInvFinal.TabIndex = 1;
+            this.lblInvFinal.TabIndex = 88;
             this.lblInvFinal.Text = "label10";
             // 
             // label9
@@ -437,7 +437,7 @@
             this.label9.Location = new System.Drawing.Point(6, 46);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 19);
-            this.label9.TabIndex = 0;
+            this.label9.TabIndex = 80;
             this.label9.Text = "Inventario Final";
             // 
             // panel1
@@ -467,7 +467,7 @@
             this.label11.Location = new System.Drawing.Point(12, 41);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 23);
-            this.label11.TabIndex = 9;
+            this.label11.TabIndex = 55;
             this.label11.Text = "PEPS";
             // 
             // pTotales
@@ -476,7 +476,7 @@
             this.pTotales.Controls.Add(this.gbTotales);
             this.pTotales.Location = new System.Drawing.Point(744, 93);
             this.pTotales.Name = "pTotales";
-            this.pTotales.Size = new System.Drawing.Size(333, 495);
+            this.pTotales.Size = new System.Drawing.Size(333, 459);
             this.pTotales.TabIndex = 20;
             this.pTotales.Visible = false;
             // 
@@ -485,17 +485,17 @@
             this.panel3.BackColor = System.Drawing.Color.Tomato;
             this.panel3.Location = new System.Drawing.Point(396, 99);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 520);
-            this.panel3.TabIndex = 21;
+            this.panel3.Size = new System.Drawing.Size(10, 476);
+            this.panel3.TabIndex = 60;
             // 
             // frmPEPS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.FondoFranjaRoja;
-            this.ClientSize = new System.Drawing.Size(1119, 658);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(1119, 622);
             this.Controls.Add(this.btnFinalizar);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.pTotales);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.gbDatosIngresados);
