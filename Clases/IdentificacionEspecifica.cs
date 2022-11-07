@@ -10,23 +10,28 @@ namespace Clases
     public class IdentificacionEspecifica
     {
     }
+
     public class RegistroEntradas:IEquatable<RegistroEntradas>
     {
         public RegistroEntradas()
         {
         }
 
-        public RegistroEntradas(string fechaEntrada, int materialesComprados, double costoUnitario)
+        //Atributos de la clase
+        public string FechaEntrada { get; set; }
+        public int UnidadesCompradas { get; set; }
+        public double CostoUnitario { get; set; }
+
+
+        //Constructor de Entrada de materiales
+        public RegistroEntradas(string fechaEntrada, int unidadesCompradas, double costoUnitario)
         {
             FechaEntrada = fechaEntrada;
-            MaterialesComprados = materialesComprados;
+            UnidadesCompradas = unidadesCompradas;
             CostoUnitario = costoUnitario;
         }
 
-        //Atributos de la clase
-        public string FechaEntrada { get; set; }
-        public int MaterialesComprados { get; set; }
-        public double CostoUnitario { get; set; }
+       
 
         public bool Equals(RegistroEntradas? other)
         {

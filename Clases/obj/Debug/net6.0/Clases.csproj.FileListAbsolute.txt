@@ -73,3 +73,15 @@ G:\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.dll
 G:\TareaDeCursoFinal\Clases\obj\Debug\net6.0\refint\Clases.dll
 G:\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.pdb
 G:\TareaDeCursoFinal\Clases\obj\Debug\net6.0\ref\Clases.dll
+C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.deps.json
+C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.dll
+C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.pdb
+C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.csproj.AssemblyReference.cache
+C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.AssemblyInfoInputs.cache
+C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.AssemblyInfo.cs
+C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.csproj.CoreCompileInputs.cache
+C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.dll
+C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\obj\Debug\net6.0\refint\Clases.dll
+C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.pdb
+C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\obj\Debug\net6.0\ref\Clases.dll

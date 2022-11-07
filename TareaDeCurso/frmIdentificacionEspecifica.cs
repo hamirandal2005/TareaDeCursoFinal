@@ -109,7 +109,6 @@ namespace pjContabilidadMetodosValuacion
                     UnidadesCompradas = int.Parse(txtUnidadesCompradas.Text);
 
 
-
                 if (txtCostoUnitario.Text.Trim().Length == 0)
                     CostoUnitario = 0;
                 else
@@ -138,7 +137,7 @@ namespace pjContabilidadMetodosValuacion
 
 
                 //Almacenando los datos en la "List"
-                RegistroentradasList.Add( new RegistroEntradas() {FechaEntrada=FechaEntrada.ToShortDateString() , UnidadesCompradas, CostoUnitario});
+                RegistroentradasList.Add( new RegistroEntradas() {FechaEntrada=FechaEntrada.ToShortDateString() , UnidadesCompradas=UnidadesCompradas, CostoUnitario=CostoUnitario});
 
                 //Almacenando las transacciones de compras en una HashTable
               //  UnidadesCompradasHash.Add(FechasEntradas[ContadorTransaccionesEntrada].ToShortDateString(), UnidadesCompradas[ContadorTransaccionesEntrada]);
@@ -148,7 +147,7 @@ namespace pjContabilidadMetodosValuacion
 
                 //Presentando los datos de Compras en el lvDatosIngresados
                 ListViewItem fila = new ListViewItem(FechasEntradas[FechasEntradasCont].ToShortDateString());
-                fila.SubItems.Add(UnidadesCompradas[ContadorUnidadesCompradas].ToString());
+                fila.SubItems.Add(UnidadesCompradas.ToString());
                 fila.SubItems.Add(CostoUnitario.ToString("C"));
                 fila.SubItems.Add(CostoUnidadesCompradas.ToString("C"));
                 lvDatosIngresados.Items.Add(fila);
