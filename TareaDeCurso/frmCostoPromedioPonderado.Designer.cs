@@ -46,17 +46,24 @@
             this.mtbUsadas = new System.Windows.Forms.MaskedTextBox();
             this.mtbCantidad = new System.Windows.Forms.MaskedTextBox();
             this.mtbCosto = new System.Windows.Forms.MaskedTextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -84,6 +91,7 @@
             this.button1.AutoSize = true;
             this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button1.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(307, 87);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 28);
@@ -106,7 +114,7 @@
             this.columnHeader7});
             this.lvPromedio.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lvPromedio.GridLines = true;
-            this.lvPromedio.Location = new System.Drawing.Point(6, 36);
+            this.lvPromedio.Location = new System.Drawing.Point(14, 12);
             this.lvPromedio.Name = "lvPromedio";
             this.lvPromedio.Size = new System.Drawing.Size(385, 208);
             this.lvPromedio.TabIndex = 4;
@@ -133,7 +141,8 @@
             this.button2.AutoSize = true;
             this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button2.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(515, 216);
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(406, 58);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 28);
             this.button2.TabIndex = 6;
@@ -149,7 +158,7 @@
             this.columnHeader4});
             this.lvCostos.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lvCostos.GridLines = true;
-            this.lvCostos.Location = new System.Drawing.Point(6, 36);
+            this.lvCostos.Location = new System.Drawing.Point(9, 15);
             this.lvCostos.Name = "lvCostos";
             this.lvCostos.Size = new System.Drawing.Size(503, 208);
             this.lvCostos.TabIndex = 7;
@@ -174,12 +183,12 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.lvCostos);
+            this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(473, 299);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(554, 299);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(635, 270);
+            this.groupBox1.Size = new System.Drawing.Size(534, 270);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Ingresados";
@@ -188,7 +197,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(53, 66);
+            this.label5.Location = new System.Drawing.Point(27, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(121, 18);
             this.label5.TabIndex = 11;
@@ -196,7 +205,8 @@
             // 
             // mtbUsadas
             // 
-            this.mtbUsadas.Location = new System.Drawing.Point(239, 63);
+            this.mtbUsadas.ForeColor = System.Drawing.Color.Black;
+            this.mtbUsadas.Location = new System.Drawing.Point(197, 60);
             this.mtbUsadas.Mask = "99999999999999999999";
             this.mtbUsadas.Name = "mtbUsadas";
             this.mtbUsadas.Size = new System.Drawing.Size(100, 26);
@@ -221,39 +231,16 @@
             this.mtbCosto.TabIndex = 16;
             this.mtbCosto.ValidatingType = typeof(int);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(499, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(290, 42);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Sistema Valuación";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(413, 66);
+            this.label8.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(84, 80);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(432, 42);
+            this.label8.Size = new System.Drawing.Size(291, 29);
             this.label8.TabIndex = 19;
             this.label8.Text = "Costo Promedio Ponderado";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::pjContabilidadMetodosValuacion.Properties.Resources.dinero;
-            this.pictureBox1.Location = new System.Drawing.Point(266, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 78);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
             // 
             // groupBox2
             // 
@@ -264,9 +251,10 @@
             this.groupBox2.Controls.Add(this.mtbCosto);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(41, 147);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(73, 155);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(397, 138);
+            this.groupBox2.Size = new System.Drawing.Size(434, 138);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Compras del periodo";
@@ -274,25 +262,89 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.lvPromedio);
+            this.groupBox3.Controls.Add(this.panel3);
             this.groupBox3.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(41, 299);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(73, 299);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(397, 270);
+            this.groupBox3.Size = new System.Drawing.Size(434, 270);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resultados";
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Controls.Add(this.mtbUsadas);
             this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Location = new System.Drawing.Point(473, 147);
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
+            this.groupBox4.Location = new System.Drawing.Point(554, 155);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(635, 138);
+            this.groupBox4.Size = new System.Drawing.Size(534, 138);
             this.groupBox4.TabIndex = 23;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Calculo de los costos";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Tomato;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(84, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 50);
+            this.panel1.TabIndex = 24;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(45, 2);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(165, 42);
+            this.label3.TabIndex = 71;
+            this.label3.Text = "Sistema V";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(284, 27);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 50);
+            this.panel2.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Tomato;
+            this.label4.Location = new System.Drawing.Point(-8, 2);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(144, 42);
+            this.label4.TabIndex = 72;
+            this.label4.Text = "aluacion";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Tomato;
+            this.panel3.Controls.Add(this.lvPromedio);
+            this.panel3.Location = new System.Drawing.Point(11, 24);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(415, 233);
+            this.panel3.TabIndex = 26;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Tomato;
+            this.panel4.Controls.Add(this.lvCostos);
+            this.panel4.Location = new System.Drawing.Point(6, 24);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(522, 240);
+            this.panel4.TabIndex = 0;
             // 
             // frmCostoPromedioPonderado
             // 
@@ -300,25 +352,33 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(1142, 637);
+            this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.FondoFranjaRoja;
+            this.ClientSize = new System.Drawing.Size(1119, 637);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmCostoPromedioPonderado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCostoPromedioPonderado";
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,11 +403,15 @@
         private MaskedTextBox mtbUsadas;
         private MaskedTextBox mtbCantidad;
         private MaskedTextBox mtbCosto;
-        private Label label6;
         private Label label8;
-        private PictureBox pictureBox1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
         private GroupBox groupBox4;
+        private Panel panel4;
+        private Panel panel3;
+        private Panel panel1;
+        private Label label3;
+        private Panel panel2;
+        private Label label4;
     }
 }

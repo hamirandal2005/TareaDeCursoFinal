@@ -62,9 +62,9 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::pjContabilidadMetodosValuacion.Properties.Resources.estadistica;
-            this.pictureBox1.Location = new System.Drawing.Point(190, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(190, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(178, 87);
+            this.pictureBox1.Size = new System.Drawing.Size(178, 83);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -73,10 +73,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("AR DESTINE", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(398, 28);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(398, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(665, 52);
+            this.label1.Size = new System.Drawing.Size(461, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "Metodo punto alto punto bajo";
             // 
@@ -91,34 +91,34 @@
             this.groupBox1.Controls.Add(this.cbMes);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(39, 127);
+            this.groupBox1.Location = new System.Drawing.Point(39, 121);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1024, 107);
+            this.groupBox1.Size = new System.Drawing.Size(1024, 102);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresar datos";
             // 
             // mtbNivelActividad
             // 
-            this.mtbNivelActividad.Location = new System.Drawing.Point(672, 51);
+            this.mtbNivelActividad.Location = new System.Drawing.Point(672, 48);
             this.mtbNivelActividad.Name = "mtbNivelActividad";
-            this.mtbNivelActividad.Size = new System.Drawing.Size(100, 29);
+            this.mtbNivelActividad.Size = new System.Drawing.Size(100, 25);
             this.mtbNivelActividad.TabIndex = 5;
             // 
             // mtbCostoPeriodo
             // 
-            this.mtbCostoPeriodo.Location = new System.Drawing.Point(380, 50);
+            this.mtbCostoPeriodo.Location = new System.Drawing.Point(380, 48);
             this.mtbCostoPeriodo.Name = "mtbCostoPeriodo";
-            this.mtbCostoPeriodo.Size = new System.Drawing.Size(100, 29);
+            this.mtbCostoPeriodo.Size = new System.Drawing.Size(100, 25);
             this.mtbCostoPeriodo.TabIndex = 4;
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.AutoSize = true;
             this.btnRegistrar.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrar.Location = new System.Drawing.Point(846, 51);
+            this.btnRegistrar.Location = new System.Drawing.Point(846, 48);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(99, 34);
+            this.btnRegistrar.Size = new System.Drawing.Size(99, 32);
             this.btnRegistrar.TabIndex = 4;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
@@ -128,9 +128,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(513, 56);
+            this.label4.Location = new System.Drawing.Point(513, 53);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 21);
+            this.label4.Size = new System.Drawing.Size(127, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Nivel de actividad : ";
             // 
@@ -138,9 +138,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(230, 55);
+            this.label3.Location = new System.Drawing.Point(230, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 21);
+            this.label3.Size = new System.Drawing.Size(122, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Costo del periodo : ";
             // 
@@ -160,18 +160,18 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cbMes.Location = new System.Drawing.Point(89, 48);
+            this.cbMes.Location = new System.Drawing.Point(89, 46);
             this.cbMes.Name = "cbMes";
-            this.cbMes.Size = new System.Drawing.Size(121, 32);
+            this.cbMes.Size = new System.Drawing.Size(121, 28);
             this.cbMes.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(33, 53);
+            this.label2.Location = new System.Drawing.Point(33, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 21);
+            this.label2.Size = new System.Drawing.Size(43, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mes : ";
             // 
@@ -184,9 +184,9 @@
             this.columnHeader3});
             this.lvInfo.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lvInfo.GridLines = true;
-            this.lvInfo.Location = new System.Drawing.Point(6, 43);
+            this.lvInfo.Location = new System.Drawing.Point(6, 41);
             this.lvInfo.Name = "lvInfo";
-            this.lvInfo.Size = new System.Drawing.Size(398, 325);
+            this.lvInfo.Size = new System.Drawing.Size(398, 309);
             this.lvInfo.TabIndex = 3;
             this.lvInfo.UseCompatibleStateImageBehavior = false;
             this.lvInfo.View = System.Windows.Forms.View.Details;
@@ -213,9 +213,9 @@
             this.columnHeader5});
             this.lvAltoBajo.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lvAltoBajo.GridLines = true;
-            this.lvAltoBajo.Location = new System.Drawing.Point(437, 43);
+            this.lvAltoBajo.Location = new System.Drawing.Point(437, 41);
             this.lvAltoBajo.Name = "lvAltoBajo";
-            this.lvAltoBajo.Size = new System.Drawing.Size(268, 325);
+            this.lvAltoBajo.Size = new System.Drawing.Size(268, 309);
             this.lvAltoBajo.TabIndex = 6;
             this.lvAltoBajo.UseCompatibleStateImageBehavior = false;
             this.lvAltoBajo.View = System.Windows.Forms.View.Details;
@@ -236,9 +236,9 @@
             this.lblTasaVariable.AutoSize = true;
             this.lblTasaVariable.BackColor = System.Drawing.Color.Transparent;
             this.lblTasaVariable.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTasaVariable.Location = new System.Drawing.Point(173, 44);
+            this.lblTasaVariable.Location = new System.Drawing.Point(173, 42);
             this.lblTasaVariable.Name = "lblTasaVariable";
-            this.lblTasaVariable.Size = new System.Drawing.Size(60, 18);
+            this.lblTasaVariable.Size = new System.Drawing.Size(47, 15);
             this.lblTasaVariable.TabIndex = 7;
             this.lblTasaVariable.Text = "label5";
             // 
@@ -247,9 +247,9 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(25, 44);
+            this.label6.Location = new System.Drawing.Point(25, 42);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 18);
+            this.label6.Size = new System.Drawing.Size(101, 15);
             this.label6.TabIndex = 8;
             this.label6.Text = "Tasa variable : ";
             // 
@@ -262,9 +262,9 @@
             this.gbTasaVariable.Controls.Add(this.label6);
             this.gbTasaVariable.Controls.Add(this.lblTasaVariable);
             this.gbTasaVariable.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.gbTasaVariable.Location = new System.Drawing.Point(830, 294);
+            this.gbTasaVariable.Location = new System.Drawing.Point(830, 279);
             this.gbTasaVariable.Name = "gbTasaVariable";
-            this.gbTasaVariable.Size = new System.Drawing.Size(282, 245);
+            this.gbTasaVariable.Size = new System.Drawing.Size(282, 233);
             this.gbTasaVariable.TabIndex = 9;
             this.gbTasaVariable.TabStop = false;
             this.gbTasaVariable.Text = "Resultados";
@@ -274,9 +274,9 @@
             // 
             this.btnLimpiar.AutoSize = true;
             this.btnLimpiar.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLimpiar.Location = new System.Drawing.Point(137, 161);
+            this.btnLimpiar.Location = new System.Drawing.Point(137, 153);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(77, 34);
+            this.btnLimpiar.Size = new System.Drawing.Size(77, 32);
             this.btnLimpiar.TabIndex = 10;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -286,9 +286,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(35, 106);
+            this.label7.Location = new System.Drawing.Point(35, 101);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 18);
+            this.label7.Size = new System.Drawing.Size(82, 15);
             this.label7.TabIndex = 10;
             this.label7.Text = "Costo fijo : ";
             // 
@@ -296,9 +296,9 @@
             // 
             this.lblCostoFijo.AutoSize = true;
             this.lblCostoFijo.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCostoFijo.Location = new System.Drawing.Point(173, 106);
+            this.lblCostoFijo.Location = new System.Drawing.Point(173, 101);
             this.lblCostoFijo.Name = "lblCostoFijo";
-            this.lblCostoFijo.Size = new System.Drawing.Size(60, 18);
+            this.lblCostoFijo.Size = new System.Drawing.Size(47, 15);
             this.lblCostoFijo.TabIndex = 9;
             this.lblCostoFijo.Text = "label5";
             // 
@@ -308,19 +308,18 @@
             this.groupBox2.Controls.Add(this.lvAltoBajo);
             this.groupBox2.Controls.Add(this.lvInfo);
             this.groupBox2.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox2.Location = new System.Drawing.Point(39, 263);
+            this.groupBox2.Location = new System.Drawing.Point(39, 250);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(717, 392);
+            this.groupBox2.Size = new System.Drawing.Size(717, 372);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Ingresados";
             // 
             // frmMetodoPuntoAltoBajo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.fondoos;
-            this.ClientSize = new System.Drawing.Size(1239, 667);
+            this.ClientSize = new System.Drawing.Size(1239, 634);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbTasaVariable);
             this.Controls.Add(this.groupBox1);

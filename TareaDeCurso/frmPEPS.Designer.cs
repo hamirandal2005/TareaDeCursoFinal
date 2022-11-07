@@ -492,7 +492,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.FondoFranjaRoja;
+            this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.FondoFranjaRoja1;
             this.ClientSize = new System.Drawing.Size(1119, 622);
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.panel3);
