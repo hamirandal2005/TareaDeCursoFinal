@@ -8,24 +8,37 @@
     "net6.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\GP\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+=======
+    "C:\\Users\\JADPA-19\\.nuget\\packages\\": {}
+>>>>>>> 0e942707fdb16e2f81905667915ac4ba64352996
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\GP\\Desktop\\TareaDeCursoFinal\\Clases\\Clases.csproj",
       "projectName": "Clases",
       "projectPath": "C:\\Users\\GP\\Desktop\\TareaDeCursoFinal\\Clases\\Clases.csproj",
       "packagesPath": "C:\\Users\\GP\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\GP\\Desktop\\TareaDeCursoFinal\\Clases\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\JADPA-19\\Source\\Repos\\TareaDeCursoFinal\\Clases\\Clases.csproj",
+      "projectName": "Clases",
+      "projectPath": "C:\\Users\\JADPA-19\\Source\\Repos\\TareaDeCursoFinal\\Clases\\Clases.csproj",
+      "packagesPath": "C:\\Users\\JADPA-19\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JADPA-19\\Source\\Repos\\TareaDeCursoFinal\\Clases\\obj\\",
+>>>>>>> 0e942707fdb16e2f81905667915ac4ba64352996
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\GP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+        "C:\\Users\\JADPA-19\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 0e942707fdb16e2f81905667915ac4ba64352996
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -56,8 +69,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -66,7 +78,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+>>>>>>> 0e942707fdb16e2f81905667915ac4ba64352996
       }
     }
   }

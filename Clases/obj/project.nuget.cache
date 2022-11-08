@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "qUxPRZ0WAjplWwBGu69+wFBH3EyGsVmtpGuUfUD98W7Xgr+fi+lyqKeOjWq9r104NhZfSN3gqGJv40DZayuHaA==",
   "success": true,
   "projectFilePath": "C:\\Users\\GP\\Desktop\\TareaDeCursoFinal\\Clases\\Clases.csproj",
+=======
+  "dgSpecHash": "FypER53miwsIdtBbvCxWSXGiQb0XfTWKNuqmeICNGMcjjSPoovl5rMr8RK9nLV43LdFAhL/36cTM0md3lTqBxg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\JADPA-19\\Source\\Repos\\TareaDeCursoFinal\\Clases\\Clases.csproj",
+>>>>>>> 0e942707fdb16e2f81905667915ac4ba64352996
   "expectedPackageFiles": [],
   "logs": []
 }
