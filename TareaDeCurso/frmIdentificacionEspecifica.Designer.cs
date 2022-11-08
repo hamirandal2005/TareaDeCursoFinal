@@ -59,6 +59,8 @@
             this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.btnFinalizarPeriodo = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtCostoUnitarioSalida = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -189,6 +191,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.txtCostoUnitarioSalida);
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.btnRegistrarSalidas);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.DTPSalida);
@@ -247,7 +251,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(189, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 18);
@@ -385,6 +389,23 @@
             this.btnFinalizarPeriodo.Text = "Finalizar Período";
             this.btnFinalizarPeriodo.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(424, 36);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 18);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "CostoUnitario :";
+            // 
+            // txtCostoUnitarioSalida
+            // 
+            this.txtCostoUnitarioSalida.Location = new System.Drawing.Point(530, 33);
+            this.txtCostoUnitarioSalida.Name = "txtCostoUnitarioSalida";
+            this.txtCostoUnitarioSalida.Size = new System.Drawing.Size(101, 25);
+            this.txtCostoUnitarioSalida.TabIndex = 19;
+            // 
             // frmIdentificacionEspecifica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -450,5 +471,7 @@
         private ColumnHeader columnHeader5;
         private ColumnHeader columnHeader8;
         private Button btnFinalizarPeriodo;
+        private Label label8;
+        private TextBox txtCostoUnitarioSalida;
     }
 }

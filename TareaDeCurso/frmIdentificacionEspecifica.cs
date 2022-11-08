@@ -21,9 +21,8 @@ namespace pjContabilidadMetodosValuacion
         //Haciendo uso de nuevos métodos para llevar a cabo el ejercicio
 
         //Creación de una "List" para guardar los datos de la clase
-        List<RegistroEntradas> RegistroentradasList = new List<RegistroEntradas>();
-        string Fechaentrada;
-        RegistroEntradas oRegistroEntradas = new RegistroEntradas();
+        List<RegistroEntradas> RegistroentradasList = new();
+       
        
 
 
@@ -33,8 +32,8 @@ namespace pjContabilidadMetodosValuacion
         int UnidadesCompradas;
         int UnidadesUsadas;
         //Variables para almacenar los costos
-        double CostoUnitario, UnidadesDisponibles = 0, CostoUnidadesDisponibles = 0, CostoUnidadesCompradas = 0, CostoUnidadesUsadas=0;
-
+        double CostoUnitario, CostoUnidadesCompradas = 0, CostoUnidadesUsadas=0, CostoUnitarioSalida=0;
+        double UnidadesDisponibles=0, CostoUnidadesDisponibles=0;   
         public frmIdentificacionEspecifica()
         {
             InitializeComponent();
@@ -42,6 +41,7 @@ namespace pjContabilidadMetodosValuacion
 
         private void btnRegistrarSalidas_Click(object sender, EventArgs e)
         {
+            return;
             if (ValidaDatos() == "")
             {
                 //Validando los cuadro de textos de "Datos Salidas"
@@ -51,13 +51,17 @@ namespace pjContabilidadMetodosValuacion
                 else
                     UnidadesUsadas = int.Parse(txtUnidadesUsadas.Text);
 
+                if (txtCostoUnitarioSalida.Text.Trim().Length == 0)
+                    CostoUnitarioSalida = 0;
+                else
+                    CostoUnitarioSalida=double.Parse(txtCostoUnitarioSalida.Text); 
 
                 DateTime FechaSalida = DTPSalida.Value;
 
 
                 for (int i = 0; i < 100; i++)
                 {
-                    if (RegistroentradasList[i].FechaEntrada == FechaSalida)
+                    if (RegistroentradasList[i].FechaEntrada == FechaSalida && RegistroentradasList[i].CostoUnitario==CostoUnitarioSalida)
                     {
                         //Una vez comprobadal las fechas...
 

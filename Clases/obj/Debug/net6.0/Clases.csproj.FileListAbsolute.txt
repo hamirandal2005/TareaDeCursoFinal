@@ -97,3 +97,15 @@ C:\Users\hamir\source\repos\Clases\obj\Debug\net6.0\Clases.dll
 C:\Users\hamir\source\repos\Clases\obj\Debug\net6.0\refint\Clases.dll
 C:\Users\hamir\source\repos\Clases\obj\Debug\net6.0\Clases.pdb
 C:\Users\hamir\source\repos\Clases\obj\Debug\net6.0\ref\Clases.dll
+C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.deps.json
+C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.dll
+C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.pdb
+C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.csproj.AssemblyReference.cache
+C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.AssemblyInfoInputs.cache
+C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.AssemblyInfo.cs
+C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.csproj.CoreCompileInputs.cache
+C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.dll
+C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\refint\Clases.dll
+C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.pdb
+C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\ref\Clases.dll
