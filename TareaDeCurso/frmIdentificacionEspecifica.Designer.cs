@@ -52,12 +52,13 @@
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvDatosSalidas = new System.Windows.Forms.ListView();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnFinalizarPeriodo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -240,7 +241,7 @@
             // 
             this.txtUnidadesUsadas.Location = new System.Drawing.Point(317, 33);
             this.txtUnidadesUsadas.Name = "txtUnidadesUsadas";
-            this.txtUnidadesUsadas.Size = new System.Drawing.Size(100, 25);
+            this.txtUnidadesUsadas.Size = new System.Drawing.Size(101, 25);
             this.txtUnidadesUsadas.TabIndex = 8;
             // 
             // label2
@@ -258,11 +259,11 @@
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.lvDatosIngresados);
             this.groupBox3.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox3.Location = new System.Drawing.Point(30, 281);
+            this.groupBox3.Location = new System.Drawing.Point(24, 281);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(637, 205);
+            this.groupBox3.Size = new System.Drawing.Size(583, 205);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos Ingresados";
@@ -274,12 +275,12 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.lvDatosIngresados.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lvDatosIngresados.Font = new System.Drawing.Font("Sitka Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lvDatosIngresados.GridLines = true;
-            this.lvDatosIngresados.Location = new System.Drawing.Point(8, 35);
+            this.lvDatosIngresados.Location = new System.Drawing.Point(50, 34);
             this.lvDatosIngresados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvDatosIngresados.Name = "lvDatosIngresados";
-            this.lvDatosIngresados.Size = new System.Drawing.Size(623, 159);
+            this.lvDatosIngresados.Size = new System.Drawing.Size(492, 159);
             this.lvDatosIngresados.TabIndex = 0;
             this.lvDatosIngresados.UseCompatibleStateImageBehavior = false;
             this.lvDatosIngresados.View = System.Windows.Forms.View.Details;
@@ -287,13 +288,13 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Fecha";
-            this.columnHeader1.Width = 100;
+            this.columnHeader1.Width = 110;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Unidades Compradas";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 120;
+            this.columnHeader2.Width = 180;
             // 
             // columnHeader3
             // 
@@ -310,9 +311,9 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox4.Controls.Add(this.listView1);
+            this.groupBox4.Controls.Add(this.lvDatosSalidas);
             this.groupBox4.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox4.Location = new System.Drawing.Point(685, 281);
+            this.groupBox4.Location = new System.Drawing.Point(665, 281);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -321,22 +322,22 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Datos Especificaciones";
             // 
-            // listView1
+            // lvDatosSalidas
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvDatosSalidas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader5,
             this.columnHeader8});
-            this.listView1.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(49, 34);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(488, 161);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvDatosSalidas.Font = new System.Drawing.Font("Sitka Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lvDatosSalidas.GridLines = true;
+            this.lvDatosSalidas.Location = new System.Drawing.Point(33, 32);
+            this.lvDatosSalidas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lvDatosSalidas.Name = "lvDatosSalidas";
+            this.lvDatosSalidas.Size = new System.Drawing.Size(497, 161);
+            this.lvDatosSalidas.TabIndex = 2;
+            this.lvDatosSalidas.UseCompatibleStateImageBehavior = false;
+            this.lvDatosSalidas.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader6
             // 
@@ -347,7 +348,7 @@
             // 
             this.columnHeader7.Text = "Unidades Usadas";
             this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader7.Width = 130;
+            this.columnHeader7.Width = 150;
             // 
             // columnHeader5
             // 
@@ -365,15 +366,24 @@
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Transparent;
             this.groupBox6.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox6.Location = new System.Drawing.Point(1025, 80);
+            this.groupBox6.Location = new System.Drawing.Point(918, 18);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox6.Size = new System.Drawing.Size(219, 194);
+            this.groupBox6.Size = new System.Drawing.Size(354, 208);
             this.groupBox6.TabIndex = 17;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Resultados";
-         
+            // 
+            // btnFinalizarPeriodo
+            // 
+            this.btnFinalizarPeriodo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFinalizarPeriodo.Location = new System.Drawing.Point(1053, 231);
+            this.btnFinalizarPeriodo.Name = "btnFinalizarPeriodo";
+            this.btnFinalizarPeriodo.Size = new System.Drawing.Size(99, 45);
+            this.btnFinalizarPeriodo.TabIndex = 0;
+            this.btnFinalizarPeriodo.Text = "Finalizar Período";
+            this.btnFinalizarPeriodo.UseVisualStyleBackColor = true;
             // 
             // frmIdentificacionEspecifica
             // 
@@ -382,6 +392,7 @@
             this.BackColor = System.Drawing.Color.Chartreuse;
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.identificacion;
             this.ClientSize = new System.Drawing.Size(1284, 518);
+            this.Controls.Add(this.btnFinalizarPeriodo);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -431,12 +442,13 @@
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private GroupBox groupBox4;
-        private ListView listView1;
+        private ListView lvDatosSalidas;
         private ColumnHeader columnHeader6;
         private ColumnHeader columnHeader7;
         private GroupBox groupBox6;
         private ColumnHeader columnHeader4;
         private ColumnHeader columnHeader5;
         private ColumnHeader columnHeader8;
+        private Button btnFinalizarPeriodo;
     }
 }

@@ -11,20 +11,20 @@ namespace Clases
     {
     }
 
-    public class RegistroEntradas:IEquatable<RegistroEntradas>
+    public class RegistroEntradas : IEquatable<RegistroEntradas>
     {
         public RegistroEntradas()
         {
         }
 
         //Atributos de la clase
-        public string FechaEntrada { get; set; }
+        public DateTime FechaEntrada { get; set; }
         public int UnidadesCompradas { get; set; }
         public double CostoUnitario { get; set; }
 
 
         //Constructor de Entrada de materiales
-        public RegistroEntradas(string fechaEntrada, int unidadesCompradas, double costoUnitario)
+        public RegistroEntradas(DateTime fechaEntrada, int unidadesCompradas, double costoUnitario)
         {
             FechaEntrada = fechaEntrada;
             UnidadesCompradas = unidadesCompradas;
