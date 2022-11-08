@@ -23,6 +23,7 @@ namespace pjContabilidadMetodosValuacion
         //Creación de una "List" para guardar los datos de la clase
         List<RegistroEntradas> RegistroentradasList = new List<RegistroEntradas>();
         string Fechaentrada;
+        RegistroEntradas oRegistroEntradas = new RegistroEntradas();
 
 
 
@@ -31,16 +32,11 @@ namespace pjContabilidadMetodosValuacion
         //Arrays sobre las unidades que se van comprando o utilizando (Cambiar por ArrayList o similar para más eficiencia)
         int UnidadesCompradas;
         int UnidadesUsadas;
-        //Contadores para los arrays
-        int ContadorUnidadesCompradas = 0, ContadorUnidadesSalidas = 0;
         //Variables para almacenar los costos
-        double CostoUnitario, UnidadesDisponibles = 0, CostoUnidadesDisponibles = 0, CostoUnidadesCompradas = 0, CostoUnidadesUsadas;
+        double CostoUnitario, UnidadesDisponibles = 0, CostoUnidadesDisponibles = 0, CostoUnidadesCompradas = 0, CostoUnidadesUsadas=0;
         //Contadores Secundarios
         int i = 0, ContadorTransaccionesEntrada = 0, FechasEntradasCont = 0, FechasSalidasCont=0;
 
-        //Arrays que contengan las fechas de entradas y salidas
-        DateTime[] FechasEntradas = new DateTime[100];
-        DateTime[] FechasSalidas = new DateTime[100];
         //Creación de una HashTable para guardar...
         //"Fechas de Compra" como -Key-
         //"Unidades Compradas" como -Value-
@@ -49,6 +45,7 @@ namespace pjContabilidadMetodosValuacion
         public frmIdentificacionEspecifica()
         {
             InitializeComponent();
+            RegistroentradasList.Add(new RegistroEntradas() { FechaEntrada = "10 / 10 / 2022", UnidadesCompradas = 0, CostoUnitario = 0 });
 
         }
 
@@ -61,38 +58,62 @@ namespace pjContabilidadMetodosValuacion
                 if (txtUnidadesUsadas.Text.Trim().Length == 0)
                     UnidadesUsadas = 0;
                 else
-                    UnidadesUsadas = double.Parse(txtUnidadesUsadas.Text);
+                    UnidadesUsadas = int.Parse(txtUnidadesUsadas.Text);
 
 
-                DateTime FechaSalida = DTPSalida.Value;
-                FechasSalidas[FechasSalidasCont] = FechaSalida;
+                string FechaSalida = DTPSalida.Value.ToShortDateString();
 
 
-                //Operaciones correspondientes
-
-                //Costo total de unidades usadas, se deberá usar el Hashtable
-                //Se recorre el Hastable
-                foreach (DictionaryEntry UnidadesHashTable in UnidadesCompradasHash)
+                for (int i = 0; i < 100; i++)
                 {
-                    if (FechasSalidas[i].ToShortDateString() == UnidadesHashTable.Key)
+                    if (RegistroentradasList[i].FechaEntrada == FechaSalida)
                     {
-                        //Se hace el cálculo
-                        CostoUnidadesUsadas = UnidadesUsadas[ContadorUnidadesSalidas] * ((double)UnidadesHashTable.Value);
+                        //Una vez comprobadal las fechas...
 
-                        ListViewItem fila = new ListViewItem(FechasSalidas[FechasSalidasCont].ToShortDateString());
-                        fila.SubItems.Add(UnidadesUsadas[ContadorUnidadesSalidas].ToString("C"));
-                        fila.SubItems.Add("N/A");
+                        //Se comprueban el número de unidades que vayan a salir
+                        if (RegistroentradasList[i].UnidadesCompradas <= UnidadesUsadas)
+                {
+                            MessageBox.Show("No hay suficientes unidades compradas ese día para que se usen lo estipulado", "Registro de Salidas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                            txtUnidadesUsadas.Clear();
+                            break;
+                        }
+                        else
+                    {
+
+
+                            //Se restan las unidades salientes
+                            RegistroentradasList[i].UnidadesCompradas = RegistroentradasList[i].UnidadesCompradas - UnidadesUsadas;
+                            //Costo Total de las unidades utilizadas
+                            CostoUnidadesUsadas = RegistroentradasList[i].CostoUnitario * UnidadesUsadas;
+
+
+                            //Se presentan los datos...
+                            ListViewItem fila = new ListViewItem(FechaSalida);
+                            fila.SubItems.Add(UnidadesUsadas.ToString());
+                            fila.SubItems.Add(RegistroentradasList[i].CostoUnitario.ToString("C"));
                         fila.SubItems.Add(CostoUnidadesUsadas.ToString("C"));
+                            lvDatosSalidas.Items.Add(fila);
 
+
+                            //Actualizar los datos de las Unidades Compradas
+                            
+                            break;
                     }
-                    else
-                        MessageBox.Show("No se han registrado unidades en ese día");
-                    i++;
                 }
+                    else
+                    {
+                        MessageBox.Show("No se han registrado materiales en el día que se ha especicifícado", "Registro de Salidas", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                
-                FechasSalidasCont++;
-                ContadorUnidadesSalidas++;
+                        txtUnidadesUsadas.Clear();
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show(ValidaDatos(), "¡Error!");
             }
         }
 
@@ -118,14 +139,12 @@ namespace pjContabilidadMetodosValuacion
                 //Obteniendo los datos de los TextBox
 
                 //Obteniendo las fechas para comparar con las salidas
-                DateTime FechaEntrada = DTPEntrada.Value;                
-                FechasEntradas[FechasEntradasCont] = FechaEntrada;
-                Fechaentrada = FechaEntrada.ToShortDateString();
-                
+                string FechaEntrada = DTPEntrada.Value.ToShortDateString();
 
-
-
-
+                for (int i = 0; i < 100; i++)
+                {
+                    if (RegistroentradasList[i].FechaEntrada != FechaEntrada)
+                    {
                 //Haciendo las operaciones correspondientes...
                 //Para obtener las Unidades Disponibles
                 UnidadesDisponibles += (UnidadesCompradas - UnidadesUsadas);
@@ -134,45 +153,35 @@ namespace pjContabilidadMetodosValuacion
                 //Para obtener el costo de la unidades en cada transacción
                 CostoUnidadesCompradas = UnidadesCompradas * CostoUnitario;
 
-
-
                 //Almacenando los datos en la "List"
-                RegistroentradasList.Add( new RegistroEntradas() {FechaEntrada=FechaEntrada.ToShortDateString() , UnidadesCompradas=UnidadesCompradas, CostoUnitario=CostoUnitario});
-
-                //Almacenando las transacciones de compras en una HashTable
-              //  UnidadesCompradasHash.Add(FechasEntradas[ContadorTransaccionesEntrada].ToShortDateString(), UnidadesCompradas[ContadorTransaccionesEntrada]);
-
-
+                        RegistroentradasList.Add(new RegistroEntradas() { FechaEntrada = FechaEntrada, UnidadesCompradas = UnidadesCompradas, CostoUnitario = CostoUnitario });
 
 
                 //Presentando los datos de Compras en el lvDatosIngresados
-                ListViewItem fila = new ListViewItem(FechasEntradas[FechasEntradasCont].ToShortDateString());
+                        ListViewItem fila = new ListViewItem(FechaEntrada);
                 fila.SubItems.Add(UnidadesCompradas.ToString());
                 fila.SubItems.Add(CostoUnitario.ToString("C"));
                 fila.SubItems.Add(CostoUnidadesCompradas.ToString("C"));
                 lvDatosIngresados.Items.Add(fila);
 
-
-
                 //Limpiando los cuadros de texto
                 txtCostoUnitario.Clear();
                 txtUnidadesCompradas.Clear();
                 txtUnidadesCompradas.Focus();
-
-
-
-                ContadorUnidadesCompradas++;
-                ContadorUnidadesSalidas++;
-                ContadorTransaccionesEntrada++;
-                FechasEntradasCont++;
+                        break;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ya se han registrado unidades en ese día", "Registro de Entradas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                        }
+                    }
             }
             else
             {
                 MessageBox.Show(ValidaDatos(), "¡Error!");
             }
         }
-
-
 
         private string ValidaDatos()
         {
