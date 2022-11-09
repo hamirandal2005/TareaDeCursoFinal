@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,31 +12,34 @@ namespace Clases
     {
     }
 
-    public class RegistroEntradas : IEquatable<RegistroEntradas>
+    public class RegistroTransacciones
     {
-        public RegistroEntradas()
+        public RegistroTransacciones()
         {
         }
 
         //Atributos de la clase
-        public DateTime FechaEntrada { get; set; }
+        public DateTime Fecha { get; set; }
         public int UnidadesCompradas { get; set; }
         public double CostoUnitario { get; set; }
+        public double CostoUnidadesCompradas { get; set; }
+        public double UnidadesUsadas { get; set; }
 
 
         //Constructor de Entrada de materiales
-        public RegistroEntradas(DateTime fechaEntrada, int unidadesCompradas, double costoUnitario)
+        public RegistroTransacciones(DateTime fechaEntrada, int unidadesCompradas, double costoUnitario, double costoUnidadesCompradas)
         {
-            FechaEntrada = fechaEntrada;
+            Fecha = fechaEntrada;
             UnidadesCompradas = unidadesCompradas;
             CostoUnitario = costoUnitario;
+            CostoUnidadesCompradas = costoUnidadesCompradas;
         }
 
-       
-
-        public bool Equals(RegistroEntradas? other)
+        public RegistroTransacciones(DateTime FechaSalida, double unidadesUsadas, double costoUnitario)
         {
-            throw new NotImplementedException();
+            this.Fecha = FechaSalida;
+            this.CostoUnitario= costoUnitario;
+            this.UnidadesUsadas = unidadesUsadas;
         }
     }
 }
