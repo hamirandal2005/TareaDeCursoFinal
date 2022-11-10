@@ -24,6 +24,7 @@ namespace Clases
         public double CostoUnitario { get; set; }
         public double CostoUnidadesCompradas { get; set; }
         public double UnidadesUsadas { get; set; }
+        public DateTime FechaSale { get; set; }
 
 
         //Constructor de Entrada de materiales
@@ -35,9 +36,10 @@ namespace Clases
             CostoUnidadesCompradas = costoUnidadesCompradas;
         }
 
-        public RegistroTransacciones(DateTime FechaSalida, double unidadesUsadas, double costoUnitario)
+        public RegistroTransacciones(DateTime FechaTransaccion, DateTime FechaSalida, double unidadesUsadas, double costoUnitario)
         {
-            this.Fecha = FechaSalida;
+            this.Fecha = FechaTransaccion;
+            this.FechaSale = FechaSalida;
             this.CostoUnitario= costoUnitario;
             this.UnidadesUsadas = unidadesUsadas;
         }

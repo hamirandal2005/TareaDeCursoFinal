@@ -55,6 +55,7 @@ namespace pjContabilidadMetodosValuacion
                     CostoUnitarioSalida=double.Parse(txtCostoUnitarioSalida.Text); 
 
                 DateTime FechaSalida = DTPSalida.Value;
+                DateTime FechaTransaccion = DTP.Value;
 
                 if (RegistroentradasList.Count > 0)
                 {
@@ -81,7 +82,7 @@ namespace pjContabilidadMetodosValuacion
                                     //Costo Total de las unidades utilizadas
                                     CostoUnidadesUsadas = RegistroentradasList[i].CostoUnitario * UnidadesUsadas;
 
-                                    RegistrosalidasList.Add(new RegistroTransacciones() { Fecha = FechaSalida, UnidadesUsadas = UnidadesUsadas, CostoUnitario = RegistroentradasList[i].CostoUnitario });
+                                    RegistrosalidasList.Add(new RegistroTransacciones() { FechaSale=FechaTransaccion, Fecha = FechaSalida, UnidadesUsadas = UnidadesUsadas, CostoUnitario = RegistroentradasList[i].CostoUnitario });
 
                                 if (RegistroentradasList[i].UnidadesCompradas == 0)
                                 {
@@ -211,11 +212,51 @@ namespace pjContabilidadMetodosValuacion
             {
                 return "No se ha registrado el 'Costo por Unidad'";
             }
-
-
-
-
             return "";
+        }
+
+
+        private void txtUnidadesCompradas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarCajasTexto(e);
+        }
+        private void txtCostoUnitario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarCajasTextoCosto(e);
+        }
+
+        private void txtUnidadesUsadas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarCajasTexto(e);
+        }
+
+        private void txtCostoUnitarioSalida_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ValidarCajasTextoCosto(e);
+        }
+
+        private void ValidarCajasTextoCosto(KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar == 47) || (e.KeyChar >= 58 && e.KeyChar <= 255)) {
+                MessageBox.Show("¡Solo son permitidos números!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void btnFinalizarPeriodo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ValidarCajasTexto(KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("¡Solo son permitidos números!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                e.Handled = true;
+                return;
+            }
         }
         private void frmIdentificacionEspecifica_Load(object sender, EventArgs e)
         {
@@ -241,8 +282,9 @@ namespace pjContabilidadMetodosValuacion
             lvDatosSalidas.Items.Clear();
             foreach (RegistroTransacciones Refresh in RegistrosalidasList)
             {
-                ListViewItem Salidas = new ListViewItem(Refresh.Fecha.ToShortDateString());
+                ListViewItem Salidas = new ListViewItem(Refresh.FechaSale.ToShortDateString());
                 Salidas.SubItems.Add(Refresh.UnidadesUsadas.ToString());
+                Salidas.SubItems.Add(Refresh.Fecha.ToShortDateString());
                 Salidas.SubItems.Add(Refresh.CostoUnitario.ToString("C"));
                 Salidas.SubItems.Add((Refresh.UnidadesUsadas * Refresh.CostoUnitario).ToString("C"));
                 lvDatosSalidas.Items.Add(Salidas);
