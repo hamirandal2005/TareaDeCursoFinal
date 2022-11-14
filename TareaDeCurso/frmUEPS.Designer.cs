@@ -42,7 +42,7 @@
             this.gbSalidas = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txttxtUsadas = new System.Windows.Forms.TextBox();
+            this.txtUsadas = new System.Windows.Forms.TextBox();
             this.DTPUsadas = new System.Windows.Forms.DateTimePicker();
             this.btnRegistrarUsadas = new System.Windows.Forms.Button();
             this.gbDatosIngresados = new System.Windows.Forms.GroupBox();
@@ -50,13 +50,13 @@
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.lvUnidadesUsadas = new System.Windows.Forms.ListView();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbCompras.SuspendLayout();
             this.gbSalidas.SuspendLayout();
@@ -146,6 +146,7 @@
             this.txtCompras.Name = "txtCompras";
             this.txtCompras.Size = new System.Drawing.Size(88, 25);
             this.txtCompras.TabIndex = 2;
+            this.txtCompras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCompras_KeyPress);
             // 
             // btnRegistrarCompras
             // 
@@ -158,6 +159,7 @@
             this.btnRegistrarCompras.TabIndex = 0;
             this.btnRegistrarCompras.Text = "Registrar";
             this.btnRegistrarCompras.UseVisualStyleBackColor = true;
+            this.btnRegistrarCompras.Click += new System.EventHandler(this.btnRegistrarCompras_Click);
             // 
             // DTPCompras
             // 
@@ -186,13 +188,14 @@
             this.txtCostoCompras.Name = "txtCostoCompras";
             this.txtCostoCompras.Size = new System.Drawing.Size(88, 25);
             this.txtCostoCompras.TabIndex = 3;
+            this.txtCostoCompras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCostoCompras_KeyPress);
             // 
             // gbSalidas
             // 
             this.gbSalidas.BackColor = System.Drawing.Color.Transparent;
             this.gbSalidas.Controls.Add(this.label6);
             this.gbSalidas.Controls.Add(this.label7);
-            this.gbSalidas.Controls.Add(this.txttxtUsadas);
+            this.gbSalidas.Controls.Add(this.txtUsadas);
             this.gbSalidas.Controls.Add(this.DTPUsadas);
             this.gbSalidas.Controls.Add(this.btnRegistrarUsadas);
             this.gbSalidas.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -225,13 +228,14 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Unidades Utilizadas : ";
             // 
-            // txttxtUsadas
+            // txtUsadas
             // 
-            this.txttxtUsadas.Location = new System.Drawing.Point(339, 27);
-            this.txttxtUsadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txttxtUsadas.Name = "txttxtUsadas";
-            this.txttxtUsadas.Size = new System.Drawing.Size(88, 25);
-            this.txttxtUsadas.TabIndex = 8;
+            this.txtUsadas.Location = new System.Drawing.Point(339, 27);
+            this.txtUsadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsadas.Name = "txtUsadas";
+            this.txtUsadas.Size = new System.Drawing.Size(88, 25);
+            this.txtUsadas.TabIndex = 8;
+            this.txtUsadas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsadas_KeyPress);
             // 
             // DTPUsadas
             // 
@@ -254,6 +258,7 @@
             this.btnRegistrarUsadas.TabIndex = 4;
             this.btnRegistrarUsadas.Text = "Registrar";
             this.btnRegistrarUsadas.UseVisualStyleBackColor = true;
+            this.btnRegistrarUsadas.Click += new System.EventHandler(this.btnRegistrarUsadas_Click);
             // 
             // gbDatosIngresados
             // 
@@ -302,6 +307,12 @@
             this.columnHeader3.Text = "C/U";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Costo Total";
+            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader7.Width = 80;
+            // 
             // lvUnidadesUsadas
             // 
             this.lvUnidadesUsadas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -314,7 +325,7 @@
             this.lvUnidadesUsadas.Location = new System.Drawing.Point(0, 22);
             this.lvUnidadesUsadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvUnidadesUsadas.Name = "lvUnidadesUsadas";
-            this.lvUnidadesUsadas.Size = new System.Drawing.Size(351, 149);
+            this.lvUnidadesUsadas.Size = new System.Drawing.Size(362, 149);
             this.lvUnidadesUsadas.TabIndex = 8;
             this.lvUnidadesUsadas.UseCompatibleStateImageBehavior = false;
             this.lvUnidadesUsadas.View = System.Windows.Forms.View.Details;
@@ -335,11 +346,11 @@
             this.columnHeader6.Text = "C/U";
             this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // columnHeader7
+            // columnHeader8
             // 
-            this.columnHeader7.Text = "Costo Total";
-            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader7.Width = 80;
+            this.columnHeader8.Text = "Costo Total";
+            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader8.Width = 100;
             // 
             // groupBox1
             // 
@@ -347,16 +358,10 @@
             this.groupBox1.Font = new System.Drawing.Font("Sitka Banner", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(377, 260);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 185);
+            this.groupBox1.Size = new System.Drawing.Size(370, 185);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Usadas";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Costo Total";
-            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader8.Width = 100;
             // 
             // frmUEPS
             // 
@@ -400,7 +405,7 @@
         private GroupBox gbSalidas;
         private Label label6;
         private Label label7;
-        private TextBox txttxtUsadas;
+        private TextBox txtUsadas;
         private DateTimePicker DTPUsadas;
         private Button btnRegistrarUsadas;
         private GroupBox gbDatosIngresados;

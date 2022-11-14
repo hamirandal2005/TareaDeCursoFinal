@@ -42,14 +42,7 @@ namespace pjContabilidadMetodosValuacion
             {
                 //Validando los cuadro de textos de "Datos Salidas"
 
-                if (txtUnidadesUsadas.Text.Trim().Length == 0)
-                    UnidadesUsadas = 0;
-                else
                     UnidadesUsadas = int.Parse(txtUnidadesUsadas.Text);
-
-                if (txtCostoUnitarioSalida.Text.Trim().Length == 0)
-                    CostoUnitarioSalida = 0;
-                else
                     CostoUnitarioSalida=double.Parse(txtCostoUnitarioSalida.Text); 
 
                 DateTime FechaSalida = DTPSalida.Value;
@@ -130,17 +123,7 @@ namespace pjContabilidadMetodosValuacion
         {
             if (ValidaDatos() == "")
             {
-
-                //Validando los cuadro de Texto de "Datos Ingresados"
-                if (txtUnidadesCompradas.Text.Trim().Length == 0)
-                    UnidadesCompradas = 0;
-                else
                     UnidadesCompradas = int.Parse(txtUnidadesCompradas.Text);
-
-
-                if (txtCostoUnitario.Text.Trim().Length == 0)
-                    CostoUnitario = 0;
-                else
                     CostoUnitario = double.Parse(txtCostoUnitario.Text);
 
 
@@ -234,7 +217,7 @@ namespace pjContabilidadMetodosValuacion
         private void ValidarCajasTextoCosto(KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar == 47) || (e.KeyChar >= 58 && e.KeyChar <= 255)) {
-                MessageBox.Show("¡Solo son permitidos números!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("¡Solo son permitidos números positivos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 e.Handled = true;
                 return;
             }
@@ -249,7 +232,7 @@ namespace pjContabilidadMetodosValuacion
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
-                MessageBox.Show("¡Solo son permitidos números!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("¡Solo son permitidos números enteros y positivos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 e.Handled = true;
                 return;
             }
@@ -258,8 +241,6 @@ namespace pjContabilidadMetodosValuacion
         {
 
         }
-
-
         public void ActualizarDatosEntradas()
         {
             lvDatosIngresados.Items.Clear();

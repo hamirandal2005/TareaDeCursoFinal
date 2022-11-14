@@ -6,8 +6,10 @@
         frmCostoPromedioSimple formularioValuacionPromedioSimple;
         frmMetodoPuntoAltoBajo formularioPuntoAltoBajo;
         frmPEPS formularioPEPS;
+        frmUEPS formularioUEPS;
         frmIdentificacionEspecifica formularioIdentificacionEspecifica;
         frmCostoPromedioPonderado formularioPonderado;
+
 
 
 
@@ -18,6 +20,7 @@
             formularioValuacionPromedioSimple = new frmCostoPromedioSimple();
             formularioPuntoAltoBajo = new frmMetodoPuntoAltoBajo();
             formularioPEPS = new frmPEPS();
+            formularioUEPS = new frmUEPS();
             formularioIdentificacionEspecifica = new frmIdentificacionEspecifica();
             formularioPonderado = new frmCostoPromedioPonderado();
             formularioIdentificacionEspecifica = new frmIdentificacionEspecifica();
@@ -137,7 +140,7 @@
 
         private void btnUEPS_Click(object sender, EventArgs e)
         {
-            
+            formularioUEPS.ShowDialog();
         }
 
         private void btnPEPS_Click(object sender, EventArgs e)
@@ -153,6 +156,11 @@
         private void btnEstadistico_Click(object sender, EventArgs e)
         {
             formularioMetodoEstadistico.ShowDialog();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
