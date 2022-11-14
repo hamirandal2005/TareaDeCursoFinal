@@ -22,4 +22,21 @@ namespace pjContabilidadMetodosValuacion
             InitializeComponent();
         }
     }
+
+    private string ValidaDatos()
+    {
+        if ((txtCompras.Text.Trim().Length == 0) && (txtUsadas.Text.Trim().Length == 0))
+        {
+            return "No se han registrado Unidades, ni de entradas y/o salidas";
+        }
+        else if (txtUnidadesUsadas.Text.Trim().Length > 0 && txtCostoUnitarioSalida.Text.Trim().Length == 0)
+        {
+            return "No se ha registrado el costo unitario al que se desea que salgan las unidades";
+        }
+        else if ((txtUnidadesCompradas.Text.Trim().Length > 0) && (txtCostoUnitario.Text.Trim().Length == 0))
+        {
+            return "No se ha registrado el 'Costo por Unidad'";
+        }
+        return "";
+    }
 }
