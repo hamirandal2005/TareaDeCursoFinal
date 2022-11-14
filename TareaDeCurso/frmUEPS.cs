@@ -52,14 +52,14 @@ namespace pjContabilidadMetodosValuacion
         }
         private void btnRegistrarUsadas_Click(object sender, EventArgs e)
         {
-            int usadas = 0;
+            int usadas = 0, temporalU=0;
             if (ValidaDatos() == "")
             {
                 usadas = int.Parse(txtUsadas.Text);
-
+                temporalU = int.Parse(txtUsadas.Text);
                 if (usadas <= UnidadesTotales)
                 {
-                    if (usadas == Compradas.Peek().UnidadesCompradas)
+                    if (usadas <= Compradas.Peek().UnidadesCompradas)
                     {
                         Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, int.Parse(txtUsadas.Text), Compradas.Peek().CostoUnitario));
                         Compradas.Pop();
@@ -71,13 +71,20 @@ namespace pjContabilidadMetodosValuacion
 
                     }else if(usadas > Compradas.Peek().UnidadesCompradas)
                     {
-                        while(usadas != 0)
+                        while(usadas > 0)
                         {
-                            if (Compradas.Peek().UnidadesCompradas < usadas)
+                            Compradas.Peek().UnidadesCompradas -= usadas;
+                            UnidadesTotales -= usadas;
+                            Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, int.Parse(txtUsadas.Text), Compradas.Peek().CostoUnitario));
+                            usadas -= Compradas.Peek().UnidadesCompradas;
+                            if (Compradas.Peek().UnidadesCompradas <= 0)
                             {
-
+                                Compradas.Pop();
                             }
                         }
+                        UnidadesTotales -= usadas;
+                        ActualizarCompras();
+                        ActualizarUsadas();
                     }
                 }
                 else
