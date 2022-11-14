@@ -25,8 +25,6 @@ namespace pjContabilidadMetodosValuacion
         List<RegistroTransacciones> RegistrosalidasList = new();
 
         //****************************************************************************************
-
-        //Arrays sobre las unidades que se van comprando o utilizando (Cambiar por ArrayList o similar para más eficiencia)
         int UnidadesCompradas;
         int UnidadesUsadas;
         //Variables para almacenar los costos
@@ -118,6 +116,7 @@ namespace pjContabilidadMetodosValuacion
                 {
                     MessageBox.Show("Aún no se han registrado unidades", "Registro de Salidas", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtUnidadesUsadas.Clear();
+                    txtCostoUnitarioSalida.Clear();
                 }
             }
             else
@@ -200,9 +199,6 @@ namespace pjContabilidadMetodosValuacion
             if ((txtUnidadesCompradas.Text.Trim().Length == 0) && (txtUnidadesUsadas.Text.Trim().Length == 0))
             {
                 return "No se han registrado Unidades, ni de entradas y/o salidas";
-
-
-
             }
             else if (txtUnidadesUsadas.Text.Trim().Length > 0 && txtCostoUnitarioSalida.Text.Trim().Length == 0)
             {
