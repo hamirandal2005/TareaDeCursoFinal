@@ -269,7 +269,7 @@
             this.gbDatosIngresados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbDatosIngresados.Name = "gbDatosIngresados";
             this.gbDatosIngresados.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbDatosIngresados.Size = new System.Drawing.Size(359, 185);
+            this.gbDatosIngresados.Size = new System.Drawing.Size(376, 185);
             this.gbDatosIngresados.TabIndex = 16;
             this.gbDatosIngresados.TabStop = false;
             this.gbDatosIngresados.Text = "Datos Compras";
@@ -281,12 +281,12 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader7});
-            this.lvUnidadesCompradas.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lvUnidadesCompradas.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lvUnidadesCompradas.GridLines = true;
             this.lvUnidadesCompradas.Location = new System.Drawing.Point(6, 22);
             this.lvUnidadesCompradas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvUnidadesCompradas.Name = "lvUnidadesCompradas";
-            this.lvUnidadesCompradas.Size = new System.Drawing.Size(345, 149);
+            this.lvUnidadesCompradas.Size = new System.Drawing.Size(365, 149);
             this.lvUnidadesCompradas.TabIndex = 7;
             this.lvUnidadesCompradas.UseCompatibleStateImageBehavior = false;
             this.lvUnidadesCompradas.View = System.Windows.Forms.View.Details;
@@ -300,7 +300,7 @@
             // 
             this.columnHeader2.Text = "Unidades Compradas";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 120;
+            this.columnHeader2.Width = 140;
             // 
             // columnHeader3
             // 
@@ -320,12 +320,12 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader8});
-            this.lvUnidadesUsadas.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lvUnidadesUsadas.Font = new System.Drawing.Font("Sitka Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lvUnidadesUsadas.GridLines = true;
-            this.lvUnidadesUsadas.Location = new System.Drawing.Point(0, 22);
+            this.lvUnidadesUsadas.Location = new System.Drawing.Point(15, 24);
             this.lvUnidadesUsadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvUnidadesUsadas.Name = "lvUnidadesUsadas";
-            this.lvUnidadesUsadas.Size = new System.Drawing.Size(362, 149);
+            this.lvUnidadesUsadas.Size = new System.Drawing.Size(384, 149);
             this.lvUnidadesUsadas.TabIndex = 8;
             this.lvUnidadesUsadas.UseCompatibleStateImageBehavior = false;
             this.lvUnidadesUsadas.View = System.Windows.Forms.View.Details;
@@ -339,7 +339,7 @@
             // 
             this.columnHeader5.Text = "Unidades Utilizadas";
             this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 115;
+            this.columnHeader5.Width = 140;
             // 
             // columnHeader6
             // 
@@ -356,9 +356,9 @@
             // 
             this.groupBox1.Controls.Add(this.lvUnidadesUsadas);
             this.groupBox1.Font = new System.Drawing.Font("Sitka Banner", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(410, 260);
+            this.groupBox1.Location = new System.Drawing.Point(394, 260);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(370, 185);
+            this.groupBox1.Size = new System.Drawing.Size(405, 185);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Usadas";
