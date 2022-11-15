@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Clases;
+using System.Linq.Expressions;
 
 namespace pjContabilidadMetodosValuacion
 {
@@ -26,26 +27,39 @@ namespace pjContabilidadMetodosValuacion
             bool Confirmacion = true;
             if (ValidaDatos() == "")
             {
-                foreach(MatEntradaSalida Check in Compradas)
+
+                try
                 {
-                    if(Check.CostoUnitario == double.Parse(txtCostoCompras.Text))
+                    if(int.Parse(txtCompras.Text) > 0 && double.Parse(txtCostoCompras.Text) > 0)
                     {
-                        Check.UnidadesCompradas += int.Parse(txtCompras.Text);
+                        foreach (MatEntradaSalida Check in Compradas)
+                        {
+                            if (Check.CostoUnitario == double.Parse(txtCostoCompras.Text))
+                            {
+                            Check.UnidadesCompradas += int.Parse(txtCompras.Text);
+                            UnidadesTotales += int.Parse(txtCompras.Text);
+                            Confirmacion = false;
+                            ActualizarCompras();
+                            }
+                        }
+
+                        if (Confirmacion)
+                        {
+                        Compradas.Push(new MatEntradaSalida(DTPCompras.Value, int.Parse(txtCompras.Text), double.Parse(txtCostoCompras.Text)));
                         UnidadesTotales += int.Parse(txtCompras.Text);
-                        Confirmacion = false;
                         ActualizarCompras();
-                    }
-                }
+                        }
 
-                if (Confirmacion)
+                        txtCompras.Clear();
+                        txtCostoCompras.Clear();
+                    }else
+                        MessageBox.Show("Los datos no pueden ser negativos", "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (FormatException)
                 {
-                    Compradas.Push(new MatEntradaSalida(DTPCompras.Value, int.Parse(txtCompras.Text), double.Parse(txtCostoCompras.Text)));
-                    UnidadesTotales += int.Parse(txtCompras.Text);
-                    ActualizarCompras();
+                    MessageBox.Show("Ingrese las unidades y su costo en un formato valido", "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
-
-                txtCompras.Clear();
-                txtCostoCompras.Clear();
             }
             else
                 MessageBox.Show(ValidaDatos(), "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -55,53 +69,71 @@ namespace pjContabilidadMetodosValuacion
             int usadas = 0, temporalU=0, RegistroUsadas=0;
             if (ValidaDatos() == "")
             {
-                usadas = int.Parse(txtUsadas.Text);
-                temporalU = int.Parse(txtUsadas.Text);
-                if (usadas <= UnidadesTotales)
+                try
                 {
-                    UnidadesTotales -= usadas;
-
-                    if (usadas <= Compradas.Peek().UnidadesCompradas)
+                    usadas = int.Parse(txtUsadas.Text);
+                    if(usadas > 0)
                     {
-                        if(usadas == Compradas.Peek().UnidadesCompradas)
+                        temporalU = int.Parse(txtUsadas.Text);
+                        if (usadas <= UnidadesTotales)
                         {
-                            Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, int.Parse(txtUsadas.Text), Compradas.Peek().CostoUnitario));
-                            Compradas.Pop();
-                            usadas -= int.Parse(txtUsadas.Text);
-                        }else if (usadas < Compradas.Peek().UnidadesCompradas)
-                        {
-                            Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, int.Parse(txtUsadas.Text), Compradas.Peek().CostoUnitario));
-                            usadas -= int.Parse(txtUsadas.Text);
-                        }
-                        ActualizarCompras();
-                        ActualizarUsadas();
-                        txtUsadas.Clear();
-
-                    }else if(usadas > Compradas.Peek().UnidadesCompradas)
-                    {
-                        while(usadas > 0)
-                        {
-                            RegistroUsadas = Compradas.Peek().UnidadesCompradas;
-                            usadas -= Compradas.Peek().UnidadesCompradas;
-                            Compradas.Peek().UnidadesCompradas -= temporalU;
-                            if (Compradas.Peek().UnidadesCompradas <= 0)
+                            UnidadesTotales -= usadas;
+                                
+                            if (usadas <= Compradas.Peek().UnidadesCompradas)
                             {
-                                Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, RegistroUsadas, Compradas.Peek().CostoUnitario));
-                                Compradas.Pop();
-                            }
-                            else
-                                Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, temporalU, Compradas.Peek().CostoUnitario));
+                                if (usadas == Compradas.Peek().UnidadesCompradas)
+                                {
+                                    Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, int.Parse(txtUsadas.Text), Compradas.Peek().CostoUnitario));
+                                    Compradas.Pop();
+                                    usadas -= int.Parse(txtUsadas.Text);
+                                }
+                                else if (usadas < Compradas.Peek().UnidadesCompradas)
+                                {
+                                Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, int.Parse(txtUsadas.Text), Compradas.Peek().CostoUnitario));
+                                Compradas.Peek().UnidadesCompradas -= usadas;
+                                }
+                                ActualizarCompras();
+                                ActualizarUsadas();
+                                txtUsadas.Clear();
 
-                            temporalU = usadas;
+                            }
+                            else if (usadas > Compradas.Peek().UnidadesCompradas)
+                            {
+                                while (usadas > 0)
+                                {
+                                    RegistroUsadas = Compradas.Peek().UnidadesCompradas;
+                                    usadas -= Compradas.Peek().UnidadesCompradas;
+                                    Compradas.Peek().UnidadesCompradas -= temporalU;
+                                    if (Compradas.Peek().UnidadesCompradas <= 0)
+                                    {
+                                        Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, RegistroUsadas, Compradas.Peek().CostoUnitario));
+                                        Compradas.Pop();
+                                    }
+                                    else
+                                        Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, temporalU, Compradas.Peek().CostoUnitario));
+
+                                    temporalU = usadas;
+                                }
+                                    ActualizarCompras();
+                                    ActualizarUsadas();
+                                    txtUsadas.Clear();
+                            }
                         }
-                        ActualizarCompras();
-                        ActualizarUsadas();
-                        txtUsadas.Clear();
+                        else
+                            MessageBox.Show("¡No hay unidades suficientes!", "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                    else
+                        MessageBox.Show("¡Debe ser un valor entero y positivos!", "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
-                else
-                    MessageBox.Show("¡No hay unidades suficientes!", "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }else
+                catch(FormatException)
+                {
+                    MessageBox.Show("Ingrese las unidades en un formato valido", "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+            }
+            else
                 MessageBox.Show(ValidaDatos(), "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private string ValidaDatos()
@@ -140,39 +172,6 @@ namespace pjContabilidadMetodosValuacion
                 Usadas.SubItems.Add((Refresh.UnidadesCompradas * Refresh.CostoUnitario).ToString("C"));
                 lvUnidadesUsadas.Items.Add(Usadas);
             }
-        }
-        private void ValidarCajasTextoCosto(KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar == 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("¡Solo son permitidos números positivos!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                e.Handled = true;
-                return;
-            }
-        }
-        private void ValidarCajasTexto(KeyPressEventArgs e)
-        {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 45) || (e.KeyChar >= 58 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("¡Solo son permitidos números enteros!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txtCostoCompras_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ValidarCajasTextoCosto(e);
-        }
-
-        private void txtCompras_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ValidarCajasTexto(e);
-        }
-
-        private void txtUsadas_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ValidarCajasTexto(e);
         }
     }
 }

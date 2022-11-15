@@ -146,7 +146,6 @@
             this.txtCompras.Name = "txtCompras";
             this.txtCompras.Size = new System.Drawing.Size(88, 25);
             this.txtCompras.TabIndex = 2;
-            this.txtCompras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCompras_KeyPress);
             // 
             // btnRegistrarCompras
             // 
@@ -188,7 +187,6 @@
             this.txtCostoCompras.Name = "txtCostoCompras";
             this.txtCostoCompras.Size = new System.Drawing.Size(88, 25);
             this.txtCostoCompras.TabIndex = 3;
-            this.txtCostoCompras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCostoCompras_KeyPress);
             // 
             // gbSalidas
             // 
@@ -235,7 +233,6 @@
             this.txtUsadas.Name = "txtUsadas";
             this.txtUsadas.Size = new System.Drawing.Size(88, 25);
             this.txtUsadas.TabIndex = 8;
-            this.txtUsadas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsadas_KeyPress);
             // 
             // DTPUsadas
             // 
