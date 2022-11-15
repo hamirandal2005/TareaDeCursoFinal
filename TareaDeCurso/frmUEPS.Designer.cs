@@ -356,7 +356,7 @@
             // 
             this.groupBox1.Controls.Add(this.lvUnidadesUsadas);
             this.groupBox1.Font = new System.Drawing.Font("Sitka Banner", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(377, 260);
+            this.groupBox1.Location = new System.Drawing.Point(410, 260);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(370, 185);
             this.groupBox1.TabIndex = 17;

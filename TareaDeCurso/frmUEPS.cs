@@ -52,19 +52,27 @@ namespace pjContabilidadMetodosValuacion
         }
         private void btnRegistrarUsadas_Click(object sender, EventArgs e)
         {
-            int usadas = 0, temporalU=0;
+            int usadas = 0, temporalU=0, RegistroUsadas=0;
             if (ValidaDatos() == "")
             {
                 usadas = int.Parse(txtUsadas.Text);
                 temporalU = int.Parse(txtUsadas.Text);
                 if (usadas <= UnidadesTotales)
                 {
+                    UnidadesTotales -= usadas;
+
                     if (usadas <= Compradas.Peek().UnidadesCompradas)
                     {
-                        Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, int.Parse(txtUsadas.Text), Compradas.Peek().CostoUnitario));
-                        Compradas.Pop();
-                        usadas -= int.Parse(txtUsadas.Text);
-                        UnidadesTotales -= usadas;
+                        if(usadas == Compradas.Peek().UnidadesCompradas)
+                        {
+                            Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, int.Parse(txtUsadas.Text), Compradas.Peek().CostoUnitario));
+                            Compradas.Pop();
+                            usadas -= int.Parse(txtUsadas.Text);
+                        }else if (usadas < Compradas.Peek().UnidadesCompradas)
+                        {
+                            Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, int.Parse(txtUsadas.Text), Compradas.Peek().CostoUnitario));
+                            usadas -= int.Parse(txtUsadas.Text);
+                        }
                         ActualizarCompras();
                         ActualizarUsadas();
                         txtUsadas.Clear();
@@ -73,18 +81,22 @@ namespace pjContabilidadMetodosValuacion
                     {
                         while(usadas > 0)
                         {
-                            Compradas.Peek().UnidadesCompradas -= usadas;
-                            UnidadesTotales -= usadas;
-                            Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, int.Parse(txtUsadas.Text), Compradas.Peek().CostoUnitario));
+                            RegistroUsadas = Compradas.Peek().UnidadesCompradas;
                             usadas -= Compradas.Peek().UnidadesCompradas;
+                            Compradas.Peek().UnidadesCompradas -= temporalU;
                             if (Compradas.Peek().UnidadesCompradas <= 0)
                             {
+                                Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, RegistroUsadas, Compradas.Peek().CostoUnitario));
                                 Compradas.Pop();
                             }
+                            else
+                                Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, temporalU, Compradas.Peek().CostoUnitario));
+
+                            temporalU = usadas;
                         }
-                        UnidadesTotales -= usadas;
                         ActualizarCompras();
                         ActualizarUsadas();
+                        txtUsadas.Clear();
                     }
                 }
                 else
