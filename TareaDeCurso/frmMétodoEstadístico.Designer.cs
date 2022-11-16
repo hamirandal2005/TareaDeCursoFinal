@@ -37,8 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cboMes = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.ttMensajeVariable = new System.Windows.Forms.ToolTip(this.components);
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.ttMensajeVariable = new System.Windows.Forms.ToolTip(this.components);
             this.lvDatos = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
@@ -153,10 +153,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mes :";
             // 
-            // ttMensajeVariable
-            // 
-            this.ttMensajeVariable.IsBalloon = true;
-            // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.White;
@@ -170,6 +166,10 @@
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // ttMensajeVariable
+            // 
+            this.ttMensajeVariable.IsBalloon = true;
             // 
             // lvDatos
             // 
@@ -301,7 +301,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(90)))));
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(420, 57);
+            this.panel2.Location = new System.Drawing.Point(399, 57);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(506, 54);
             this.panel2.TabIndex = 10;
