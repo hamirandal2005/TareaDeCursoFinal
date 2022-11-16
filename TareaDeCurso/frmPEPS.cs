@@ -57,7 +57,6 @@ namespace pjContabilidadMetodosValuacion
                         return;
                     }
                 }
-                
                 else
                 {
                     MessageBox.Show("Ingrese un valor mayor a 0", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -208,6 +207,7 @@ namespace pjContabilidadMetodosValuacion
             lblUnidadesCompradas.Text = unidades.ToString();
 
             gbTotales.Visible = true;
+            pTotales.Visible = true;
         }
     }
 }
