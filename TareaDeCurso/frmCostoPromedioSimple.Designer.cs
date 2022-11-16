@@ -64,6 +64,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnMenú = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -425,6 +426,21 @@
             this.pictureBox2.TabIndex = 33;
             this.pictureBox2.TabStop = false;
             // 
+            // btnMenú
+            // 
+            this.btnMenú.AutoSize = true;
+            this.btnMenú.BackColor = System.Drawing.Color.White;
+            this.btnMenú.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMenú.ForeColor = System.Drawing.Color.Black;
+            this.btnMenú.Location = new System.Drawing.Point(972, 614);
+            this.btnMenú.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMenú.Name = "btnMenú";
+            this.btnMenú.Size = new System.Drawing.Size(82, 33);
+            this.btnMenú.TabIndex = 34;
+            this.btnMenú.Text = "Menú";
+            this.btnMenú.UseVisualStyleBackColor = false;
+            this.btnMenú.Click += new System.EventHandler(this.btnMenú_Click);
+            // 
             // frmCostoPromedioSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -432,6 +448,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(36)))), ((int)(((byte)(63)))));
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.Captura_de_pantalla__35_;
             this.ClientSize = new System.Drawing.Size(1249, 676);
+            this.Controls.Add(this.btnMenú);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
@@ -457,6 +474,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -496,5 +514,6 @@
         private Panel panel7;
         private Panel panel6;
         private PictureBox pictureBox2;
+        private Button btnMenú;
     }
 }

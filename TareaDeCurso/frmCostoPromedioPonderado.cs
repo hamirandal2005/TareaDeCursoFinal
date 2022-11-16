@@ -69,5 +69,13 @@ namespace pjContabilidadMetodosValuacion
 
 
         }
+
+        private void btnMenú_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Hide();
+            frmPrincipal Menu = new frmPrincipal();
+            Menu.ShowDialog();
+        }
     }
 }
