@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mtbNivelActividad = new System.Windows.Forms.MaskedTextBox();
             this.mtbCostoPeriodo = new System.Windows.Forms.MaskedTextBox();
@@ -60,6 +61,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnMenú = new System.Windows.Forms.Button();
+            this.Tmensaje = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.gbTasaVariable.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -95,16 +98,16 @@
             this.mtbNivelActividad.Location = new System.Drawing.Point(622, 32);
             this.mtbNivelActividad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbNivelActividad.Name = "mtbNivelActividad";
-            this.mtbNivelActividad.Size = new System.Drawing.Size(76, 29);
-            this.mtbNivelActividad.TabIndex = 5;
+            this.mtbNivelActividad.Size = new System.Drawing.Size(76, 25);
+            this.mtbNivelActividad.TabIndex = 3;
             // 
             // mtbCostoPeriodo
             // 
             this.mtbCostoPeriodo.Location = new System.Drawing.Point(353, 31);
             this.mtbCostoPeriodo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbCostoPeriodo.Name = "mtbCostoPeriodo";
-            this.mtbCostoPeriodo.Size = new System.Drawing.Size(76, 29);
-            this.mtbCostoPeriodo.TabIndex = 4;
+            this.mtbCostoPeriodo.Size = new System.Drawing.Size(76, 25);
+            this.mtbCostoPeriodo.TabIndex = 2;
             // 
             // btnRegistrar
             // 
@@ -127,7 +130,7 @@
             this.label4.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(451, 36);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 23);
+            this.label4.Size = new System.Drawing.Size(130, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "Nivel de actividad : ";
             // 
@@ -135,9 +138,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(178, 36);
+            this.label3.Location = new System.Drawing.Point(190, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 23);
+            this.label3.Size = new System.Drawing.Size(129, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Costo del periodo : ";
             // 
@@ -160,8 +163,9 @@
             this.cbMes.Location = new System.Drawing.Point(81, 31);
             this.cbMes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMes.Name = "cbMes";
-            this.cbMes.Size = new System.Drawing.Size(91, 32);
+            this.cbMes.Size = new System.Drawing.Size(103, 28);
             this.cbMes.TabIndex = 1;
+            this.cbMes.Text = "(Seleccione)";
             // 
             // label2
             // 
@@ -169,7 +173,7 @@
             this.label2.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(25, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 23);
+            this.label2.Size = new System.Drawing.Size(45, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mes : ";
             // 
@@ -238,7 +242,7 @@
             this.lblTasaVariable.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTasaVariable.Location = new System.Drawing.Point(163, 31);
             this.lblTasaVariable.Name = "lblTasaVariable";
-            this.lblTasaVariable.Size = new System.Drawing.Size(59, 23);
+            this.lblTasaVariable.Size = new System.Drawing.Size(46, 18);
             this.lblTasaVariable.TabIndex = 7;
             this.lblTasaVariable.Text = "label5";
             // 
@@ -249,7 +253,7 @@
             this.label6.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(19, 31);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 23);
+            this.label6.Size = new System.Drawing.Size(99, 18);
             this.label6.TabIndex = 8;
             this.label6.Text = "Tasa variable : ";
             // 
@@ -282,7 +286,7 @@
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(82, 33);
-            this.btnLimpiar.TabIndex = 10;
+            this.btnLimpiar.TabIndex = 5;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -293,7 +297,7 @@
             this.label7.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(19, 87);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 23);
+            this.label7.Size = new System.Drawing.Size(77, 18);
             this.label7.TabIndex = 10;
             this.label7.Text = "Costo fijo : ";
             // 
@@ -303,7 +307,7 @@
             this.lblCostoFijo.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCostoFijo.Location = new System.Drawing.Point(163, 87);
             this.lblCostoFijo.Name = "lblCostoFijo";
-            this.lblCostoFijo.Size = new System.Drawing.Size(59, 23);
+            this.lblCostoFijo.Size = new System.Drawing.Size(46, 18);
             this.lblCostoFijo.TabIndex = 9;
             this.lblCostoFijo.Text = "label5";
             // 
@@ -410,12 +414,27 @@
             this.panel7.Size = new System.Drawing.Size(370, 5);
             this.panel7.TabIndex = 17;
             // 
+            // btnMenú
+            // 
+            this.btnMenú.AutoSize = true;
+            this.btnMenú.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMenú.ForeColor = System.Drawing.Color.Black;
+            this.btnMenú.Location = new System.Drawing.Point(982, 527);
+            this.btnMenú.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMenú.Name = "btnMenú";
+            this.btnMenú.Size = new System.Drawing.Size(82, 33);
+            this.btnMenú.TabIndex = 6;
+            this.btnMenú.Text = "Menú";
+            this.btnMenú.UseVisualStyleBackColor = true;
+            this.btnMenú.Click += new System.EventHandler(this.btnMenú_Click);
+            // 
             // frmMetodoPuntoAltoBajo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.FondoAmarillo;
             this.ClientSize = new System.Drawing.Size(1208, 658);
+            this.Controls.Add(this.btnMenú);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -445,6 +464,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -481,5 +501,7 @@
         private Panel panel5;
         private Panel panel6;
         private Panel panel7;
+        private Button btnMenú;
+        private ToolTip Tmensaje;
     }
 }

@@ -21,6 +21,8 @@ namespace pjContabilidadMetodosValuacion
         public frmMetodoPuntoAltoBajo()
         {
             InitializeComponent();
+            this.Tmensaje.SetToolTip(this.mtbCostoPeriodo, "Solo números mayores que 0");
+            this.Tmensaje.SetToolTip(this.mtbNivelActividad, "Solo números mayores que 0");
         }
         public void iniciar() //Pruebas
         {
@@ -39,9 +41,9 @@ namespace pjContabilidadMetodosValuacion
         }
         private void frmMetodoPuntoAltoBajo_Load(object sender, EventArgs e)
         {
+
             lblCostoFijo.Text = "0.00";
             lblTasaVariable.Text = "0.00";
-
             lvInfo.Items.Clear();
             lvAltoBajo.Visible = false;
             for (int i = 0; i < altoBajo.Meses.Length; i++)
@@ -58,7 +60,7 @@ namespace pjContabilidadMetodosValuacion
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            iniciar();
+            //iniciar();
             Mes a = new Mes();
             a.Nombre = cbMes.Text;
             try
@@ -68,50 +70,61 @@ namespace pjContabilidadMetodosValuacion
             }
             catch (FormatException)
             {
-                MessageBox.Show("Ingrese un valor entero", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Rellene las casillas con información valida", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtbCostoPeriodo.Clear();
                 mtbNivelActividad.Clear();
                 return;
             }
-            if (double.Parse(mtbCostoPeriodo.Text) > 0 && double.Parse(mtbNivelActividad.Text) > 0)
+            if (double.Parse(mtbCostoPeriodo.Text) > 0 && int.Parse(mtbNivelActividad.Text) > 0)
             {
-                for (int i = 0; i < altoBajo.Meses.Length; i++)
+                if (double.Parse(mtbCostoPeriodo.Text) < 999999 && int.Parse(mtbNivelActividad.Text) < 999999)
                 {
-                    if (altoBajo.Meses[i].Nombre == cbMes.Text)
-                        altoBajo.Meses[i] = a;
-                }
-                if (Comprobando())
-                {
-                    frmMetodoPuntoAltoBajo_Load(sender, e);
-                    DialogResult r = MessageBox.Show("Verifique la informacion, ¿Desea hacer el calculo con la informacion ingresada?", "Notificacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (r == DialogResult.Yes)
+                    for (int i = 0; i < altoBajo.Meses.Length; i++)
                     {
-                        lvAltoBajo.Visible = true; Calcular();
-                        panelIngresados.Size = new Size(675, 304);
+                        if (altoBajo.Meses[i].Nombre == cbMes.Text)
+                            altoBajo.Meses[i] = a;
+                    }
+                    if (Comprobando())
+                    {
+                        frmMetodoPuntoAltoBajo_Load(sender, e);
+                        DialogResult r = MessageBox.Show("Verifique la informacion, ¿Desea hacer el cálculo con la información ingresada?", "Notificación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (r == DialogResult.Yes)
+                        {
+                            lvAltoBajo.Visible = true; Calcular();
+                            panelIngresados.Size = new Size(675, 304);
+                        }
+                        else
+                        {
+                            gbTasaVariable.Visible = false;
+                            panelIngresados.Size = new Size(385, 304);
+                        }
                     }
                     else
                     {
-                        gbTasaVariable.Visible = false;
-                        panelIngresados.Size = new Size(385, 304);
+                        frmMetodoPuntoAltoBajo_Load(sender, e);
+                        mtbCostoPeriodo.Clear();
+                        mtbNivelActividad.Clear();
+                        cbMes.Focus();
                     }
                 }
                 else
                 {
-                    frmMetodoPuntoAltoBajo_Load(sender, e);
+                    MessageBox.Show("Números demasiado grandes", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     mtbCostoPeriodo.Clear();
                     mtbNivelActividad.Clear();
-                    cbMes.Focus();
+                    return;
                 }
+                mtbCostoPeriodo.Clear();
+                mtbNivelActividad.Clear();
             }
             else
             {
-                MessageBox.Show("Ingrese un valor mayor a 0", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo puedes ingresar números mayores que 0", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtbCostoPeriodo.Clear();
                 mtbNivelActividad.Clear();
                 return;
             }
-            mtbCostoPeriodo.Clear();
-            mtbNivelActividad.Clear();
+
         }
         public bool Comprobando()
         {
@@ -149,6 +162,15 @@ namespace pjContabilidadMetodosValuacion
             lvAltoBajo.Visible = false;
             altoBajo = new PuntoBajoPuntoAlto();
             frmMetodoPuntoAltoBajo_Load(sender, e);
+            cbMes.Text = "(Seleccione)";
+        }
+
+        private void btnMenú_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Hide();
+            frmPrincipal Menu = new frmPrincipal();
+            Menu.ShowDialog();
         }
     }
 }
