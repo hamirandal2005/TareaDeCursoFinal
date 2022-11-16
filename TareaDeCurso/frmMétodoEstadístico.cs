@@ -36,19 +36,51 @@ namespace pjContabilidadMetodosValuacion
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            //Capturando Datos
-             variableX= double.Parse(this.txtVariableX.Text);
-             variableY= double.Parse(this.txtVariableY.Text);
-             mes = cboMes.Text;
-           
-            //Pasando Datos a lv
-            ListViewItem fila = new ListViewItem(mes);
-            fila.SubItems.Add (variableX.ToString("0.00"));
-            fila.SubItems.Add(variableY.ToString("0.00"));
-            lvDatos.Items.Add(fila);
-            txtVariableX.Clear();
-            txtVariableY.Clear();
-            txtVariableX.Focus();
+            try
+            {
+                try
+                {
+
+                    if (double.Parse(txtVariableX.Text)>0 && double.Parse(txtVariableY.Text) > 0)
+                    {
+
+                        //Capturando Datos
+                        variableX = double.Parse(this.txtVariableX.Text);
+                        variableY = double.Parse(this.txtVariableY.Text);
+                        mes = cboMes.Text;
+
+                        //Pasando Datos a lv
+                        ListViewItem fila = new ListViewItem(mes);
+                        fila.SubItems.Add(variableX.ToString("0.00"));
+                        fila.SubItems.Add(variableY.ToString("0.00"));
+                        lvDatos.Items.Add(fila);
+                        txtVariableX.Clear();
+                        txtVariableY.Clear();
+                        txtVariableX.Focus();
+
+                    }
+                    else
+                    {
+
+                    }
+
+                }
+                catch (OverflowException)
+                {
+                    MessageBox.Show("Numeros muy Grandes", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtVariableX.Clear();
+                    txtVariableY.Clear();
+                    txtVariableX.Focus();
+                }
+
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show ("Ingrese los datos en un formato Valido ", "¡Error!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                txtVariableX.Clear();
+                txtVariableY.Clear();
+                txtVariableX.Focus();
+            }
            
 
         }

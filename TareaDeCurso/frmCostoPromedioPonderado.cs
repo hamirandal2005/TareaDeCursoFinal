@@ -42,7 +42,7 @@ namespace pjContabilidadMetodosValuacion
             }
             catch (FormatException)
             {
-                MessageBox.Show("Ingrese un valor entero", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ingrese un valor entero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
 

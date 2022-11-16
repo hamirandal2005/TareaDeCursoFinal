@@ -227,7 +227,6 @@
             // 
             this.mtbUsadas.Location = new System.Drawing.Point(175, 36);
             this.mtbUsadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mtbUsadas.Mask = "9999999999999999999";
             this.mtbUsadas.Name = "mtbUsadas";
             this.mtbUsadas.Size = new System.Drawing.Size(76, 26);
             this.mtbUsadas.TabIndex = 13;
@@ -237,7 +236,6 @@
             // 
             this.mtbCantidad.Location = new System.Drawing.Point(104, 30);
             this.mtbCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mtbCantidad.Mask = "999999999999999999";
             this.mtbCantidad.Name = "mtbCantidad";
             this.mtbCantidad.Size = new System.Drawing.Size(75, 29);
             this.mtbCantidad.TabIndex = 15;
@@ -247,11 +245,9 @@
             // 
             this.mtbCosto.Location = new System.Drawing.Point(277, 29);
             this.mtbCosto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mtbCosto.Mask = "9999999999999999";
             this.mtbCosto.Name = "mtbCosto";
             this.mtbCosto.Size = new System.Drawing.Size(75, 29);
             this.mtbCosto.TabIndex = 16;
-            this.mtbCosto.ValidatingType = typeof(int);
             // 
             // groupBox2
             // 
