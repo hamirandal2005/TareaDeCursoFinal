@@ -6,9 +6,16 @@
         frmCostoPromedioSimple formularioValuacionPromedioSimple;
         frmMetodoPuntoAltoBajo formularioPuntoAltoBajo;
         frmPEPS formularioPEPS;
+        frmUEPS formularioUEPS;
         frmIdentificacionEspecifica formularioIdentificacionEspecifica;
         frmCostoPromedioPonderado formularioPonderado;
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> Henry
         public frmPrincipal()
         {
             InitializeComponent();
@@ -16,6 +23,7 @@
             formularioValuacionPromedioSimple = new frmCostoPromedioSimple();
             formularioPuntoAltoBajo = new frmMetodoPuntoAltoBajo();
             formularioPEPS = new frmPEPS();
+            formularioUEPS = new frmUEPS();
             formularioIdentificacionEspecifica = new frmIdentificacionEspecifica();
             formularioPonderado = new frmCostoPromedioPonderado();
             formularioIdentificacionEspecifica = new frmIdentificacionEspecifica();
@@ -103,7 +111,7 @@
 
         private void btnUEPS_Click(object sender, EventArgs e)
         {
-            
+            formularioUEPS.ShowDialog();
         }
 
         private void btnPEPS_Click(object sender, EventArgs e)
@@ -125,6 +133,11 @@
             Visible = false;
             formularioMetodoEstadistico.ShowDialog();
             Visible = true;
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
