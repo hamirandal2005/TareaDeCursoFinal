@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "u/t7hrG6pB7uDcSOFhkPrv8QvcK9JMwj7BBjucDrPS/nrQDZxIXfaIiI8bhuWliWIMcWw6AP3poqACPOL+ZK3Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\GP\\Desktop\\TareaDeCursoFinal\\Clases\\Clases.csproj",
-=======
-  "dgSpecHash": "q3wPOMwt0KPr8Kdk1mrWCHs87P52Qluxr2ETLKPshT+0OsuE6CcaHM6cH+xmZ/9kp17dGk2omykab7/v2ZQXeQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\hamir\\source\\repos\\Clases\\Clases.csproj",
->>>>>>> Henry
   "expectedPackageFiles": [],
   "logs": [
     {

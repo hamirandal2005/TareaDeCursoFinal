@@ -10,12 +10,9 @@
         frmIdentificacionEspecifica formularioIdentificacionEspecifica;
         frmCostoPromedioPonderado formularioPonderado;
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> Henry
         public frmPrincipal()
         {
             InitializeComponent();

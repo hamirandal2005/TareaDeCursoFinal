@@ -73,7 +73,6 @@ G:\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.dll
 G:\TareaDeCursoFinal\Clases\obj\Debug\net6.0\refint\Clases.dll
 G:\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.pdb
 G:\TareaDeCursoFinal\Clases\obj\Debug\net6.0\ref\Clases.dll
-<<<<<<< HEAD
 C:\Users\GP\Desktop\prueba\Clases\bin\Debug\net6.0\Clases.deps.json
 C:\Users\GP\Desktop\prueba\Clases\bin\Debug\net6.0\Clases.dll
 C:\Users\GP\Desktop\prueba\Clases\bin\Debug\net6.0\Clases.pdb
@@ -99,7 +98,6 @@ C:\Users\GP\Desktop\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.dll
 C:\Users\GP\Desktop\TareaDeCursoFinal\Clases\obj\Debug\net6.0\refint\Clases.dll
 C:\Users\GP\Desktop\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.pdb
 C:\Users\GP\Desktop\TareaDeCursoFinal\Clases\obj\Debug\net6.0\ref\Clases.dll
-=======
 C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.deps.json
 C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.dll
 C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.pdb
@@ -125,7 +123,6 @@ C:\Users\hamir\source\repos\Clases\obj\Debug\net6.0\Clases.dll
 C:\Users\hamir\source\repos\Clases\obj\Debug\net6.0\refint\Clases.dll
 C:\Users\hamir\source\repos\Clases\obj\Debug\net6.0\Clases.pdb
 C:\Users\hamir\source\repos\Clases\obj\Debug\net6.0\ref\Clases.dll
-<<<<<<< HEAD
 C:\Users\JADPA-24\Desktop\Proyecto\Clases\bin\Debug\net6.0\Clases.deps.json
 C:\Users\JADPA-24\Desktop\Proyecto\Clases\bin\Debug\net6.0\Clases.dll
 C:\Users\JADPA-24\Desktop\Proyecto\Clases\bin\Debug\net6.0\Clases.pdb
@@ -139,7 +136,6 @@ C:\Users\JADPA-24\Desktop\Proyecto\Clases\obj\Debug\net6.0\refint\Clases.dll
 C:\Users\JADPA-24\Desktop\Proyecto\Clases\obj\Debug\net6.0\Clases.pdb
 C:\Users\JADPA-24\Desktop\Proyecto\Clases\obj\Debug\net6.0\ref\Clases.dll
 >>>>>>> 0e942707fdb16e2f81905667915ac4ba64352996
-=======
 C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.deps.json
 C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.dll
 C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.pdb
@@ -152,4 +148,3 @@ C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.
 C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\refint\Clases.dll
 C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.pdb
 C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\ref\Clases.dll
->>>>>>> Henry
