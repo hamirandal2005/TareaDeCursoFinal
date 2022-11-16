@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.mtbNivelActividad = new System.Windows.Forms.MaskedTextBox();
             this.mtbCostoPeriodo = new System.Windows.Forms.MaskedTextBox();
@@ -52,27 +51,17 @@
             this.lblCostoFijo = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panelIngresados = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.gbTasaVariable.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panelIngresados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Candara", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(145, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Metodo punto alto punto bajo";
             // 
             // groupBox1
             // 
@@ -86,29 +75,29 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(145, 157);
+            this.groupBox1.Location = new System.Drawing.Point(161, 125);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(938, 75);
+            this.groupBox1.Size = new System.Drawing.Size(898, 75);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresar datos";
             // 
             // mtbNivelActividad
             // 
-            this.mtbNivelActividad.Location = new System.Drawing.Point(593, 30);
+            this.mtbNivelActividad.Location = new System.Drawing.Point(622, 32);
             this.mtbNivelActividad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbNivelActividad.Name = "mtbNivelActividad";
-            this.mtbNivelActividad.Size = new System.Drawing.Size(76, 25);
+            this.mtbNivelActividad.Size = new System.Drawing.Size(76, 29);
             this.mtbNivelActividad.TabIndex = 5;
             // 
             // mtbCostoPeriodo
             // 
-            this.mtbCostoPeriodo.Location = new System.Drawing.Point(338, 34);
+            this.mtbCostoPeriodo.Location = new System.Drawing.Point(353, 31);
             this.mtbCostoPeriodo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbCostoPeriodo.Name = "mtbCostoPeriodo";
-            this.mtbCostoPeriodo.Size = new System.Drawing.Size(76, 25);
+            this.mtbCostoPeriodo.Size = new System.Drawing.Size(76, 29);
             this.mtbCostoPeriodo.TabIndex = 4;
             // 
             // btnRegistrar
@@ -117,10 +106,10 @@
             this.btnRegistrar.BackColor = System.Drawing.Color.White;
             this.btnRegistrar.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrar.Location = new System.Drawing.Point(818, 27);
+            this.btnRegistrar.Location = new System.Drawing.Point(758, 30);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(77, 28);
+            this.btnRegistrar.Size = new System.Drawing.Size(94, 33);
             this.btnRegistrar.TabIndex = 4;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -130,9 +119,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(454, 36);
+            this.label4.Location = new System.Drawing.Point(451, 36);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 18);
+            this.label4.Size = new System.Drawing.Size(165, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "Nivel de actividad : ";
             // 
@@ -140,9 +129,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(207, 38);
+            this.label3.Location = new System.Drawing.Point(178, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 18);
+            this.label3.Size = new System.Drawing.Size(169, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Costo del periodo : ";
             // 
@@ -162,10 +151,10 @@
             "Octubre",
             "Noviembre",
             "Diciembre"});
-            this.cbMes.Location = new System.Drawing.Point(67, 34);
+            this.cbMes.Location = new System.Drawing.Point(81, 31);
             this.cbMes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMes.Name = "cbMes";
-            this.cbMes.Size = new System.Drawing.Size(91, 28);
+            this.cbMes.Size = new System.Drawing.Size(91, 32);
             this.cbMes.TabIndex = 1;
             // 
             // label2
@@ -174,7 +163,7 @@
             this.label2.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(25, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 18);
+            this.label2.Size = new System.Drawing.Size(57, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mes : ";
             // 
@@ -187,7 +176,7 @@
             this.columnHeader3});
             this.lvInfo.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lvInfo.GridLines = true;
-            this.lvInfo.Location = new System.Drawing.Point(32, 41);
+            this.lvInfo.Location = new System.Drawing.Point(17, 24);
             this.lvInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvInfo.Name = "lvInfo";
             this.lvInfo.Size = new System.Drawing.Size(360, 265);
@@ -217,7 +206,7 @@
             this.columnHeader5});
             this.lvAltoBajo.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lvAltoBajo.GridLines = true;
-            this.lvAltoBajo.Location = new System.Drawing.Point(405, 42);
+            this.lvAltoBajo.Location = new System.Drawing.Point(40, 21);
             this.lvAltoBajo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvAltoBajo.Name = "lvAltoBajo";
             this.lvAltoBajo.Size = new System.Drawing.Size(265, 264);
@@ -241,9 +230,9 @@
             this.lblTasaVariable.AutoSize = true;
             this.lblTasaVariable.BackColor = System.Drawing.Color.Transparent;
             this.lblTasaVariable.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTasaVariable.Location = new System.Drawing.Point(129, 31);
+            this.lblTasaVariable.Location = new System.Drawing.Point(163, 31);
             this.lblTasaVariable.Name = "lblTasaVariable";
-            this.lblTasaVariable.Size = new System.Drawing.Size(46, 18);
+            this.lblTasaVariable.Size = new System.Drawing.Size(59, 23);
             this.lblTasaVariable.TabIndex = 7;
             this.lblTasaVariable.Text = "label5";
             // 
@@ -254,7 +243,7 @@
             this.label6.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(19, 31);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 18);
+            this.label6.Size = new System.Drawing.Size(127, 23);
             this.label6.TabIndex = 8;
             this.label6.Text = "Tasa variable : ";
             // 
@@ -268,11 +257,11 @@
             this.gbTasaVariable.Controls.Add(this.lblTasaVariable);
             this.gbTasaVariable.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.gbTasaVariable.ForeColor = System.Drawing.Color.White;
-            this.gbTasaVariable.Location = new System.Drawing.Point(871, 254);
+            this.gbTasaVariable.Location = new System.Drawing.Point(876, 280);
             this.gbTasaVariable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbTasaVariable.Name = "gbTasaVariable";
             this.gbTasaVariable.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbTasaVariable.Size = new System.Drawing.Size(212, 172);
+            this.gbTasaVariable.Size = new System.Drawing.Size(289, 189);
             this.gbTasaVariable.TabIndex = 9;
             this.gbTasaVariable.TabStop = false;
             this.gbTasaVariable.Text = "Resultados";
@@ -283,10 +272,10 @@
             this.btnLimpiar.AutoSize = true;
             this.btnLimpiar.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
-            this.btnLimpiar.Location = new System.Drawing.Point(103, 113);
+            this.btnLimpiar.Location = new System.Drawing.Point(106, 136);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(66, 28);
+            this.btnLimpiar.Size = new System.Drawing.Size(82, 33);
             this.btnLimpiar.TabIndex = 10;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -296,9 +285,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(27, 75);
+            this.label7.Location = new System.Drawing.Point(19, 87);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 18);
+            this.label7.Size = new System.Drawing.Size(102, 23);
             this.label7.TabIndex = 10;
             this.label7.Text = "Costo fijo : ";
             // 
@@ -306,25 +295,24 @@
             // 
             this.lblCostoFijo.AutoSize = true;
             this.lblCostoFijo.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCostoFijo.Location = new System.Drawing.Point(129, 75);
+            this.lblCostoFijo.Location = new System.Drawing.Point(163, 87);
             this.lblCostoFijo.Name = "lblCostoFijo";
-            this.lblCostoFijo.Size = new System.Drawing.Size(46, 18);
+            this.lblCostoFijo.Size = new System.Drawing.Size(59, 23);
             this.lblCostoFijo.TabIndex = 9;
             this.lblCostoFijo.Text = "label5";
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.lvAltoBajo);
-            this.groupBox2.Controls.Add(this.lvInfo);
+            this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Controls.Add(this.panelIngresados);
             this.groupBox2.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(144, 245);
+            this.groupBox2.Location = new System.Drawing.Point(22, 233);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(704, 344);
+            this.groupBox2.Size = new System.Drawing.Size(814, 344);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Ingresados";
@@ -332,65 +320,53 @@
             // panelIngresados
             // 
             this.panelIngresados.BackColor = System.Drawing.Color.Gold;
+            this.panelIngresados.Controls.Add(this.lvInfo);
             this.panelIngresados.Location = new System.Drawing.Point(16, 23);
             this.panelIngresados.Name = "panelIngresados";
             this.panelIngresados.Size = new System.Drawing.Size(385, 304);
             this.panelIngresados.TabIndex = 22;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(90)))));
+            this.pictureBox1.Image = global::pjContabilidadMetodosValuacion.Properties.Resources.Captura_de_pantalla__23_;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(613, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::pjContabilidadMetodosValuacion.Properties.Resources.Captura_de_pantalla__26_;
+            this.pictureBox2.Location = new System.Drawing.Point(374, 58);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(572, 62);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(100, 12);
+            this.panel1.Controls.Add(this.lvAltoBajo);
+            this.panel1.Location = new System.Drawing.Point(461, 23);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 50);
-            this.panel1.TabIndex = 20;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(45, 2);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(165, 42);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Sistema V";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Location = new System.Drawing.Point(300, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 50);
-            this.panel2.TabIndex = 21;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.Gold;
-            this.label8.Location = new System.Drawing.Point(-8, 2);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(144, 42);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "aluacion";
+            this.panel1.Size = new System.Drawing.Size(329, 304);
+            this.panel1.TabIndex = 23;
             // 
             // frmMetodoPuntoAltoBajo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.FondoAmarillo;
-            this.ClientSize = new System.Drawing.Size(1172, 658);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1208, 658);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbTasaVariable);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -403,17 +379,15 @@
             this.gbTasaVariable.ResumeLayout(false);
             this.gbTasaVariable.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.panelIngresados.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private Label label1;
         private GroupBox groupBox1;
         private ComboBox cbMes;
         private Label label2;
@@ -436,10 +410,9 @@
         private Label lblCostoFijo;
         private Button btnLimpiar;
         private GroupBox groupBox2;
-        private Panel panel1;
-        private Label label5;
-        private Panel panel2;
-        private Label label8;
         private Panel panelIngresados;
+        private Panel panel1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
