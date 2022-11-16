@@ -72,6 +72,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnMenú = new System.Windows.Forms.Button();
             this.gbCompras.SuspendLayout();
             this.gbSalidas.SuspendLayout();
             this.gbDatosIngresados.SuspendLayout();
@@ -510,12 +511,28 @@
             this.panel7.Size = new System.Drawing.Size(5, 680);
             this.panel7.TabIndex = 32;
             // 
+            // btnMenú
+            // 
+            this.btnMenú.AutoSize = true;
+            this.btnMenú.BackColor = System.Drawing.Color.White;
+            this.btnMenú.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMenú.ForeColor = System.Drawing.Color.Black;
+            this.btnMenú.Location = new System.Drawing.Point(1000, 644);
+            this.btnMenú.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMenú.Name = "btnMenú";
+            this.btnMenú.Size = new System.Drawing.Size(82, 33);
+            this.btnMenú.TabIndex = 35;
+            this.btnMenú.Text = "Menú";
+            this.btnMenú.UseVisualStyleBackColor = false;
+            this.btnMenú.Click += new System.EventHandler(this.btnMenú_Click);
+            // 
             // frmPEPS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.FondoFranjaRoja;
             this.ClientSize = new System.Drawing.Size(1188, 688);
+            this.Controls.Add(this.btnMenú);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -595,5 +612,6 @@
         private Panel panel5;
         private Panel panel6;
         private Panel panel7;
+        private Button btnMenú;
     }
 }

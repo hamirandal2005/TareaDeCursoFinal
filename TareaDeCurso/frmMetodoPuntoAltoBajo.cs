@@ -24,7 +24,7 @@ namespace pjContabilidadMetodosValuacion
             this.Tmensaje.SetToolTip(this.mtbCostoPeriodo, "Solo números mayores que 0");
             this.Tmensaje.SetToolTip(this.mtbNivelActividad, "Solo números mayores que 0");
         }
-        public void iniciar() //Pruebas
+        public void iniciar() 
         {
             altoBajo.Meses[0] = new Mes("Enero", 166000, 6700);
             altoBajo.Meses[1] = new Mes("Febrero", 170000, 7000);
@@ -171,6 +171,7 @@ namespace pjContabilidadMetodosValuacion
             this.Hide();
             frmPrincipal Menu = new frmPrincipal();
             Menu.ShowDialog();
+          
         }
     }
 }
