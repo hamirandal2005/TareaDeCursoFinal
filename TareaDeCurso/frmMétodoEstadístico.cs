@@ -17,6 +17,7 @@ namespace pjContabilidadMetodosValuacion
         double variableX;
         double variableY;
         string mes;
+        List<string> Mes = new List<string>();
         public frmMétodoEstadístico()
         {
             InitializeComponent();
@@ -44,10 +45,12 @@ namespace pjContabilidadMetodosValuacion
                     if (double.Parse(txtVariableX.Text)>0 && double.Parse(txtVariableY.Text) > 0)
                     {
 
+                        Mes.Add(mes);
                         //Capturando Datos
                         variableX = double.Parse(this.txtVariableX.Text);
                         variableY = double.Parse(this.txtVariableY.Text);
                         mes = cboMes.Text;
+
 
                         //Pasando Datos a lv
                         ListViewItem fila = new ListViewItem(mes);
