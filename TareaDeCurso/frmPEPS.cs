@@ -208,6 +208,7 @@ namespace pjContabilidadMetodosValuacion
             lblUnidadesCompradas.Text = unidades.ToString();
 
             gbTotales.Visible = true;
+            pTotales.Visible = true;
         }
     }
 }

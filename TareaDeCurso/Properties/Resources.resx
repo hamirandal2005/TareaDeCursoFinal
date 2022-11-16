@@ -124,8 +124,8 @@
   <data name="cibt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cibt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="identificacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\identificacion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Captura de pantalla_20221102_091213" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura de pantalla_20221102_091213.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dinero" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dinero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,6 +148,9 @@
   <data name="estadistica" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\estadistica.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FondoFranjaRoja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondoFranjaRoja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pepss" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pepss.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,13 +166,16 @@
   <data name="calculo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calculo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fondo prog" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo prog.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="identificacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\identificacion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="calculadora (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calculadora (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Captura de pantalla_20221102_091213" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura de pantalla_20221102_091213.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fondo prog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo prog.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FondoAmarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondoAmarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

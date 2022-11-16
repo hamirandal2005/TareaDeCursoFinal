@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "eMt8tkOzpVio6xT2Q9uIwVE8aERWXqtF4mXPXHxCodyrCAZPy4SiKRSRHbvrMIgG8AFuxbbRgrCV4E7UKQ+lgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\carva\\Source\\Repos\\TareaDeCursoFinal\\Clases\\Clases.csproj",
+=======
+  "dgSpecHash": "u/t7hrG6pB7uDcSOFhkPrv8QvcK9JMwj7BBjucDrPS/nrQDZxIXfaIiI8bhuWliWIMcWw6AP3poqACPOL+ZK3Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\GP\\Desktop\\TareaDeCursoFinal\\Clases\\Clases.csproj",
+>>>>>>> Developer
   "expectedPackageFiles": [],
   "logs": [
     {

@@ -9,8 +9,6 @@
         frmIdentificacionEspecifica formularioIdentificacionEspecifica;
         frmCostoPromedioPonderado formularioPonderado;
 
-
-
         public frmPrincipal()
         {
             InitializeComponent();
@@ -24,49 +22,11 @@
             formularioPonderado = new frmCostoPromedioPonderado();
 
         }
-
-        //private void btnSiguiente_Click(object sender, EventArgs e)
-        //{
-
-        //    if (rbPuntoAltoBajo.Checked == true)
-        //    {
-        //        formularioPuntoAltoBajo.ShowDialog();
-        //        rbPuntoAltoBajo.Checked = false;
-        //    }
-        //    else if (rbEstadistico.Checked == true)
-        //    {
-
-        //        formularioMetodoEstadistico.ShowDialog();
-
-        //    }
-        //    else if (rbIdentificacionEspecifica.Checked == true)
-        //    {
-        //        formularioIdentificacionEspecifica.ShowDialog();
-        //    }
-        //    else if (rbPromedioSimple.Checked == true)
-        //    {
-        //        formularioValuacionPromedioSimple.ShowDialog();
-        //    }
-        //    else if (rbPromedioPonderado.Checked == true)
-        //    {
-        //        formularioPonderado.ShowDialog();
-        //    }
-        //    else if (rbPEPS.Checked == true)
-        //    {
-        //        formularioPEPS.ShowDialog();
-
-        //    }
-        //    else if (rbUEPS.Checked == true)
-        //    {
-        //        this.Close();
-        //    }
-
-        //}
+        
         private void btnEspecifica_MouseLeave(object sender, EventArgs e)
         {
             btnEspecifica.BackColor = Color.DodgerBlue;
         }
-        //
         private void btnEspecifica_MouseEnter(object sender, EventArgs e)
         {
             btnEspecifica.BackColor = Color.Tomato;
@@ -122,17 +82,23 @@
 
         private void btnEspecifica_Click(object sender, EventArgs e)
         {
+            Visible = false; 
             formularioIdentificacionEspecifica.ShowDialog();
+            Visible = true;
         }
 
         private void btnPonderado_Click(object sender, EventArgs e)
         {
+            Visible = false;
             formularioPonderado.ShowDialog();
+            Visible = true;
         }
 
         private void btnSimple_Click(object sender, EventArgs e)
         {
+            Visible = false;
             formularioValuacionPromedioSimple.ShowDialog();
+            Visible = true;
         }
 
         private void btnUEPS_Click(object sender, EventArgs e)
@@ -142,17 +108,23 @@
 
         private void btnPEPS_Click(object sender, EventArgs e)
         {
+            Visible = false;
             formularioPEPS.ShowDialog();
+            Visible = true; 
         }
 
         private void btnAltoBajo_Click(object sender, EventArgs e)
         {
+            Visible = false;
             formularioPuntoAltoBajo.ShowDialog();
+            Visible = true;
         }
 
         private void btnEstadistico_Click(object sender, EventArgs e)
         {
+            Visible = false;
             formularioMetodoEstadistico.ShowDialog();
+            Visible = true;
         }
     }
 }
