@@ -75,9 +75,9 @@ namespace pjContabilidadMetodosValuacion
                 mtbNivelActividad.Clear();
                 return;
             }
-            if (double.Parse(mtbCostoPeriodo.Text) > 0 && int.Parse(mtbNivelActividad.Text) > 0)
+            if (double.Parse(mtbCostoPeriodo.Text) < 999999 && int.Parse(mtbNivelActividad.Text) < 999999)
             {
-                if (double.Parse(mtbCostoPeriodo.Text) < 999999 && int.Parse(mtbNivelActividad.Text) < 999999)
+                if (double.Parse(mtbCostoPeriodo.Text) > 0 && int.Parse(mtbNivelActividad.Text) > 0)
                 {
                     for (int i = 0; i < altoBajo.Meses.Length; i++)
                     {
@@ -109,7 +109,7 @@ namespace pjContabilidadMetodosValuacion
                 }
                 else
                 {
-                    MessageBox.Show("Números demasiado grandes", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Solo puedes ingresar números mayores que 0", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     mtbCostoPeriodo.Clear();
                     mtbNivelActividad.Clear();
                     return;
@@ -119,7 +119,7 @@ namespace pjContabilidadMetodosValuacion
             }
             else
             {
-                MessageBox.Show("Solo puedes ingresar números mayores que 0", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Números demasiado grandes", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtbCostoPeriodo.Clear();
                 mtbNivelActividad.Clear();
                 return;
