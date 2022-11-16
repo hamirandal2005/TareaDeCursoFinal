@@ -52,9 +52,10 @@
             this.btnAltoBajo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAltoBajo.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAltoBajo.ForeColor = System.Drawing.Color.White;
-            this.btnAltoBajo.Location = new System.Drawing.Point(652, 448);
+            this.btnAltoBajo.Location = new System.Drawing.Point(570, 354);
+            this.btnAltoBajo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAltoBajo.Name = "btnAltoBajo";
-            this.btnAltoBajo.Size = new System.Drawing.Size(213, 38);
+            this.btnAltoBajo.Size = new System.Drawing.Size(186, 30);
             this.btnAltoBajo.TabIndex = 5;
             this.btnAltoBajo.Text = "Punto alto, Punto bajo";
             this.btnAltoBajo.UseVisualStyleBackColor = false;
@@ -69,9 +70,10 @@
             this.btnEstadistico.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEstadistico.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEstadistico.ForeColor = System.Drawing.Color.White;
-            this.btnEstadistico.Location = new System.Drawing.Point(652, 503);
+            this.btnEstadistico.Location = new System.Drawing.Point(570, 397);
+            this.btnEstadistico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEstadistico.Name = "btnEstadistico";
-            this.btnEstadistico.Size = new System.Drawing.Size(213, 38);
+            this.btnEstadistico.Size = new System.Drawing.Size(186, 30);
             this.btnEstadistico.TabIndex = 6;
             this.btnEstadistico.Text = "Estadistico";
             this.btnEstadistico.UseVisualStyleBackColor = false;
@@ -86,9 +88,10 @@
             this.btnSimple.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSimple.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSimple.ForeColor = System.Drawing.Color.White;
-            this.btnSimple.Location = new System.Drawing.Point(652, 221);
+            this.btnSimple.Location = new System.Drawing.Point(570, 174);
+            this.btnSimple.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSimple.Name = "btnSimple";
-            this.btnSimple.Size = new System.Drawing.Size(213, 38);
+            this.btnSimple.Size = new System.Drawing.Size(186, 30);
             this.btnSimple.TabIndex = 8;
             this.btnSimple.Text = "Costo Promedio Simple";
             this.btnSimple.UseVisualStyleBackColor = false;
@@ -103,9 +106,10 @@
             this.btnEspecifica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEspecifica.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEspecifica.ForeColor = System.Drawing.Color.White;
-            this.btnEspecifica.Location = new System.Drawing.Point(652, 119);
+            this.btnEspecifica.Location = new System.Drawing.Point(570, 94);
+            this.btnEspecifica.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEspecifica.Name = "btnEspecifica";
-            this.btnEspecifica.Size = new System.Drawing.Size(213, 38);
+            this.btnEspecifica.Size = new System.Drawing.Size(186, 30);
             this.btnEspecifica.TabIndex = 7;
             this.btnEspecifica.Text = "Identificacion Especifica";
             this.btnEspecifica.UseVisualStyleBackColor = false;
@@ -120,9 +124,10 @@
             this.btnPEPS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPEPS.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPEPS.ForeColor = System.Drawing.Color.White;
-            this.btnPEPS.Location = new System.Drawing.Point(652, 327);
+            this.btnPEPS.Location = new System.Drawing.Point(570, 258);
+            this.btnPEPS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPEPS.Name = "btnPEPS";
-            this.btnPEPS.Size = new System.Drawing.Size(213, 38);
+            this.btnPEPS.Size = new System.Drawing.Size(186, 30);
             this.btnPEPS.TabIndex = 10;
             this.btnPEPS.Text = "PEPS";
             this.btnPEPS.UseVisualStyleBackColor = false;
@@ -137,9 +142,10 @@
             this.btnPonderado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPonderado.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPonderado.ForeColor = System.Drawing.Color.White;
-            this.btnPonderado.Location = new System.Drawing.Point(652, 170);
+            this.btnPonderado.Location = new System.Drawing.Point(570, 134);
+            this.btnPonderado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPonderado.Name = "btnPonderado";
-            this.btnPonderado.Size = new System.Drawing.Size(213, 38);
+            this.btnPonderado.Size = new System.Drawing.Size(213, 30);
             this.btnPonderado.TabIndex = 9;
             this.btnPonderado.Text = "Costo Promedio Ponderado";
             this.btnPonderado.UseVisualStyleBackColor = false;
@@ -154,9 +160,10 @@
             this.btnUEPS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUEPS.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUEPS.ForeColor = System.Drawing.Color.White;
-            this.btnUEPS.Location = new System.Drawing.Point(652, 274);
+            this.btnUEPS.Location = new System.Drawing.Point(570, 216);
+            this.btnUEPS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUEPS.Name = "btnUEPS";
-            this.btnUEPS.Size = new System.Drawing.Size(213, 38);
+            this.btnUEPS.Size = new System.Drawing.Size(186, 30);
             this.btnUEPS.TabIndex = 11;
             this.btnUEPS.Text = "UEPS";
             this.btnUEPS.UseVisualStyleBackColor = false;
@@ -167,9 +174,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(164, 76);
+            this.pictureBox2.Location = new System.Drawing.Point(144, 60);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(186, 164);
+            this.pictureBox2.Size = new System.Drawing.Size(163, 129);
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             // 
@@ -179,7 +187,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Candara", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(194, 261);
+            this.label5.Location = new System.Drawing.Point(170, 206);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 37);
             this.label5.TabIndex = 13;
@@ -191,7 +199,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(204, 298);
+            this.label6.Location = new System.Drawing.Point(178, 235);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 29);
             this.label6.TabIndex = 14;
@@ -203,7 +211,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(184, 332);
+            this.label7.Location = new System.Drawing.Point(161, 262);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(158, 29);
             this.label7.TabIndex = 15;
@@ -215,7 +223,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.SkyBlue;
-            this.label1.Location = new System.Drawing.Point(641, 74);
+            this.label1.Location = new System.Drawing.Point(561, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(239, 29);
             this.label1.TabIndex = 16;
@@ -227,7 +235,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.SkyBlue;
-            this.label8.Location = new System.Drawing.Point(619, 400);
+            this.label8.Location = new System.Drawing.Point(542, 316);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(286, 29);
             this.label8.TabIndex = 17;
@@ -235,11 +243,11 @@
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.Captura_de_pantalla_20221102_091213;
-            this.ClientSize = new System.Drawing.Size(1172, 658);
+            this.ClientSize = new System.Drawing.Size(1026, 519);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
@@ -255,9 +263,11 @@
             this.Controls.Add(this.btnAltoBajo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Metodos";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

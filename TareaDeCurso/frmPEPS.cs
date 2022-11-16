@@ -57,7 +57,6 @@ namespace pjContabilidadMetodosValuacion
                         return;
                     }
                 }
-                
                 else
                 {
                     MessageBox.Show("Ingrese un valor mayor a 0", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
