@@ -153,6 +153,36 @@ namespace pjContabilidadMetodosValuacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla__28_ {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla (28)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla__30_ {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla (30)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla__30_1 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla (30)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_pantalla_20221102_091213 {
             get {
                 object obj = ResourceManager.GetObject("Captura de pantalla_20221102_091213", resourceCulture);

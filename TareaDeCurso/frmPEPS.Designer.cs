@@ -48,6 +48,7 @@
             this.txtUnidadesUtilizadas = new System.Windows.Forms.TextBox();
             this.dtFechaUtilizadas = new System.Windows.Forms.DateTimePicker();
             this.gbDatosIngresados = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lvUnidadesUtilizadas = new System.Windows.Forms.ListView();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
@@ -67,7 +68,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.gbCompras.SuspendLayout();
             this.gbSalidas.SuspendLayout();
             this.gbDatosIngresados.SuspendLayout();
@@ -274,6 +278,14 @@
             this.gbDatosIngresados.TabStop = false;
             this.gbDatosIngresados.Text = "Datos Ingresados";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Tomato;
+            this.panel2.Location = new System.Drawing.Point(319, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(8, 270);
+            this.panel2.TabIndex = 22;
+            // 
             // lvUnidadesUtilizadas
             // 
             this.lvUnidadesUtilizadas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -307,7 +319,7 @@
             // 
             this.btnFinalizar.AutoSize = true;
             this.btnFinalizar.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnFinalizar.Location = new System.Drawing.Point(911, 628);
+            this.btnFinalizar.Location = new System.Drawing.Point(659, 635);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(156, 33);
             this.btnFinalizar.TabIndex = 15;
@@ -422,7 +434,7 @@
             // 
             this.pTotales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
             this.pTotales.Controls.Add(this.gbTotales);
-            this.pTotales.Location = new System.Drawing.Point(774, 121);
+            this.pTotales.Location = new System.Drawing.Point(780, 124);
             this.pTotales.Name = "pTotales";
             this.pTotales.Size = new System.Drawing.Size(333, 495);
             this.pTotales.TabIndex = 20;
@@ -433,7 +445,7 @@
             this.panel3.BackColor = System.Drawing.Color.Tomato;
             this.panel3.Location = new System.Drawing.Point(349, 121);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 219);
+            this.panel3.Size = new System.Drawing.Size(8, 219);
             this.panel3.TabIndex = 21;
             // 
             // panel1
@@ -459,20 +471,44 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(90)))));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(396, 54);
+            this.pictureBox2.Location = new System.Drawing.Point(386, 70);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(492, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 28;
             this.pictureBox2.TabStop = false;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.BackColor = System.Drawing.Color.Tomato;
-            this.panel2.Location = new System.Drawing.Point(319, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(11, 270);
-            this.panel2.TabIndex = 22;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(248)))), ((int)(((byte)(160)))));
+            this.panel4.Location = new System.Drawing.Point(-2, 54);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(600, 5);
+            this.panel4.TabIndex = 29;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(248)))), ((int)(((byte)(160)))));
+            this.panel5.Location = new System.Drawing.Point(0, 65);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(550, 5);
+            this.panel5.TabIndex = 30;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(0)))));
+            this.panel6.Location = new System.Drawing.Point(1139, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(5, 600);
+            this.panel6.TabIndex = 31;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(0)))));
+            this.panel7.Location = new System.Drawing.Point(1161, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(5, 680);
+            this.panel7.TabIndex = 32;
             // 
             // frmPEPS
             // 
@@ -480,6 +516,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.FondoFranjaRoja;
             this.ClientSize = new System.Drawing.Size(1188, 688);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
@@ -489,7 +529,7 @@
             this.Controls.Add(this.gbSalidas);
             this.Controls.Add(this.gbCompras);
             this.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmPEPS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PEPS";
@@ -551,5 +591,9 @@
         private PictureBox pictureBox1;
         private Panel panel2;
         private PictureBox pictureBox2;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
+        private Panel panel7;
     }
 }

@@ -54,6 +54,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -333,6 +339,54 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(1)))), ((int)(((byte)(1)))));
+            this.panel2.Location = new System.Drawing.Point(0, 540);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1100, 5);
+            this.panel2.TabIndex = 27;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(1)))), ((int)(((byte)(1)))));
+            this.panel5.Location = new System.Drawing.Point(0, 560);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1150, 5);
+            this.panel5.TabIndex = 28;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(33)))), ((int)(((byte)(225)))));
+            this.panel7.Location = new System.Drawing.Point(1, 65);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(250, 5);
+            this.panel7.TabIndex = 30;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(33)))), ((int)(((byte)(225)))));
+            this.panel6.Location = new System.Drawing.Point(1, 54);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(310, 5);
+            this.panel6.TabIndex = 29;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(88)))), ((int)(((byte)(4)))));
+            this.panel8.Location = new System.Drawing.Point(1129, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(5, 500);
+            this.panel8.TabIndex = 31;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(88)))), ((int)(((byte)(4)))));
+            this.panel9.Location = new System.Drawing.Point(1155, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(5, 550);
+            this.panel9.TabIndex = 32;
+            // 
             // frmCostoPromedioPonderado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -341,6 +395,12 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.FondoFranjaRoja;
             this.ClientSize = new System.Drawing.Size(1172, 597);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox4);
@@ -349,6 +409,7 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmCostoPromedioPonderado";
             this.Text = "frmCostoPromedioPonderado";
@@ -393,5 +454,11 @@
         private Panel panel1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private Panel panel2;
+        private Panel panel5;
+        private Panel panel7;
+        private Panel panel6;
+        private Panel panel8;
+        private Panel panel9;
     }
 }

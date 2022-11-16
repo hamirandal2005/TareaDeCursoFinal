@@ -209,5 +209,7 @@ namespace pjContabilidadMetodosValuacion
             gbTotales.Visible = true;
             pTotales.Visible = true;
         }
+
+      
     }
 }

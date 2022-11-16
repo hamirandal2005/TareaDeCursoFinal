@@ -50,12 +50,17 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAltoBajo
@@ -202,7 +207,7 @@
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1173, 13);
+            this.panel1.Size = new System.Drawing.Size(1216, 13);
             this.panel1.TabIndex = 18;
             // 
             // panel2
@@ -328,12 +333,47 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(47)))), ((int)(((byte)(79)))));
             this.pictureBox2.Image = global::pjContabilidadMetodosValuacion.Properties.Resources.Captura_de_pantalla__22_;
-            this.pictureBox2.Location = new System.Drawing.Point(461, 168);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(670, 373);
+            this.pictureBox2.Size = new System.Drawing.Size(704, 429);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(164)))), ((int)(((byte)(199)))));
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel12.Location = new System.Drawing.Point(297, 13);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(10, 679);
+            this.panel12.TabIndex = 21;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(235)))), ((int)(((byte)(133)))));
+            this.panel13.Location = new System.Drawing.Point(431, 12);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(10, 680);
+            this.panel13.TabIndex = 22;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(44)))), ((int)(((byte)(146)))));
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel14.Location = new System.Drawing.Point(1206, 13);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(10, 679);
+            this.panel14.TabIndex = 23;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(0)))));
+            this.panel15.Controls.Add(this.pictureBox2);
+            this.panel15.Location = new System.Drawing.Point(460, 100);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(710, 435);
+            this.panel15.TabIndex = 24;
             // 
             // frmPrincipal
             // 
@@ -341,8 +381,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.Captura_de_pantalla_20221102_091213;
-            this.ClientSize = new System.Drawing.Size(1173, 692);
-            this.Controls.Add(this.pictureBox2);
+            this.ClientSize = new System.Drawing.Size(1216, 692);
+            this.Controls.Add(this.panel15);
+            this.Controls.Add(this.panel14);
+            this.Controls.Add(this.panel13);
+            this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -358,6 +401,7 @@
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -384,5 +428,9 @@
         private Panel panel5;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private Panel panel12;
+        private Panel panel13;
+        private Panel panel14;
+        private Panel panel15;
     }
 }

@@ -50,17 +50,23 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblCostoFijo = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelIngresados = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.gbTasaVariable.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panelIngresados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -206,7 +212,7 @@
             this.columnHeader5});
             this.lvAltoBajo.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lvAltoBajo.GridLines = true;
-            this.lvAltoBajo.Location = new System.Drawing.Point(40, 21);
+            this.lvAltoBajo.Location = new System.Drawing.Point(29, 25);
             this.lvAltoBajo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvAltoBajo.Name = "lvAltoBajo";
             this.lvAltoBajo.Size = new System.Drawing.Size(265, 264);
@@ -317,6 +323,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Ingresados";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.Controls.Add(this.lvAltoBajo);
+            this.panel1.Location = new System.Drawing.Point(461, 23);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(329, 304);
+            this.panel1.TabIndex = 23;
+            // 
             // panelIngresados
             // 
             this.panelIngresados.BackColor = System.Drawing.Color.Gold;
@@ -347,14 +362,53 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gold;
-            this.panel1.Controls.Add(this.lvAltoBajo);
-            this.panel1.Location = new System.Drawing.Point(461, 23);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(329, 304);
-            this.panel1.TabIndex = 23;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(197)))), ((int)(((byte)(0)))));
+            this.panel2.Location = new System.Drawing.Point(-1, 606);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1000, 5);
+            this.panel2.TabIndex = 12;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(197)))), ((int)(((byte)(0)))));
+            this.panel3.Location = new System.Drawing.Point(-1, 628);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1100, 5);
+            this.panel3.TabIndex = 13;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(54)))), ((int)(((byte)(101)))));
+            this.panel4.Location = new System.Drawing.Point(1171, 1);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(5, 500);
+            this.panel4.TabIndex = 14;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(54)))), ((int)(((byte)(101)))));
+            this.panel5.Location = new System.Drawing.Point(1191, 1);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 650);
+            this.panel5.TabIndex = 15;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(33)))), ((int)(((byte)(225)))));
+            this.panel6.Location = new System.Drawing.Point(-1, 58);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(310, 5);
+            this.panel6.TabIndex = 16;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(33)))), ((int)(((byte)(225)))));
+            this.panel7.Location = new System.Drawing.Point(-1, 69);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(370, 5);
+            this.panel7.TabIndex = 17;
             // 
             // frmMetodoPuntoAltoBajo
             // 
@@ -362,6 +416,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.FondoAmarillo;
             this.ClientSize = new System.Drawing.Size(1208, 658);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
@@ -369,6 +429,7 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMetodoPuntoAltoBajo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -379,10 +440,10 @@
             this.gbTasaVariable.ResumeLayout(false);
             this.gbTasaVariable.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panelIngresados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -414,5 +475,11 @@
         private Panel panel1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private Panel panel2;
+        private Panel panel3;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
+        private Panel panel7;
     }
 }
