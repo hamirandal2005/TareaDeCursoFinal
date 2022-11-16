@@ -104,7 +104,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // columnHeader1
             // 
@@ -155,7 +155,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Calcular costos";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.btnCalculaar_Click);
             // 
             // lvCostos
             // 
@@ -240,6 +240,7 @@
             this.mtbCantidad.Size = new System.Drawing.Size(75, 29);
             this.mtbCantidad.TabIndex = 15;
             this.mtbCantidad.ValidatingType = typeof(int);
+         
             // 
             // mtbCosto
             // 

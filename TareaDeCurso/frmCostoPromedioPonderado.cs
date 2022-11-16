@@ -22,23 +22,33 @@ namespace pjContabilidadMetodosValuacion
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
             try
             {
-                ponderado.Add(new PromedioPonderado(int.Parse(mtbCantidad.Text), double.Parse(mtbCosto.Text)));
-                PromedioPonderado[] listview = ponderado.ToArray();
-                ListViewItem a = new ListViewItem(num.ToString());
-                num++;
-                a.SubItems.Add(ponderado.Last().UnidadesCompradas.ToString());
-                a.SubItems.Add(ponderado.Last().PrecioDeCompra.ToString());
-                a.SubItems.Add(ponderado.Last().Calculo(listview).ToString("0.00"));
-                promedio = ponderado.Last().Calculo(listview);
-                lvPromedio.Items.Add(a);
-                unidadesCompradas += ponderado.Last().UnidadesCompradas;
-                mtbCantidad.Clear();
-                mtbCosto.Clear();
-                mtbCantidad.Focus();
+                try
+                {
+                    if(int.Parse(mtbCantidad.Text)>0&& double.Parse(mtbCosto.Text) > 0)
+                    {
+                        ponderado.Add(new PromedioPonderado(int.Parse(mtbCantidad.Text), double.Parse(mtbCosto.Text)));
+                        PromedioPonderado[] listview = ponderado.ToArray();
+                        ListViewItem a = new ListViewItem(num.ToString());
+                        num++;
+                        a.SubItems.Add(ponderado.Last().UnidadesCompradas.ToString());
+                        a.SubItems.Add(ponderado.Last().PrecioDeCompra.ToString());
+                        a.SubItems.Add(ponderado.Last().Calculo(listview).ToString("0.00"));
+                        promedio = ponderado.Last().Calculo(listview);
+                        lvPromedio.Items.Add(a);
+                        unidadesCompradas += ponderado.Last().UnidadesCompradas;
+                        mtbCantidad.Clear();
+                        mtbCosto.Clear();
+                        mtbCantidad.Focus();
+                    }
+                }catch (OverflowException)
+                {
+                    MessageBox.Show("Numeros muy Grandes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+               
             }
             catch (FormatException)
             {
@@ -48,7 +58,7 @@ namespace pjContabilidadMetodosValuacion
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnCalculaar_Click(object sender, EventArgs e)
         {
             double prom = double.Parse(promedio.ToString("0.00"));
             if (mtbUsadas.Text.Trim().Length != 0)
@@ -77,5 +87,7 @@ namespace pjContabilidadMetodosValuacion
             frmPrincipal Menu = new frmPrincipal();
             Menu.ShowDialog();
         }
+
+       
     }
 }
