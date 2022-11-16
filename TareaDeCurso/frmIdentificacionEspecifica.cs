@@ -42,7 +42,7 @@ namespace pjContabilidadMetodosValuacion
             {
                 try
                 {
-                    if (int.Parse(txtUnidadesUsadas.Text) < 999999 && double.Parse(txtCostoUnitarioSalida.Text) < 999999)
+                    try
                     {
                         if (int.Parse(txtUnidadesUsadas.Text) > 0 && double.Parse(txtCostoUnitarioSalida.Text) > 0)
                         {
@@ -126,7 +126,7 @@ namespace pjContabilidadMetodosValuacion
                             return;
                         }
                     }
-                    else
+                    catch(OverflowException)
                     {
                         MessageBox.Show("Números demasiado grandes", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtUnidadesUsadas.Clear();
@@ -154,78 +154,80 @@ namespace pjContabilidadMetodosValuacion
             {
                 try
                 {
-                    if (int.Parse(txtUnidadesCompradas.Text) > 999999 && double.Parse(txtCostoUnitario.Text) < 999999)
+                    try
                     {
                         if (int.Parse(txtUnidadesCompradas.Text) > 0 && double.Parse(txtCostoUnitario.Text) > 0)
-                        {
-                            UnidadesCompradas = int.Parse(txtUnidadesCompradas.Text);
-                            CostoUnitario = double.Parse(txtCostoUnitario.Text);
-
-
-                            //Obteniendo los datos de los TextBox
-
-                            //Obteniendo las fechas para comparar con las salidas
-                            DateTime FechaEntrada = DTPEntrada.Value;
-
-                            //Haciendo las operaciones correspondientes...
-                            //Para obtener las Unidades Disponibles
-                            UnidadesDisponibles += (UnidadesCompradas - UnidadesUsadas);
-                            //Para obtener el costo total de las unidades Disponibles
-                            CostoUnidadesDisponibles += (UnidadesCompradas * CostoUnitario);
-                            //Para obtener el costo de las unidades compradas
-                            CostoUnidadesCompradas = UnidadesCompradas * CostoUnitario;
-
-                            for (int i = 0; i < RegistroentradasList.Count; i++)
                             {
-                                if (CostoUnitario.ToString().Equals(RegistroentradasList[i].CostoUnitario.ToString()))
+                                UnidadesCompradas = int.Parse(txtUnidadesCompradas.Text);
+                                CostoUnitario = double.Parse(txtCostoUnitario.Text);
+
+
+                                //Obteniendo los datos de los TextBox
+
+                                //Obteniendo las fechas para comparar con las salidas
+                                DateTime FechaEntrada = DTPEntrada.Value;
+
+                                //Haciendo las operaciones correspondientes...
+                                //Para obtener las Unidades Disponibles
+                                UnidadesDisponibles += (UnidadesCompradas - UnidadesUsadas);
+                                //Para obtener el costo total de las unidades Disponibles
+                                CostoUnidadesDisponibles += (UnidadesCompradas * CostoUnitario);
+                                //Para obtener el costo de las unidades compradas
+                                CostoUnidadesCompradas = UnidadesCompradas * CostoUnitario;
+
+                                for (int i = 0; i < RegistroentradasList.Count; i++)
                                 {
-                                    UnidadesCompradas += RegistroentradasList[i].UnidadesCompradas;
+                                    if (CostoUnitario.ToString().Equals(RegistroentradasList[i].CostoUnitario.ToString()))
+                                    {
+                                        UnidadesCompradas += RegistroentradasList[i].UnidadesCompradas;
 
-                                    RegistroentradasList.RemoveAt(i);
-                                    break;
+                                        RegistroentradasList.RemoveAt(i);
+                                        break;
+                                    }
                                 }
-                            }
-                            //Almacenando los datos en la "List
+                                //Almacenando los datos en la "List
 
-                            RegistroentradasList.Add(new RegistroTransacciones()
+                                RegistroentradasList.Add(new RegistroTransacciones()
+                                {
+                                    Fecha = FechaEntrada,
+                                    UnidadesCompradas = UnidadesCompradas,
+                                    CostoUnitario = CostoUnitario,
+                                    CostoUnidadesCompradas = CostoUnidadesCompradas
+                                });
+
+                                //Presentando los datos en el ListView
+                                ActualizarDatosEntradas();
+
+                                //Limpiando los cuadros de texto
+                                txtCostoUnitario.Clear();
+                                txtUnidadesCompradas.Clear();
+                                txtUnidadesCompradas.Focus();
+
+                                C++;
+                        }
+                            else
                             {
-                                Fecha = FechaEntrada,
-                                UnidadesCompradas = UnidadesCompradas,
-                                CostoUnitario = CostoUnitario,
-                                CostoUnidadesCompradas = CostoUnidadesCompradas
-                            });
-
-                            //Presentando los datos en el ListView
-                            ActualizarDatosEntradas();
-
-                            //Limpiando los cuadros de texto
-                            txtCostoUnitario.Clear();
-                            txtUnidadesCompradas.Clear();
-                            txtUnidadesCompradas.Focus();
-
-                            C++;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Solo puedes ingresar números mayores que 0", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            txtUnidadesCompradas.Clear();
-                            txtCostoUnitario.Clear();
-                        }
+                                MessageBox.Show("Solo puedes ingresar números mayores que 0", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                txtUnidadesCompradas.Clear();
+                                txtCostoUnitario.Clear();
+                            }
+                        
                     }
-                    else
+                    catch (OverflowException)
                     {
                         MessageBox.Show("Números demasiado grandes", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        txtUnidadesCompradas.Clear();
                         txtCostoUnitario.Clear();
+                        txtUnidadesCompradas.Clear();
+                        return;
                     }
-                    
                 }
                 catch (FormatException)
                 {
-                    MessageBox.Show("Ingrese las unidades en un formato valido", "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ingrese las unidades y el costo al que desea que se usen en un formato valido", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtCostoUnitario.Clear();
+                    txtUnidadesCompradas.Clear();
                     return;
                 }
-                    
             }
             else
             {
