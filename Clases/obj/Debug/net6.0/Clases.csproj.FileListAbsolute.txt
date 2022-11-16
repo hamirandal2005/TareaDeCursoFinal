@@ -73,7 +73,6 @@ G:\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.dll
 G:\TareaDeCursoFinal\Clases\obj\Debug\net6.0\refint\Clases.dll
 G:\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.pdb
 G:\TareaDeCursoFinal\Clases\obj\Debug\net6.0\ref\Clases.dll
-<<<<<<< HEAD
 C:\Users\GP\Desktop\prueba\Clases\bin\Debug\net6.0\Clases.deps.json
 C:\Users\GP\Desktop\prueba\Clases\bin\Debug\net6.0\Clases.dll
 C:\Users\GP\Desktop\prueba\Clases\bin\Debug\net6.0\Clases.pdb
@@ -87,7 +86,6 @@ C:\Users\GP\Desktop\prueba\Clases\obj\Debug\net6.0\refint\Clases.dll
 C:\Users\GP\Desktop\prueba\Clases\obj\Debug\net6.0\Clases.pdb
 C:\Users\GP\Desktop\prueba\Clases\obj\Debug\net6.0\ref\Clases.dll
 >>>>>>> Developer
-=======
 >>>>>>> LiLi
 C:\Users\GP\Desktop\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.deps.json
 C:\Users\GP\Desktop\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.dll
@@ -101,7 +99,6 @@ C:\Users\GP\Desktop\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.dll
 C:\Users\GP\Desktop\TareaDeCursoFinal\Clases\obj\Debug\net6.0\refint\Clases.dll
 C:\Users\GP\Desktop\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.pdb
 C:\Users\GP\Desktop\TareaDeCursoFinal\Clases\obj\Debug\net6.0\ref\Clases.dll
-<<<<<<< HEAD
 C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.deps.json
 C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.dll
 C:\Users\hamir\OneDrive\Documents\Programación I\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.pdb
@@ -152,5 +149,3 @@ C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.
 C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\refint\Clases.dll
 C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.pdb
 C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\ref\Clases.dll
-=======
->>>>>>> LiLi
