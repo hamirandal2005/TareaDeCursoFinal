@@ -18,6 +18,7 @@ namespace pjContabilidadMetodosValuacion
         Stack<MatEntradaSalida> Compradas = new Stack<MatEntradaSalida>();
         Stack<MatEntradaSalida> Usadas = new Stack<MatEntradaSalida>();
         int UnidadesTotales = 0;
+        double CostoUnidadesCompradas = 0, CostoUnidadesUsadas = 0;
         public frmUEPS()
         {
             InitializeComponent();
@@ -25,9 +26,6 @@ namespace pjContabilidadMetodosValuacion
         private void btnRegistrarCompras_Click(object sender, EventArgs e)
         {
             bool Confirmacion = true;
-            if (ValidaDatos() == "")
-            {
-
                 try
                 {
                     if(int.Parse(txtCompras.Text) > 0 && double.Parse(txtCostoCompras.Text) > 0)
@@ -50,6 +48,7 @@ namespace pjContabilidadMetodosValuacion
                         ActualizarCompras();
                         }
 
+                    CostoUnidadesCompradas += (int.Parse(txtCompras.Text) * double.Parse(txtCostoCompras.Text));
                         txtCompras.Clear();
                         txtCostoCompras.Clear();
                     }else
@@ -60,15 +59,10 @@ namespace pjContabilidadMetodosValuacion
                     MessageBox.Show("Ingrese las unidades y su costo en un formato valido", "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-            }
-            else
-                MessageBox.Show(ValidaDatos(), "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void btnRegistrarUsadas_Click(object sender, EventArgs e)
         {
             int usadas = 0, temporalU=0, RegistroUsadas=0;
-            if (ValidaDatos() == "")
-            {
                 try
                 {
                     usadas = int.Parse(txtUsadas.Text);
@@ -84,12 +78,14 @@ namespace pjContabilidadMetodosValuacion
                                 if (usadas == Compradas.Peek().UnidadesCompradas)
                                 {
                                     Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, int.Parse(txtUsadas.Text), Compradas.Peek().CostoUnitario));
+                                CostoUnidadesUsadas = (int.Parse(txtUsadas.Text) * Compradas.Peek().CostoUnitario);
                                     Compradas.Pop();
                                     usadas -= int.Parse(txtUsadas.Text);
                                 }
                                 else if (usadas < Compradas.Peek().UnidadesCompradas)
                                 {
                                 Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, int.Parse(txtUsadas.Text), Compradas.Peek().CostoUnitario));
+                                CostoUnidadesUsadas = (int.Parse(txtUsadas.Text) * Compradas.Peek().CostoUnitario);
                                 Compradas.Peek().UnidadesCompradas -= usadas;
                                 }
                                 ActualizarCompras();
@@ -107,12 +103,16 @@ namespace pjContabilidadMetodosValuacion
                                     if (Compradas.Peek().UnidadesCompradas <= 0)
                                     {
                                         Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, RegistroUsadas, Compradas.Peek().CostoUnitario));
-                                        Compradas.Pop();
+                                    CostoUnidadesUsadas = (int.Parse(txtUsadas.Text) * Compradas.Peek().CostoUnitario);
+                                    Compradas.Pop();
                                     }
-                                    else
-                                        Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, temporalU, Compradas.Peek().CostoUnitario));
+                                else
+                                {
+                                    Usadas.Push(new MatEntradaSalida(DTPUsadas.Value, temporalU, Compradas.Peek().CostoUnitario));
+                                    CostoUnidadesUsadas = (int.Parse(txtUsadas.Text) * Compradas.Peek().CostoUnitario);
+                                }
 
-                                    temporalU = usadas;
+                                temporalU = usadas;
                                 }
                                     ActualizarCompras();
                                     ActualizarUsadas();
@@ -131,23 +131,8 @@ namespace pjContabilidadMetodosValuacion
                     MessageBox.Show("Ingrese las unidades en un formato valido", "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
+        }
 
-            }
-            else
-                MessageBox.Show(ValidaDatos(), "¡Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-        private string ValidaDatos()
-        {
-            if ((txtCompras.Text.Trim().Length == 0) && (txtUsadas.Text.Trim().Length == 0))
-            {
-                return "No se han registrado Unidades, ni de entradas y/o salidas";
-            }
-            else if (txtCompras.Text.Trim().Length > 0 && txtCostoCompras.Text.Trim().Length == 0)
-            {
-                return "No se ha registrado el costo unitario";
-            } 
-            return "";
-        }
         public void ActualizarCompras()
         {
             lvUnidadesCompradas.Items.Clear();
@@ -159,7 +144,6 @@ namespace pjContabilidadMetodosValuacion
                 Entradas.SubItems.Add((Refresh.UnidadesCompradas * Refresh.CostoUnitario).ToString("C"));
                 lvUnidadesCompradas.Items.Add(Entradas);
             }
-
         }
         public void ActualizarUsadas()
         {
@@ -180,6 +164,14 @@ namespace pjContabilidadMetodosValuacion
             this.Hide();
             frmPrincipal Menu = new frmPrincipal();
             Menu.ShowDialog();
+        }
+
+        private void btnFinalizarPeriodo_Click(object sender, EventArgs e)
+        {
+            gpFinalizarPeriodo.Visible = true;
+            lblCostoTotalCompra.Text = CostoUnidadesCompradas.ToString("C");
+            lblCostoMaterialesUsados.Text= CostoUnidadesUsadas.ToString("C");
+            lblInventarioFinal.Text = (CostoUnidadesCompradas - CostoUnidadesUsadas).ToString("C");
         }
     }
 }

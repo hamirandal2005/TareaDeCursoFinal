@@ -67,7 +67,13 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gbResultados = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblInventarioFinal = new System.Windows.Forms.Label();
+            this.lblCostoUsadas = new System.Windows.Forms.Label();
+            this.lblCostoCompradas = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.DTPTransaccion.SuspendLayout();
@@ -75,6 +81,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.gbResultados.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -412,6 +419,7 @@
             this.btnFinalizarPeriodo.TabIndex = 10;
             this.btnFinalizarPeriodo.Text = "Finalizar Período";
             this.btnFinalizarPeriodo.UseVisualStyleBackColor = true;
+            this.btnFinalizarPeriodo.Click += new System.EventHandler(this.btnFinalizarPeriodo_Click);
             // 
             // panel1
             // 
@@ -464,18 +472,88 @@
             this.pictureBox2.TabIndex = 33;
             this.pictureBox2.TabStop = false;
             // 
-            // groupBox3
+            // gbResultados
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(228, 458);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(856, 89);
-            this.groupBox3.TabIndex = 34;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Resultados";
+            this.gbResultados.BackColor = System.Drawing.Color.Transparent;
+            this.gbResultados.Controls.Add(this.label5);
+            this.gbResultados.Controls.Add(this.label10);
+            this.gbResultados.Controls.Add(this.lblInventarioFinal);
+            this.gbResultados.Controls.Add(this.lblCostoUsadas);
+            this.gbResultados.Controls.Add(this.lblCostoCompradas);
+            this.gbResultados.Controls.Add(this.label4);
+            this.gbResultados.ForeColor = System.Drawing.Color.White;
+            this.gbResultados.Location = new System.Drawing.Point(228, 458);
+            this.gbResultados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbResultados.Name = "gbResultados";
+            this.gbResultados.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbResultados.Size = new System.Drawing.Size(856, 89);
+            this.gbResultados.TabIndex = 34;
+            this.gbResultados.TabStop = false;
+            this.gbResultados.Text = "Resultados";
+            this.gbResultados.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.IndianRed;
+            this.label5.Location = new System.Drawing.Point(537, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(130, 21);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "Inventario Final";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.IndianRed;
+            this.label10.Location = new System.Drawing.Point(310, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(187, 21);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Costo Unidades Usadas";
+            // 
+            // lblInventarioFinal
+            // 
+            this.lblInventarioFinal.AutoSize = true;
+            this.lblInventarioFinal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblInventarioFinal.Location = new System.Drawing.Point(568, 57);
+            this.lblInventarioFinal.Name = "lblInventarioFinal";
+            this.lblInventarioFinal.Size = new System.Drawing.Size(52, 17);
+            this.lblInventarioFinal.TabIndex = 39;
+            this.lblInventarioFinal.Text = "label11";
+            // 
+            // lblCostoUsadas
+            // 
+            this.lblCostoUsadas.AutoSize = true;
+            this.lblCostoUsadas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCostoUsadas.Location = new System.Drawing.Point(374, 57);
+            this.lblCostoUsadas.Name = "lblCostoUsadas";
+            this.lblCostoUsadas.Size = new System.Drawing.Size(45, 17);
+            this.lblCostoUsadas.TabIndex = 38;
+            this.lblCostoUsadas.Text = "label5";
+            // 
+            // lblCostoCompradas
+            // 
+            this.lblCostoCompradas.AutoSize = true;
+            this.lblCostoCompradas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCostoCompradas.Location = new System.Drawing.Point(182, 57);
+            this.lblCostoCompradas.Name = "lblCostoCompradas";
+            this.lblCostoCompradas.Size = new System.Drawing.Size(45, 17);
+            this.lblCostoCompradas.TabIndex = 36;
+            this.lblCostoCompradas.Text = "label5";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.IndianRed;
+            this.label4.Location = new System.Drawing.Point(90, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(219, 21);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Costo Unidades Compradas";
             // 
             // frmIdentificacionEspecifica
             // 
@@ -483,8 +561,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1124, 526);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(1181, 562);
+            this.Controls.Add(this.gbResultados);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
@@ -507,6 +585,8 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.gbResultados.ResumeLayout(false);
+            this.gbResultados.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -551,6 +631,12 @@
         private Panel panel7;
         private Panel panel6;
         private PictureBox pictureBox2;
-        private GroupBox groupBox3;
+        private GroupBox gbResultados;
+        private Label label5;
+        private Label label10;
+        private Label lblInventarioFinal;
+        private Label lblCostoUsadas;
+        private Label lblCostoCompradas;
+        private Label label4;
     }
 }

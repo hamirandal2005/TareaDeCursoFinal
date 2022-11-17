@@ -44,9 +44,10 @@ namespace pjContabilidadMetodosValuacion
                         mtbCosto.Clear();
                         mtbCantidad.Focus();
                     }
-                }catch (OverflowException)
+                }
+                catch (OverflowException)
                 {
-                    MessageBox.Show("Numeros muy Grandes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Números muy Grandes", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     mtbCantidad.Clear();
                     mtbCosto.Clear();
                     mtbCantidad.Focus();
@@ -55,7 +56,7 @@ namespace pjContabilidadMetodosValuacion
             }
             catch (FormatException)
             {
-                MessageBox.Show("Ingrese un valor entero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ingrese un valor entero", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtbCantidad.Clear();
                 mtbCosto.Clear();
                 mtbCantidad.Focus();
@@ -100,10 +101,6 @@ namespace pjContabilidadMetodosValuacion
                 mtbUsadas.Clear();
                 mtbUsadas.Focus();
             }
-
-
-            
-
         }
 
         private void btnMenú_Click(object sender, EventArgs e)
@@ -113,7 +110,5 @@ namespace pjContabilidadMetodosValuacion
             frmPrincipal Menu = new frmPrincipal();
             Menu.ShowDialog();
         }
-
-       
     }
 }

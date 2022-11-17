@@ -32,8 +32,6 @@ namespace pjContabilidadMetodosValuacion
                 {
                     if (int.Parse(txtUnidades.Text) > 0 && double.Parse(txtCosto.Text) > 0)
                     {
-                        try
-                        {
                             for (int i = 0; i < Entrada.Count; i++)
                             {
                                 if (Entrada[i].Fecha.ToShortDateString() == dtFechaCompras.Value.ToShortDateString() && Entrada[i].CostoUnitario == double.Parse(txtCosto.Text))
@@ -52,15 +50,7 @@ namespace pjContabilidadMetodosValuacion
                                 Entrada.Sort();
                                 ActualizarTablaEntrada();
                             }
-                        }
-                        catch (FormatException)
-                        {
-                            MessageBox.Show("Rellene las casillas requeridas", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            txtUnidades.Clear();
-                            txtCosto.Clear();
-                            txtUnidades.Focus();
-                            return;
-                        }
+                        
                     }
                     else
                     {
@@ -68,7 +58,6 @@ namespace pjContabilidadMetodosValuacion
                         return;
 
                     }
-                    dtFechaCompras.ResetText();
                     txtUnidades.Clear();
                     txtCosto.Clear();
                 }
@@ -92,13 +81,13 @@ namespace pjContabilidadMetodosValuacion
         private void btnRegistrarUtilizadas_Click(object sender, EventArgs e)
         {
             int utilizadas = 0;
-
             try
             {
                 try
                 {
                     if (int.Parse(txtUnidadesUtilizadas.Text) > 0)
                     {
+                        utilizadas = int.Parse(txtUnidadesUtilizadas.Text);
                         if (suma >= utilizadas)
                         {
                             for (int i = 100; i != 0; i++)
@@ -160,20 +149,23 @@ namespace pjContabilidadMetodosValuacion
                         lvUnidadesUtilizadas.Items.Clear();
                         ActualizarTablaSalida();
                         ActualizarTablaEntrada();
-                        dtFechaUtilizadas.ResetText();
                         txtUnidadesUtilizadas.Clear();
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Solo puedes ingresar números mayores que 0", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                   
                 }
                 catch (OverflowException)
                 {
-                    MessageBox.Show("Numeros muy Grandes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Números muy Grandes", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (FormatException)
             {
-                MessageBox.Show("Ingrese un valor entero", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ingrese un valor entero", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

@@ -28,7 +28,7 @@ namespace pjContabilidadMetodosValuacion
         int UnidadesCompradas;
         int UnidadesUsadas;
         //Variables para almacenar los costos
-        double CostoUnitario, CostoUnidadesCompradas = 0, CostoUnidadesUsadas=0, CostoUnitarioSalida=0;
+        double CostoUnitario, CostoUnidadesCompradas = 0, CostoUnitarioSalida = 0, CostoUnidadesUsadas;
         double UnidadesDisponibles=0, CostoUnidadesDisponibles=0;
         int C = 0;
         public frmIdentificacionEspecifica()
@@ -36,10 +36,16 @@ namespace pjContabilidadMetodosValuacion
             InitializeComponent();
         }
 
+        private void btnFinalizarPeriodo_Click(object sender, EventArgs e)
+        {
+            gbResultados.Visible = true;
+            lblCostoCompradas.Text = CostoUnidadesDisponibles.ToString("C");
+            lblCostoUsadas.Text = CostoUnidadesUsadas.ToString("C");
+            lblInventarioFinal.Text = (CostoUnidadesDisponibles - CostoUnidadesUsadas).ToString("C");
+        }
+
         private void btnRegistrarSalidas_Click(object sender, EventArgs e)
         { 
-            if (ValidaDatos() == "")
-            {
                 try
                 {
                     try
@@ -76,8 +82,9 @@ namespace pjContabilidadMetodosValuacion
                                             {
                                                 //Se restan las unidades salientes
                                                 RegistroentradasList[i].UnidadesCompradas = RegistroentradasList[i].UnidadesCompradas - UnidadesUsadas;
+
                                                 //Costo Total de las unidades utilizadas
-                                                CostoUnidadesUsadas = RegistroentradasList[i].CostoUnitario * UnidadesUsadas;
+                                                CostoUnidadesUsadas += RegistroentradasList[i].CostoUnitario * UnidadesUsadas;
 
                                                 RegistrosalidasList.Add(new RegistroTransacciones() { FechaSale = FechaTransaccion, Fecha = FechaSalida, UnidadesUsadas = UnidadesUsadas, CostoUnitario = RegistroentradasList[i].CostoUnitario });
 
@@ -87,7 +94,6 @@ namespace pjContabilidadMetodosValuacion
                                                 }
                                                 //Se presentan los datos...
                                                 ActualizarDatosSalidas();
-
                                                 ActualizarDatosEntradas();
 
                                                 //Limpiar los cuadros de Texto
@@ -139,19 +145,11 @@ namespace pjContabilidadMetodosValuacion
                     MessageBox.Show("Ingrese las unidades y su costo en un formato valido", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                
-            }
-            else
-            {
-                MessageBox.Show(ValidaDatos(), "¡Error!");
-            }
         }
 
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (ValidaDatos() == "")
-            {
                 try
                 {
                     try
@@ -228,30 +226,8 @@ namespace pjContabilidadMetodosValuacion
                     txtUnidadesCompradas.Clear();
                     return;
                 }
-            }
-            else
-            {
-                MessageBox.Show(ValidaDatos(), "¡Error!");
-            }
-
         }
 
-        private string ValidaDatos()
-        {
-            if ((txtUnidadesCompradas.Text.Trim().Length == 0) && (txtUnidadesUsadas.Text.Trim().Length == 0))
-            {
-                return "No se han registrado Unidades, ni de entradas y/o salidas";
-            }
-            else if (txtUnidadesUsadas.Text.Trim().Length > 0 && txtCostoUnitarioSalida.Text.Trim().Length == 0)
-            {
-                return "No se ha registrado el costo unitario al que se desea que salgan las unidades";
-            }
-            else if ((txtUnidadesCompradas.Text.Trim().Length > 0) && (txtCostoUnitario.Text.Trim().Length == 0))
-            {
-                return "No se ha registrado el 'Costo por Unidad'";
-            }
-            return "";
-        }
         public void ActualizarDatosEntradas()
         {
             lvDatosIngresados.Items.Clear();
@@ -263,8 +239,8 @@ namespace pjContabilidadMetodosValuacion
                 Entradas.SubItems.Add((Refresh.UnidadesCompradas * Refresh.CostoUnitario).ToString("C"));
                 lvDatosIngresados.Items.Add(Entradas);  
             }
-
         }
+
         public void ActualizarDatosSalidas()
         {
             lvDatosSalidas.Items.Clear();

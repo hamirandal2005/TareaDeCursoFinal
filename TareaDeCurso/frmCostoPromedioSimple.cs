@@ -27,12 +27,10 @@ namespace pjContabilidadMetodosValuacion
             lblCostoMaterialesUsados.Text="C";
             lblInventarioFinal.Text = "C";
             lblSaldo.Text = "C";
-
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
             try
             {
                 try
@@ -58,7 +56,7 @@ namespace pjContabilidadMetodosValuacion
                 }
                 catch (OverflowException)
                 {
-                    MessageBox.Show("Numeros muy Grandes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Números muy Grandes", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //Limpiar Controles
                     txtUnidadesCompradas.Clear();
                     txtCostoUnitario.Clear();
@@ -67,19 +65,13 @@ namespace pjContabilidadMetodosValuacion
             }
             catch (FormatException)
             {
-                MessageBox.Show("Ingrese un valor entero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ingrese un valor entero", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //Limpiar Controles
                 txtUnidadesCompradas.Clear();
                 txtCostoUnitario.Clear();
                 txtUnidadesCompradas.Focus();
-
             }
-              
-
-
         }
-
-
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             //Sacar el Saldo
@@ -101,12 +93,6 @@ namespace pjContabilidadMetodosValuacion
             lblInventarioFinal.Text = costoInventarioFinal.ToString("C");
             lblSaldo.Text = saldo.ToString("C");
             lblCostoTotalCompra.Text = costoTotalCompra.ToString("C");
-            
-            
-   
-
- 
-
         }
         private double SumatoriasRegistro1(double variable, int n)
         {
@@ -117,9 +103,7 @@ namespace pjContabilidadMetodosValuacion
                 {
                     variable += double.Parse(lvDatosIngresados.Items[i].SubItems[n].Text);
                 }
-
             }
-
             return variable;
         }
         private double SumatoriasRegistro2(double variable, int n)
@@ -131,9 +115,7 @@ namespace pjContabilidadMetodosValuacion
                 {
                     variable += double.Parse(lvDatos2.Items[i].SubItems[n].Text);
                 }
-
             }
-
             return variable;
         }
 
@@ -156,14 +138,14 @@ namespace pjContabilidadMetodosValuacion
                 }
                 catch (OverflowException)
                 {
-                    MessageBox.Show("Numeros muy Grandes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Numeros muy Grandes", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtUnidadesUtilizadas.Clear();
                     txtUnidadesUtilizadas.Focus();
                 }
             }
             catch (FormatException)
             {
-                MessageBox.Show("Ingrese un valor entero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Ingrese un valor entero", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUnidadesUtilizadas.Clear();
                 txtUnidadesUtilizadas.Focus();
             }
@@ -176,7 +158,6 @@ namespace pjContabilidadMetodosValuacion
             this.Hide();
             frmPrincipal Menu = new frmPrincipal();
             Menu.ShowDialog();
-
         }
     }
 }

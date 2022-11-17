@@ -91,7 +91,7 @@
             this.btnRegistrarCompras.Location = new System.Drawing.Point(209, 140);
             this.btnRegistrarCompras.Name = "btnRegistrarCompras";
             this.btnRegistrarCompras.Size = new System.Drawing.Size(95, 33);
-            this.btnRegistrarCompras.TabIndex = 0;
+            this.btnRegistrarCompras.TabIndex = 4;
             this.btnRegistrarCompras.Text = "Registrar";
             this.btnRegistrarCompras.UseVisualStyleBackColor = true;
             this.btnRegistrarCompras.Click += new System.EventHandler(this.btnRegistrarCompras_Click);
@@ -102,21 +102,22 @@
             this.dtFechaCompras.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechaCompras.Location = new System.Drawing.Point(75, 40);
             this.dtFechaCompras.Name = "dtFechaCompras";
-            this.dtFechaCompras.Size = new System.Drawing.Size(121, 27);
+            this.dtFechaCompras.Size = new System.Drawing.Size(121, 23);
             this.dtFechaCompras.TabIndex = 1;
+            this.dtFechaCompras.Value = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             // 
             // txtUnidades
             // 
             this.txtUnidades.Location = new System.Drawing.Point(209, 90);
             this.txtUnidades.Name = "txtUnidades";
-            this.txtUnidades.Size = new System.Drawing.Size(100, 30);
+            this.txtUnidades.Size = new System.Drawing.Size(100, 26);
             this.txtUnidades.TabIndex = 2;
             // 
             // txtCosto
             // 
             this.txtCosto.Location = new System.Drawing.Point(60, 138);
             this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(100, 30);
+            this.txtCosto.Size = new System.Drawing.Size(100, 26);
             this.txtCosto.TabIndex = 3;
             // 
             // btnRegistrarUtilizados
@@ -127,7 +128,7 @@
             this.btnRegistrarUtilizados.Location = new System.Drawing.Point(125, 150);
             this.btnRegistrarUtilizados.Name = "btnRegistrarUtilizados";
             this.btnRegistrarUtilizados.Size = new System.Drawing.Size(95, 33);
-            this.btnRegistrarUtilizados.TabIndex = 4;
+            this.btnRegistrarUtilizados.TabIndex = 7;
             this.btnRegistrarUtilizados.Text = "Registrar";
             this.btnRegistrarUtilizados.UseVisualStyleBackColor = true;
             this.btnRegistrarUtilizados.Click += new System.EventHandler(this.btnRegistrarUtilizadas_Click);
@@ -138,7 +139,7 @@
             this.label1.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(9, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 23);
+            this.label1.Size = new System.Drawing.Size(150, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "Unidades Compradas : ";
             // 
@@ -148,7 +149,7 @@
             this.label2.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(9, 140);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 23);
+            this.label2.Size = new System.Drawing.Size(37, 18);
             this.label2.TabIndex = 6;
             this.label2.Text = "C/U :";
             // 
@@ -177,7 +178,7 @@
             this.label5.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(9, 41);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 23);
+            this.label5.Size = new System.Drawing.Size(52, 18);
             this.label5.TabIndex = 6;
             this.label5.Text = "Fecha :";
             // 
@@ -234,7 +235,7 @@
             this.label6.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(8, 44);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 23);
+            this.label6.Size = new System.Drawing.Size(52, 18);
             this.label6.TabIndex = 10;
             this.label6.Text = "Fecha :";
             // 
@@ -244,7 +245,7 @@
             this.label7.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(8, 97);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(181, 23);
+            this.label7.Size = new System.Drawing.Size(142, 18);
             this.label7.TabIndex = 9;
             this.label7.Text = "Unidades Utilizadas : ";
             // 
@@ -252,8 +253,8 @@
             // 
             this.txtUnidadesUtilizadas.Location = new System.Drawing.Point(195, 90);
             this.txtUnidadesUtilizadas.Name = "txtUnidadesUtilizadas";
-            this.txtUnidadesUtilizadas.Size = new System.Drawing.Size(100, 30);
-            this.txtUnidadesUtilizadas.TabIndex = 8;
+            this.txtUnidadesUtilizadas.Size = new System.Drawing.Size(100, 26);
+            this.txtUnidadesUtilizadas.TabIndex = 6;
             // 
             // dtFechaUtilizadas
             // 
@@ -261,8 +262,9 @@
             this.dtFechaUtilizadas.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechaUtilizadas.Location = new System.Drawing.Point(79, 41);
             this.dtFechaUtilizadas.Name = "dtFechaUtilizadas";
-            this.dtFechaUtilizadas.Size = new System.Drawing.Size(121, 27);
-            this.dtFechaUtilizadas.TabIndex = 7;
+            this.dtFechaUtilizadas.Size = new System.Drawing.Size(121, 23);
+            this.dtFechaUtilizadas.TabIndex = 5;
+            this.dtFechaUtilizadas.Value = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             // 
             // gbDatosIngresados
             // 
@@ -334,7 +336,7 @@
             this.label8.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(6, 104);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(197, 24);
+            this.label8.Size = new System.Drawing.Size(161, 19);
             this.label8.TabIndex = 16;
             this.label8.Text = "Materiales Utilizados :";
             // 
@@ -367,7 +369,7 @@
             this.lblUnidadesCompradas.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblUnidadesCompradas.Location = new System.Drawing.Point(240, 265);
             this.lblUnidadesCompradas.Name = "lblUnidadesCompradas";
-            this.lblUnidadesCompradas.Size = new System.Drawing.Size(67, 24);
+            this.lblUnidadesCompradas.Size = new System.Drawing.Size(55, 19);
             this.lblUnidadesCompradas.TabIndex = 21;
             this.lblUnidadesCompradas.Text = "label13";
             // 
@@ -377,7 +379,7 @@
             this.label12.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.Location = new System.Drawing.Point(10, 227);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(246, 24);
+            this.label12.Size = new System.Drawing.Size(199, 19);
             this.label12.TabIndex = 20;
             this.label12.Text = "Total Unidades Compradas :";
             // 
@@ -387,7 +389,7 @@
             this.lblCostoPeriodo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCostoPeriodo.Location = new System.Drawing.Point(220, 156);
             this.lblCostoPeriodo.Name = "lblCostoPeriodo";
-            this.lblCostoPeriodo.Size = new System.Drawing.Size(65, 24);
+            this.lblCostoPeriodo.Size = new System.Drawing.Size(52, 19);
             this.lblCostoPeriodo.TabIndex = 19;
             this.lblCostoPeriodo.Text = "label11";
             // 
@@ -397,7 +399,7 @@
             this.label10.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.Location = new System.Drawing.Point(6, 156);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(168, 24);
+            this.label10.Size = new System.Drawing.Size(137, 19);
             this.label10.TabIndex = 18;
             this.label10.Text = "Costo del periodo :";
             // 
@@ -407,7 +409,7 @@
             this.lblMatUtilizados.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMatUtilizados.Location = new System.Drawing.Point(220, 104);
             this.lblMatUtilizados.Name = "lblMatUtilizados";
-            this.lblMatUtilizados.Size = new System.Drawing.Size(65, 24);
+            this.lblMatUtilizados.Size = new System.Drawing.Size(52, 19);
             this.lblMatUtilizados.TabIndex = 17;
             this.lblMatUtilizados.Text = "label11";
             // 
@@ -417,7 +419,7 @@
             this.lblInvFinal.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblInvFinal.Location = new System.Drawing.Point(216, 46);
             this.lblInvFinal.Name = "lblInvFinal";
-            this.lblInvFinal.Size = new System.Drawing.Size(69, 24);
+            this.lblInvFinal.Size = new System.Drawing.Size(56, 19);
             this.lblInvFinal.TabIndex = 1;
             this.lblInvFinal.Text = "label10";
             // 
@@ -427,7 +429,7 @@
             this.label9.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.Location = new System.Drawing.Point(6, 46);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(153, 24);
+            this.label9.Size = new System.Drawing.Size(123, 19);
             this.label9.TabIndex = 0;
             this.label9.Text = "Inventario Final :";
             // 
@@ -528,7 +530,7 @@
             // 
             // frmPEPS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.FondoFranjaRoja;
             this.ClientSize = new System.Drawing.Size(1188, 688);
