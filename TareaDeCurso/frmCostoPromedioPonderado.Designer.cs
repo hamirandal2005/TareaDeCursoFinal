@@ -120,7 +120,7 @@
             this.columnHeader7});
             this.lvPromedio.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lvPromedio.GridLines = true;
-            this.lvPromedio.Location = new System.Drawing.Point(3, 9);
+            this.lvPromedio.Location = new System.Drawing.Point(5, 7);
             this.lvPromedio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvPromedio.Name = "lvPromedio";
             this.lvPromedio.Size = new System.Drawing.Size(272, 162);
@@ -195,14 +195,14 @@
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(118, 268);
+            this.groupBox1.Location = new System.Drawing.Point(569, 247);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Size = new System.Drawing.Size(491, 228);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos Ingresados";
+            this.groupBox1.Text = "Resultados";
             // 
             // panel3
             // 
@@ -240,7 +240,6 @@
             this.mtbCantidad.Size = new System.Drawing.Size(75, 29);
             this.mtbCantidad.TabIndex = 15;
             this.mtbCantidad.ValidatingType = typeof(int);
-         
             // 
             // mtbCosto
             // 
@@ -275,14 +274,14 @@
             this.groupBox3.Controls.Add(this.panel4);
             this.groupBox3.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(708, 268);
+            this.groupBox3.Location = new System.Drawing.Point(109, 247);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Size = new System.Drawing.Size(297, 228);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Resultados";
+            this.groupBox3.Text = "Datos Ingresados";
             // 
             // panel4
             // 

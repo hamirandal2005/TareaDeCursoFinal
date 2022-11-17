@@ -47,12 +47,18 @@ namespace pjContabilidadMetodosValuacion
                 }catch (OverflowException)
                 {
                     MessageBox.Show("Numeros muy Grandes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    mtbCantidad.Clear();
+                    mtbCosto.Clear();
+                    mtbCantidad.Focus();
                 }
                
             }
             catch (FormatException)
             {
                 MessageBox.Show("Ingrese un valor entero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                mtbCantidad.Clear();
+                mtbCosto.Clear();
+                mtbCantidad.Focus();
             }
 
 
@@ -60,23 +66,43 @@ namespace pjContabilidadMetodosValuacion
 
         private void btnCalculaar_Click(object sender, EventArgs e)
         {
-            double prom = double.Parse(promedio.ToString("0.00"));
-            if (mtbUsadas.Text.Trim().Length != 0)
+            try
             {
-                lvCostos.Items.Clear();
-                String[] costos = new String[3];
-                costos[0] = (int.Parse(mtbUsadas.Text) * promedio).ToString("0.00");
-                costos[1] = ((unidadesCompradas - int.Parse(mtbUsadas.Text)) * prom).ToString("0.00");
-                costos[2] = (unidadesCompradas * prom).ToString("0.00");
-                ListViewItem info = new ListViewItem(costos);
-                lvCostos.Items.Add(info);
-            }
-            else
+                try
+                {
+                    double prom = double.Parse(promedio.ToString("0.00"));
+                    if (mtbUsadas.Text.Trim().Length != 0)
+                    {
+                        lvCostos.Items.Clear();
+                        String[] costos = new String[3];
+                        costos[0] = (int.Parse(mtbUsadas.Text) * promedio).ToString("0.00");
+                        costos[1] = ((unidadesCompradas - int.Parse(mtbUsadas.Text)) * prom).ToString("0.00");
+                        costos[2] = (unidadesCompradas * prom).ToString("0.00");
+                        ListViewItem info = new ListViewItem(costos);
+                        lvCostos.Items.Add(info);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Rellene todos los campos necesarios", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        mtbUsadas.Clear();
+                        mtbUsadas.Focus();
+                    }
+                }
+                catch (OverflowException)
+                {
+                    MessageBox.Show("Numeros muy Grandes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    mtbUsadas.Clear();
+                    mtbUsadas.Focus();
+                }
+            }catch (FormatException)
             {
-                MessageBox.Show("Rellene todos los campos necesarios", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese un valor entero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                mtbUsadas.Clear();
                 mtbUsadas.Focus();
             }
 
+
+            
 
         }
 

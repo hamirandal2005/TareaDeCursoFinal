@@ -26,29 +26,59 @@ namespace pjContabilidadMetodosValuacion
         }
         private void frmCostoPromedioSimple_Load(object sender, EventArgs e)
         {
-            lblCostoMaterialesUsados.Text = "0.00";
-            lblInventarioFinal.Text = "0.00";
-            lblSaldo.Text = "0.00";
+            lblCostoMaterialesUsados.Text="C";
+            lblInventarioFinal.Text = "C";
+            lblSaldo.Text = "C";
 
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            //Obteniendo Datos
-          
-                fecha = dtFecha.Text;
-                unidadesCompradas = double.Parse(txtUnidadesCompradas.Text);
-                costoUnitario = double.Parse(txtCostoUnitario.Text);
-   
-            ListViewItem fila = new ListViewItem(fecha);
-            fila.SubItems.Add(unidadesCompradas.ToString("0.00"));
-            fila.SubItems.Add(costoUnitario.ToString("0.00"));
-            lvDatosIngresados.Items.Add(fila);
 
-            //Limpiar Controles
-            txtUnidadesCompradas.Clear();
-            txtCostoUnitario.Clear();   
-            txtUnidadesCompradas.Focus();   
+
+            try
+            {
+                try
+                {
+                    if(double.Parse(txtUnidadesCompradas.Text )>0 && double.Parse(txtCostoUnitario.Text)>0 )
+                    {
+                        //Obteniendo Datos
+
+                        fecha = dtFecha.Text;
+                        unidadesCompradas = double.Parse(txtUnidadesCompradas.Text);
+                        costoUnitario = double.Parse(txtCostoUnitario.Text);
+
+                        ListViewItem fila = new ListViewItem(fecha);
+                        fila.SubItems.Add(unidadesCompradas.ToString("0.00"));
+                        fila.SubItems.Add(costoUnitario.ToString("0.00"));
+                        lvDatosIngresados.Items.Add(fila);
+
+                        //Limpiar Controles
+                        txtUnidadesCompradas.Clear();
+                        txtCostoUnitario.Clear();
+                        txtUnidadesCompradas.Focus();
+                    }
+
+                }
+                catch (OverflowException)
+                {
+                    MessageBox.Show("Numeros muy Grandes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //Limpiar Controles
+                    txtUnidadesCompradas.Clear();
+                    txtCostoUnitario.Clear();
+                    txtUnidadesCompradas.Focus();
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Ingrese un valor entero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //Limpiar Controles
+                txtUnidadesCompradas.Clear();
+                txtCostoUnitario.Clear();
+                txtUnidadesCompradas.Focus();
+
+            }
+              
 
 
         }
@@ -66,9 +96,16 @@ namespace pjContabilidadMetodosValuacion
             double costoPromedioSimple = SumatoriasRegistro1(costoUnitario, 2) / numeroCompras;
             //Calcular los Costos
             //Costo de Materiales Utilizados
-            double costoMaterialesUsados= costoPromedioSimple*SumatoriasRegistro2(totalunidadesUtilizadas, 1); 
+            double costoMaterialesUsados= costoPromedioSimple*SumatoriasRegistro2(totalunidadesUtilizadas, 1);
+            double costoInventarioFinal = costoPromedioSimple * saldo;
+            double costoTotalCompra = costoPromedioSimple * SumatoriasRegistro1(totalUnidadesCompradas, 1);
 
             //Imprimir Resultados
+            lblCostoMaterialesUsados.Text = costoMaterialesUsados.ToString("C");
+            lblInventarioFinal.Text = costoInventarioFinal.ToString("C");
+            lblSaldo.Text = saldo.ToString("C");
+            lblCostoTotalCompra.Text = costoTotalCompra.ToString("C");
+            
             
    
 
@@ -106,12 +143,35 @@ namespace pjContabilidadMetodosValuacion
 
         private void btnRegistrarUU_Click(object sender, EventArgs e)
         {
-            fecha2 = dtFecha2.Text;
-            unidadesUtilizadas = double.Parse(txtUnidadesUtilizadas.Text);
-            ListViewItem fila = new ListViewItem(fecha2);
-            fila.SubItems.Add(unidadesUtilizadas.ToString("0.00"));
-            lvDatos2.Items.Add(fila);
-            txtUnidadesUtilizadas.Clear();
+            try
+            {
+                try
+                {
+                    if (double.Parse(txtUnidadesUtilizadas.Text) > 0) 
+                        {
+                        fecha2 = dtFecha2.Text;
+                        unidadesUtilizadas = double.Parse(txtUnidadesUtilizadas.Text);
+                        ListViewItem fila = new ListViewItem(fecha2);
+                        fila.SubItems.Add(unidadesUtilizadas.ToString("0.00"));
+                        lvDatos2.Items.Add(fila);
+                        txtUnidadesUtilizadas.Clear();
+                    } 
+
+                }
+                catch (OverflowException)
+                {
+                    MessageBox.Show("Numeros muy Grandes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtUnidadesUtilizadas.Clear();
+                    txtUnidadesUtilizadas.Focus();
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Ingrese un valor entero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtUnidadesUtilizadas.Clear();
+                txtUnidadesUtilizadas.Focus();
+            }
+            
         }
 
         private void btnMenú_Click(object sender, EventArgs e)

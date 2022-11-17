@@ -65,6 +65,8 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnMenú = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblCostoTotalCompra = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -240,6 +242,8 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.lblCostoTotalCompra);
+            this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.lblSaldo);
             this.groupBox3.Controls.Add(this.lblInventarioFinal);
             this.groupBox3.Controls.Add(this.lblCostoMaterialesUsados);
@@ -250,7 +254,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(803, 364);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(406, 211);
+            this.groupBox3.Size = new System.Drawing.Size(406, 232);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resultados";
@@ -441,6 +445,26 @@
             this.btnMenú.UseVisualStyleBackColor = false;
             this.btnMenú.Click += new System.EventHandler(this.btnMenú_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(20, 186);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 18);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Costo Total Compras :";
+            // 
+            // lblCostoTotalCompra
+            // 
+            this.lblCostoTotalCompra.AutoSize = true;
+            this.lblCostoTotalCompra.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCostoTotalCompra.Location = new System.Drawing.Point(247, 186);
+            this.lblCostoTotalCompra.Name = "lblCostoTotalCompra";
+            this.lblCostoTotalCompra.Size = new System.Drawing.Size(65, 18);
+            this.lblCostoTotalCompra.TabIndex = 7;
+            this.lblCostoTotalCompra.Text = "label13";
+            // 
             // frmCostoPromedioSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -515,5 +539,7 @@
         private Panel panel6;
         private PictureBox pictureBox2;
         private Button btnMenú;
+        private Label lblCostoTotalCompra;
+        private Label label1;
     }
 }

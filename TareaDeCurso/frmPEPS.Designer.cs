@@ -88,7 +88,7 @@
             this.btnRegistrarCompras.AutoSize = true;
             this.btnRegistrarCompras.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRegistrarCompras.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrarCompras.Location = new System.Drawing.Point(219, 219);
+            this.btnRegistrarCompras.Location = new System.Drawing.Point(209, 140);
             this.btnRegistrarCompras.Name = "btnRegistrarCompras";
             this.btnRegistrarCompras.Size = new System.Drawing.Size(95, 33);
             this.btnRegistrarCompras.TabIndex = 0;
@@ -124,7 +124,7 @@
             this.btnRegistrarUtilizados.AutoSize = true;
             this.btnRegistrarUtilizados.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRegistrarUtilizados.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrarUtilizados.Location = new System.Drawing.Point(536, 219);
+            this.btnRegistrarUtilizados.Location = new System.Drawing.Point(125, 150);
             this.btnRegistrarUtilizados.Name = "btnRegistrarUtilizados";
             this.btnRegistrarUtilizados.Size = new System.Drawing.Size(95, 33);
             this.btnRegistrarUtilizados.TabIndex = 4;
@@ -158,6 +158,7 @@
             this.gbCompras.Controls.Add(this.label5);
             this.gbCompras.Controls.Add(this.label1);
             this.gbCompras.Controls.Add(this.txtUnidades);
+            this.gbCompras.Controls.Add(this.btnRegistrarCompras);
             this.gbCompras.Controls.Add(this.dtFechaCompras);
             this.gbCompras.Controls.Add(this.label2);
             this.gbCompras.Controls.Add(this.txtCosto);
@@ -216,6 +217,7 @@
             this.gbSalidas.Controls.Add(this.label6);
             this.gbSalidas.Controls.Add(this.label7);
             this.gbSalidas.Controls.Add(this.txtUnidadesUtilizadas);
+            this.gbSalidas.Controls.Add(this.btnRegistrarUtilizados);
             this.gbSalidas.Controls.Add(this.dtFechaUtilizadas);
             this.gbSalidas.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.gbSalidas.ForeColor = System.Drawing.Color.White;
@@ -268,13 +270,11 @@
             this.gbDatosIngresados.Controls.Add(this.panel2);
             this.gbDatosIngresados.Controls.Add(this.lvUnidadesCompradas);
             this.gbDatosIngresados.Controls.Add(this.lvUnidadesUtilizadas);
-            this.gbDatosIngresados.Controls.Add(this.btnRegistrarCompras);
-            this.gbDatosIngresados.Controls.Add(this.btnRegistrarUtilizados);
             this.gbDatosIngresados.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.gbDatosIngresados.ForeColor = System.Drawing.Color.White;
             this.gbDatosIngresados.Location = new System.Drawing.Point(12, 346);
             this.gbDatosIngresados.Name = "gbDatosIngresados";
-            this.gbDatosIngresados.Size = new System.Drawing.Size(648, 272);
+            this.gbDatosIngresados.Size = new System.Drawing.Size(648, 240);
             this.gbDatosIngresados.TabIndex = 13;
             this.gbDatosIngresados.TabStop = false;
             this.gbDatosIngresados.Text = "Datos Ingresados";
@@ -320,7 +320,7 @@
             // 
             this.btnFinalizar.AutoSize = true;
             this.btnFinalizar.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnFinalizar.Location = new System.Drawing.Point(659, 635);
+            this.btnFinalizar.Location = new System.Drawing.Point(517, 623);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(156, 33);
             this.btnFinalizar.TabIndex = 15;
@@ -555,7 +555,6 @@
             this.gbSalidas.ResumeLayout(false);
             this.gbSalidas.PerformLayout();
             this.gbDatosIngresados.ResumeLayout(false);
-            this.gbDatosIngresados.PerformLayout();
             this.gbTotales.ResumeLayout(false);
             this.gbTotales.PerformLayout();
             this.pTotales.ResumeLayout(false);
