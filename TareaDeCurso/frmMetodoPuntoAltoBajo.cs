@@ -24,7 +24,7 @@ namespace pjContabilidadMetodosValuacion
             this.Tmensaje.SetToolTip(this.mtbCostoPeriodo, "Solo números mayores que 0");
             this.Tmensaje.SetToolTip(this.mtbNivelActividad, "Solo números mayores que 0");
         }
-        public void iniciar() 
+        public void iniciar()
         {
             altoBajo.Meses[0] = new Mes("Enero", 166000, 6700);
             altoBajo.Meses[1] = new Mes("Febrero", 170000, 7000);
@@ -84,28 +84,25 @@ namespace pjContabilidadMetodosValuacion
                         if (altoBajo.Meses[i].Nombre == cbMes.Text)
                             altoBajo.Meses[i] = a;
                     }
-                    if (Comprobando())
-                    {
-                        frmMetodoPuntoAltoBajo_Load(sender, e);
-                        DialogResult r = MessageBox.Show("Verifique la informacion, ¿Desea hacer el cálculo con la información ingresada?", "Notificación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (r == DialogResult.Yes)
-                        {
-                            lvAltoBajo.Visible = true; Calcular();
-                            panelIngresados.Size = new Size(675, 304);
-                        }
-                        else
-                        {
-                            gbTasaVariable.Visible = false;
-                            panelIngresados.Size = new Size(385, 304);
-                        }
-                    }
-                    else
-                    {
-                        frmMetodoPuntoAltoBajo_Load(sender, e);
-                        mtbCostoPeriodo.Clear();
-                        mtbNivelActividad.Clear();
-                        cbMes.Focus();
-                    }
+                    //if (Comprobando())
+                    //{
+                    //    frmMetodoPuntoAltoBajo_Load(sender, e);
+                    //    DialogResult r = MessageBox.Show("Verifique la informacion, ¿Desea hacer el cálculo con la información ingresada?", "Notificación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    //    if (r == DialogResult.Yes)
+                    //    {
+                    //        lvAltoBajo.Visible = true; Calcular();
+                    //        panelIngresados.Size = new Size(675, 304);
+                    //    }
+                    //    else
+                    //    {
+                    //        gbTasaVariable.Visible = false;
+                    //        panelIngresados.Size = new Size(385, 304);
+                    //    }
+                    //}
+                    frmMetodoPuntoAltoBajo_Load(sender, e);
+                    mtbCostoPeriodo.Clear();
+                    mtbNivelActividad.Clear();
+                    cbMes.Focus();
                 }
                 else
                 {
@@ -126,32 +123,34 @@ namespace pjContabilidadMetodosValuacion
             }
 
         }
-        public bool Comprobando()
-        {
-            bool comprobante = false;
-            foreach (Mes a in altoBajo.Meses)
-            {
-                if (a.Horas > 0 && a.Valor > 0)
-                    comprobante = true;
-                else
-                    return false;
-            }
-            return comprobante;
-        }
-        
+
         private void Calcular()
         {
+            double TasaVariable = altoBajo.CostoVariableUnitario();
+            double CostoFijo = altoBajo.CostoFijoTotal();
             gbTasaVariable.Visible = true;
-            lblTasaVariable.Text = altoBajo.CostoVariableUnitario().ToString("0.00");
-            lblCostoFijo.Text = altoBajo.CostoFijoTotal().ToString("0.00");
+            lblTasaVariable.Text = TasaVariable.ToString("0.00");
+            lblCostoFijo.Text = CostoFijo.ToString("0.00");
             lvAltoBajo.Items.Clear();
             for (int i = 0; i < altoBajo.Meses.Length; i++)
             {
-                String[] info = new string[2];
-                info[0] = altoBajo.Meses[i].Nombre;
-                info[1] = (altoBajo.CostoVariableTotal(i) + altoBajo.CostoFijoTotal()).ToString("0.00");
-                ListViewItem list = new ListViewItem(info);
-                lvAltoBajo.Items.Add(list);
+                if (altoBajo.Meses[i].Valor != 0)
+                {
+                    String[] info = new string[2];
+                    info[0] = altoBajo.Meses[i].Nombre;
+                    info[1] = (altoBajo.CostoVariableTotal(i) + CostoFijo).ToString("0.00");
+                    ListViewItem list = new ListViewItem(info);
+                    lvAltoBajo.Items.Add(list);
+                }
+                else
+                {
+                    String[] info = new string[2];
+                    info[0] = altoBajo.Meses[i].Nombre;
+                    info[1] = 0.ToString("0.00");
+                    ListViewItem list = new ListViewItem(info);
+                    lvAltoBajo.Items.Add(list);
+                }
+
             }
         }
 
@@ -163,6 +162,7 @@ namespace pjContabilidadMetodosValuacion
             altoBajo = new PuntoBajoPuntoAlto();
             frmMetodoPuntoAltoBajo_Load(sender, e);
             cbMes.Text = "(Seleccione)";
+            panelIngresados.Size = new Size(385, 304);
         }
 
         private void btnMenú_Click(object sender, EventArgs e)
@@ -171,7 +171,29 @@ namespace pjContabilidadMetodosValuacion
             this.Hide();
             frmPrincipal Menu = new frmPrincipal();
             Menu.ShowDialog();
-          
+
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            altoBajo.OrdenarMeses();
+
+            if (altoBajo.MesAlto != null && altoBajo.MesBajo != null)
+            {
+                if (altoBajo.MesAlto != altoBajo.MesBajo)
+                {
+                    lvAltoBajo.Visible = true; Calcular();
+                    panelIngresados.Size = new Size(675, 304);
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese más valores a la tabla", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese valores a la tabla", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
