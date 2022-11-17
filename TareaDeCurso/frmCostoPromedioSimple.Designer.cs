@@ -47,6 +47,8 @@
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblCostoTotalCompra = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblSaldo = new System.Windows.Forms.Label();
             this.lblInventarioFinal = new System.Windows.Forms.Label();
             this.lblCostoMaterialesUsados = new System.Windows.Forms.Label();
@@ -65,8 +67,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnMenú = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblCostoTotalCompra = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -259,10 +259,32 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resultados";
             // 
+            // lblCostoTotalCompra
+            // 
+            this.lblCostoTotalCompra.AutoSize = true;
+            this.lblCostoTotalCompra.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCostoTotalCompra.ForeColor = System.Drawing.Color.Black;
+            this.lblCostoTotalCompra.Location = new System.Drawing.Point(247, 186);
+            this.lblCostoTotalCompra.Name = "lblCostoTotalCompra";
+            this.lblCostoTotalCompra.Size = new System.Drawing.Size(65, 18);
+            this.lblCostoTotalCompra.TabIndex = 7;
+            this.lblCostoTotalCompra.Text = "label13";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(20, 186);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 18);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Costo Total Compras :";
+            // 
             // lblSaldo
             // 
             this.lblSaldo.AutoSize = true;
             this.lblSaldo.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSaldo.ForeColor = System.Drawing.Color.Black;
             this.lblSaldo.Location = new System.Drawing.Point(247, 140);
             this.lblSaldo.Name = "lblSaldo";
             this.lblSaldo.Size = new System.Drawing.Size(65, 18);
@@ -273,6 +295,7 @@
             // 
             this.lblInventarioFinal.AutoSize = true;
             this.lblInventarioFinal.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblInventarioFinal.ForeColor = System.Drawing.Color.Black;
             this.lblInventarioFinal.Location = new System.Drawing.Point(247, 97);
             this.lblInventarioFinal.Name = "lblInventarioFinal";
             this.lblInventarioFinal.Size = new System.Drawing.Size(65, 18);
@@ -283,6 +306,7 @@
             // 
             this.lblCostoMaterialesUsados.AutoSize = true;
             this.lblCostoMaterialesUsados.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCostoMaterialesUsados.ForeColor = System.Drawing.Color.Black;
             this.lblCostoMaterialesUsados.Location = new System.Drawing.Point(247, 54);
             this.lblCostoMaterialesUsados.Name = "lblCostoMaterialesUsados";
             this.lblCostoMaterialesUsados.Size = new System.Drawing.Size(64, 18);
@@ -444,26 +468,6 @@
             this.btnMenú.Text = "Menú";
             this.btnMenú.UseVisualStyleBackColor = false;
             this.btnMenú.Click += new System.EventHandler(this.btnMenú_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(20, 186);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 18);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Costo Total Compras :";
-            // 
-            // lblCostoTotalCompra
-            // 
-            this.lblCostoTotalCompra.AutoSize = true;
-            this.lblCostoTotalCompra.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCostoTotalCompra.Location = new System.Drawing.Point(247, 186);
-            this.lblCostoTotalCompra.Name = "lblCostoTotalCompra";
-            this.lblCostoTotalCompra.Size = new System.Drawing.Size(65, 18);
-            this.lblCostoTotalCompra.TabIndex = 7;
-            this.lblCostoTotalCompra.Text = "label13";
             // 
             // frmCostoPromedioSimple
             // 

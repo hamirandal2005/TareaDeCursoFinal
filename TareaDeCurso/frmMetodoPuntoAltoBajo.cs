@@ -84,21 +84,6 @@ namespace pjContabilidadMetodosValuacion
                         if (altoBajo.Meses[i].Nombre == cbMes.Text)
                             altoBajo.Meses[i] = a;
                     }
-                    //if (Comprobando())
-                    //{
-                    //    frmMetodoPuntoAltoBajo_Load(sender, e);
-                    //    DialogResult r = MessageBox.Show("Verifique la informacion, ¿Desea hacer el cálculo con la información ingresada?", "Notificación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    //    if (r == DialogResult.Yes)
-                    //    {
-                    //        lvAltoBajo.Visible = true; Calcular();
-                    //        panelIngresados.Size = new Size(675, 304);
-                    //    }
-                    //    else
-                    //    {
-                    //        gbTasaVariable.Visible = false;
-                    //        panelIngresados.Size = new Size(385, 304);
-                    //    }
-                    //}
                     frmMetodoPuntoAltoBajo_Load(sender, e);
                     mtbCostoPeriodo.Clear();
                     mtbNivelActividad.Clear();
