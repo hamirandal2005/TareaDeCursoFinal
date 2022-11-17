@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPEPS));
             this.btnRegistrarCompras = new System.Windows.Forms.Button();
             this.dtFechaCompras = new System.Windows.Forms.DateTimePicker();
             this.txtUnidades = new System.Windows.Forms.TextBox();
@@ -35,9 +36,6 @@
             this.btnRegistrarUtilizados = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbCompras = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
@@ -50,6 +48,7 @@
             this.txtUnidadesUtilizadas = new System.Windows.Forms.TextBox();
             this.dtFechaUtilizadas = new System.Windows.Forms.DateTimePicker();
             this.gbDatosIngresados = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lvUnidadesUtilizadas = new System.Windows.Forms.ListView();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
@@ -57,29 +56,42 @@
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.gbTotales = new System.Windows.Forms.GroupBox();
+            this.lblUnidadesCompradas = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblCostoPeriodo = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.lblMatUtilizados = new System.Windows.Forms.Label();
             this.lblInvFinal = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblCostoPeriodo = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lblUnidadesCompradas = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pTotales = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnMenú = new System.Windows.Forms.Button();
             this.gbCompras.SuspendLayout();
             this.gbSalidas.SuspendLayout();
             this.gbDatosIngresados.SuspendLayout();
             this.gbTotales.SuspendLayout();
+            this.pTotales.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegistrarCompras
             // 
             this.btnRegistrarCompras.AutoSize = true;
-            this.btnRegistrarCompras.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrarCompras.Location = new System.Drawing.Point(599, 35);
-            this.btnRegistrarCompras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistrarCompras.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRegistrarCompras.ForeColor = System.Drawing.Color.Black;
+            this.btnRegistrarCompras.Location = new System.Drawing.Point(209, 140);
             this.btnRegistrarCompras.Name = "btnRegistrarCompras";
-            this.btnRegistrarCompras.Size = new System.Drawing.Size(83, 25);
-            this.btnRegistrarCompras.TabIndex = 0;
+            this.btnRegistrarCompras.Size = new System.Drawing.Size(95, 33);
+            this.btnRegistrarCompras.TabIndex = 4;
             this.btnRegistrarCompras.Text = "Registrar";
             this.btnRegistrarCompras.UseVisualStyleBackColor = true;
             this.btnRegistrarCompras.Click += new System.EventHandler(this.btnRegistrarCompras_Click);
@@ -88,37 +100,35 @@
             // 
             this.dtFechaCompras.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dtFechaCompras.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaCompras.Location = new System.Drawing.Point(66, 33);
-            this.dtFechaCompras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtFechaCompras.Location = new System.Drawing.Point(75, 40);
             this.dtFechaCompras.Name = "dtFechaCompras";
-            this.dtFechaCompras.Size = new System.Drawing.Size(106, 23);
+            this.dtFechaCompras.Size = new System.Drawing.Size(121, 23);
             this.dtFechaCompras.TabIndex = 1;
+            this.dtFechaCompras.Value = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             // 
             // txtUnidades
             // 
-            this.txtUnidades.Location = new System.Drawing.Point(339, 34);
-            this.txtUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUnidades.Location = new System.Drawing.Point(209, 90);
             this.txtUnidades.Name = "txtUnidades";
-            this.txtUnidades.Size = new System.Drawing.Size(88, 25);
+            this.txtUnidades.Size = new System.Drawing.Size(100, 26);
             this.txtUnidades.TabIndex = 2;
             // 
             // txtCosto
             // 
-            this.txtCosto.Location = new System.Drawing.Point(487, 32);
-            this.txtCosto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCosto.Location = new System.Drawing.Point(60, 138);
             this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(88, 25);
+            this.txtCosto.Size = new System.Drawing.Size(100, 26);
             this.txtCosto.TabIndex = 3;
             // 
             // btnRegistrarUtilizados
             // 
             this.btnRegistrarUtilizados.AutoSize = true;
-            this.btnRegistrarUtilizados.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrarUtilizados.Location = new System.Drawing.Point(480, 30);
-            this.btnRegistrarUtilizados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistrarUtilizados.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRegistrarUtilizados.ForeColor = System.Drawing.Color.Black;
+            this.btnRegistrarUtilizados.Location = new System.Drawing.Point(125, 150);
             this.btnRegistrarUtilizados.Name = "btnRegistrarUtilizados";
-            this.btnRegistrarUtilizados.Size = new System.Drawing.Size(83, 25);
-            this.btnRegistrarUtilizados.TabIndex = 4;
+            this.btnRegistrarUtilizados.Size = new System.Drawing.Size(95, 33);
+            this.btnRegistrarUtilizados.TabIndex = 7;
             this.btnRegistrarUtilizados.Text = "Registrar";
             this.btnRegistrarUtilizados.UseVisualStyleBackColor = true;
             this.btnRegistrarUtilizados.Click += new System.EventHandler(this.btnRegistrarUtilizadas_Click);
@@ -126,57 +136,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(186, 36);
+            this.label1.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(9, 90);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 18);
+            this.label1.Size = new System.Drawing.Size(150, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "Unidades Compradas : ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(443, 34);
+            this.label2.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(9, 140);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 18);
+            this.label2.Size = new System.Drawing.Size(37, 18);
             this.label2.TabIndex = 6;
             this.label2.Text = "C/U :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(312, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(305, 39);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Sistema Valuación";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(413, 51);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 39);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "PEPS";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = global::pjContabilidadMetodosValuacion.Properties.Resources.calculadora__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(154, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(103, 62);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
             // 
             // gbCompras
             // 
@@ -188,12 +163,11 @@
             this.gbCompras.Controls.Add(this.dtFechaCompras);
             this.gbCompras.Controls.Add(this.label2);
             this.gbCompras.Controls.Add(this.txtCosto);
-            this.gbCompras.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.gbCompras.Location = new System.Drawing.Point(33, 99);
-            this.gbCompras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbCompras.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbCompras.ForeColor = System.Drawing.Color.White;
+            this.gbCompras.Location = new System.Drawing.Point(12, 134);
             this.gbCompras.Name = "gbCompras";
-            this.gbCompras.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbCompras.Size = new System.Drawing.Size(716, 70);
+            this.gbCompras.Size = new System.Drawing.Size(319, 199);
             this.gbCompras.TabIndex = 11;
             this.gbCompras.TabStop = false;
             this.gbCompras.Text = "Datos Compras";
@@ -201,10 +175,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(8, 34);
+            this.label5.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(9, 41);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 18);
+            this.label5.Size = new System.Drawing.Size(52, 18);
             this.label5.TabIndex = 6;
             this.label5.Text = "Fecha :";
             // 
@@ -215,16 +189,16 @@
             // 
             // lvUnidadesCompradas
             // 
+            this.lvUnidadesCompradas.BackColor = System.Drawing.Color.White;
             this.lvUnidadesCompradas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.lvUnidadesCompradas.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lvUnidadesCompradas.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lvUnidadesCompradas.GridLines = true;
-            this.lvUnidadesCompradas.Location = new System.Drawing.Point(19, 29);
-            this.lvUnidadesCompradas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lvUnidadesCompradas.Location = new System.Drawing.Point(22, 29);
             this.lvUnidadesCompradas.Name = "lvUnidadesCompradas";
-            this.lvUnidadesCompradas.Size = new System.Drawing.Size(287, 149);
+            this.lvUnidadesCompradas.Size = new System.Drawing.Size(290, 184);
             this.lvUnidadesCompradas.TabIndex = 7;
             this.lvUnidadesCompradas.UseCompatibleStateImageBehavior = false;
             this.lvUnidadesCompradas.View = System.Windows.Forms.View.Details;
@@ -244,14 +218,13 @@
             this.gbSalidas.Controls.Add(this.label6);
             this.gbSalidas.Controls.Add(this.label7);
             this.gbSalidas.Controls.Add(this.txtUnidadesUtilizadas);
-            this.gbSalidas.Controls.Add(this.dtFechaUtilizadas);
             this.gbSalidas.Controls.Add(this.btnRegistrarUtilizados);
-            this.gbSalidas.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.gbSalidas.Location = new System.Drawing.Point(33, 182);
-            this.gbSalidas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbSalidas.Controls.Add(this.dtFechaUtilizadas);
+            this.gbSalidas.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbSalidas.ForeColor = System.Drawing.Color.White;
+            this.gbSalidas.Location = new System.Drawing.Point(378, 134);
             this.gbSalidas.Name = "gbSalidas";
-            this.gbSalidas.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbSalidas.Size = new System.Drawing.Size(716, 71);
+            this.gbSalidas.Size = new System.Drawing.Size(314, 199);
             this.gbSalidas.TabIndex = 12;
             this.gbSalidas.TabStop = false;
             this.gbSalidas.Text = "Datos Salidas";
@@ -259,55 +232,62 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(8, 30);
+            this.label6.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(8, 44);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 18);
+            this.label6.Size = new System.Drawing.Size(52, 18);
             this.label6.TabIndex = 10;
             this.label6.Text = "Fecha :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(186, 28);
+            this.label7.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(8, 97);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 18);
+            this.label7.Size = new System.Drawing.Size(142, 18);
             this.label7.TabIndex = 9;
             this.label7.Text = "Unidades Utilizadas : ";
             // 
             // txtUnidadesUtilizadas
             // 
-            this.txtUnidadesUtilizadas.Location = new System.Drawing.Point(339, 27);
-            this.txtUnidadesUtilizadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUnidadesUtilizadas.Location = new System.Drawing.Point(195, 90);
             this.txtUnidadesUtilizadas.Name = "txtUnidadesUtilizadas";
-            this.txtUnidadesUtilizadas.Size = new System.Drawing.Size(88, 25);
-            this.txtUnidadesUtilizadas.TabIndex = 8;
+            this.txtUnidadesUtilizadas.Size = new System.Drawing.Size(100, 26);
+            this.txtUnidadesUtilizadas.TabIndex = 6;
             // 
             // dtFechaUtilizadas
             // 
             this.dtFechaUtilizadas.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dtFechaUtilizadas.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaUtilizadas.Location = new System.Drawing.Point(66, 28);
-            this.dtFechaUtilizadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtFechaUtilizadas.Location = new System.Drawing.Point(79, 41);
             this.dtFechaUtilizadas.Name = "dtFechaUtilizadas";
-            this.dtFechaUtilizadas.Size = new System.Drawing.Size(106, 23);
-            this.dtFechaUtilizadas.TabIndex = 7;
+            this.dtFechaUtilizadas.Size = new System.Drawing.Size(121, 23);
+            this.dtFechaUtilizadas.TabIndex = 5;
+            this.dtFechaUtilizadas.Value = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             // 
             // gbDatosIngresados
             // 
             this.gbDatosIngresados.BackColor = System.Drawing.Color.Transparent;
+            this.gbDatosIngresados.Controls.Add(this.panel2);
             this.gbDatosIngresados.Controls.Add(this.lvUnidadesCompradas);
             this.gbDatosIngresados.Controls.Add(this.lvUnidadesUtilizadas);
-            this.gbDatosIngresados.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.gbDatosIngresados.Location = new System.Drawing.Point(33, 272);
-            this.gbDatosIngresados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbDatosIngresados.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbDatosIngresados.ForeColor = System.Drawing.Color.White;
+            this.gbDatosIngresados.Location = new System.Drawing.Point(12, 346);
             this.gbDatosIngresados.Name = "gbDatosIngresados";
-            this.gbDatosIngresados.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbDatosIngresados.Size = new System.Drawing.Size(607, 212);
+            this.gbDatosIngresados.Size = new System.Drawing.Size(648, 240);
             this.gbDatosIngresados.TabIndex = 13;
             this.gbDatosIngresados.TabStop = false;
             this.gbDatosIngresados.Text = "Datos Ingresados";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Tomato;
+            this.panel2.Location = new System.Drawing.Point(319, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(8, 270);
+            this.panel2.TabIndex = 22;
             // 
             // lvUnidadesUtilizadas
             // 
@@ -315,12 +295,11 @@
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            this.lvUnidadesUtilizadas.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lvUnidadesUtilizadas.Font = new System.Drawing.Font("Candara", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lvUnidadesUtilizadas.GridLines = true;
-            this.lvUnidadesUtilizadas.Location = new System.Drawing.Point(339, 29);
-            this.lvUnidadesUtilizadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lvUnidadesUtilizadas.Location = new System.Drawing.Point(336, 35);
             this.lvUnidadesUtilizadas.Name = "lvUnidadesUtilizadas";
-            this.lvUnidadesUtilizadas.Size = new System.Drawing.Size(243, 149);
+            this.lvUnidadesUtilizadas.Size = new System.Drawing.Size(295, 179);
             this.lvUnidadesUtilizadas.TabIndex = 8;
             this.lvUnidadesUtilizadas.UseCompatibleStateImageBehavior = false;
             this.lvUnidadesUtilizadas.View = System.Windows.Forms.View.Details;
@@ -333,7 +312,7 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Unidades Utilizadas";
-            this.columnHeader5.Width = 120;
+            this.columnHeader5.Width = 140;
             // 
             // columnHeader6
             // 
@@ -342,11 +321,10 @@
             // btnFinalizar
             // 
             this.btnFinalizar.AutoSize = true;
-            this.btnFinalizar.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnFinalizar.Location = new System.Drawing.Point(646, 459);
-            this.btnFinalizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFinalizar.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnFinalizar.Location = new System.Drawing.Point(517, 623);
             this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(131, 25);
+            this.btnFinalizar.Size = new System.Drawing.Size(156, 33);
             this.btnFinalizar.TabIndex = 15;
             this.btnFinalizar.Text = "Finalizar periodo";
             this.btnFinalizar.UseVisualStyleBackColor = true;
@@ -355,11 +333,12 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 69);
+            this.label8.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(6, 104);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(132, 16);
+            this.label8.Size = new System.Drawing.Size(161, 19);
             this.label8.TabIndex = 16;
-            this.label8.Text = "Materiales Utilizados";
+            this.label8.Text = "Materiales Utilizados :";
             // 
             // gbTotales
             // 
@@ -372,97 +351,207 @@
             this.gbTotales.Controls.Add(this.lblInvFinal);
             this.gbTotales.Controls.Add(this.label8);
             this.gbTotales.Controls.Add(this.label9);
-            this.gbTotales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.gbTotales.Location = new System.Drawing.Point(646, 272);
+            this.gbTotales.Font = new System.Drawing.Font("Candara", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbTotales.ForeColor = System.Drawing.Color.White;
+            this.gbTotales.Location = new System.Drawing.Point(17, 41);
+            this.gbTotales.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbTotales.Name = "gbTotales";
-            this.gbTotales.Size = new System.Drawing.Size(260, 178);
+            this.gbTotales.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbTotales.Size = new System.Drawing.Size(313, 405);
             this.gbTotales.TabIndex = 17;
             this.gbTotales.TabStop = false;
             this.gbTotales.Text = "Valores Totalizados";
             this.gbTotales.Visible = false;
             // 
+            // lblUnidadesCompradas
+            // 
+            this.lblUnidadesCompradas.AutoSize = true;
+            this.lblUnidadesCompradas.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblUnidadesCompradas.Location = new System.Drawing.Point(240, 265);
+            this.lblUnidadesCompradas.Name = "lblUnidadesCompradas";
+            this.lblUnidadesCompradas.Size = new System.Drawing.Size(55, 19);
+            this.lblUnidadesCompradas.TabIndex = 21;
+            this.lblUnidadesCompradas.Text = "label13";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(10, 227);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(199, 19);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Total Unidades Compradas :";
+            // 
+            // lblCostoPeriodo
+            // 
+            this.lblCostoPeriodo.AutoSize = true;
+            this.lblCostoPeriodo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCostoPeriodo.Location = new System.Drawing.Point(220, 156);
+            this.lblCostoPeriodo.Name = "lblCostoPeriodo";
+            this.lblCostoPeriodo.Size = new System.Drawing.Size(52, 19);
+            this.lblCostoPeriodo.TabIndex = 19;
+            this.lblCostoPeriodo.Text = "label11";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(6, 156);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(137, 19);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Costo del periodo :";
+            // 
             // lblMatUtilizados
             // 
             this.lblMatUtilizados.AutoSize = true;
-            this.lblMatUtilizados.Location = new System.Drawing.Point(194, 69);
+            this.lblMatUtilizados.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMatUtilizados.Location = new System.Drawing.Point(220, 104);
             this.lblMatUtilizados.Name = "lblMatUtilizados";
-            this.lblMatUtilizados.Size = new System.Drawing.Size(51, 16);
+            this.lblMatUtilizados.Size = new System.Drawing.Size(52, 19);
             this.lblMatUtilizados.TabIndex = 17;
             this.lblMatUtilizados.Text = "label11";
             // 
             // lblInvFinal
             // 
             this.lblInvFinal.AutoSize = true;
-            this.lblInvFinal.Location = new System.Drawing.Point(194, 36);
+            this.lblInvFinal.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblInvFinal.Location = new System.Drawing.Point(216, 46);
             this.lblInvFinal.Name = "lblInvFinal";
-            this.lblInvFinal.Size = new System.Drawing.Size(51, 16);
+            this.lblInvFinal.Size = new System.Drawing.Size(56, 19);
             this.lblInvFinal.TabIndex = 1;
             this.lblInvFinal.Text = "label10";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 36);
+            this.label9.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(6, 46);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 16);
+            this.label9.Size = new System.Drawing.Size(123, 19);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Inventario Final";
+            this.label9.Text = "Inventario Final :";
             // 
-            // label10
+            // pTotales
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 100);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 16);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Costo del periodo";
+            this.pTotales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.pTotales.Controls.Add(this.gbTotales);
+            this.pTotales.Location = new System.Drawing.Point(780, 124);
+            this.pTotales.Name = "pTotales";
+            this.pTotales.Size = new System.Drawing.Size(333, 495);
+            this.pTotales.TabIndex = 20;
+            this.pTotales.Visible = false;
             // 
-            // lblCostoPeriodo
+            // panel3
             // 
-            this.lblCostoPeriodo.AutoSize = true;
-            this.lblCostoPeriodo.Location = new System.Drawing.Point(194, 100);
-            this.lblCostoPeriodo.Name = "lblCostoPeriodo";
-            this.lblCostoPeriodo.Size = new System.Drawing.Size(51, 16);
-            this.lblCostoPeriodo.TabIndex = 19;
-            this.lblCostoPeriodo.Text = "label11";
+            this.panel3.BackColor = System.Drawing.Color.Tomato;
+            this.panel3.Location = new System.Drawing.Point(349, 121);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(8, 219);
+            this.panel3.TabIndex = 21;
             // 
-            // label12
+            // panel1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(13, 131);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(174, 16);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Total Unidades Compradas";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(629, 50);
+            this.panel1.TabIndex = 27;
             // 
-            // lblUnidadesCompradas
+            // pictureBox1
             // 
-            this.lblUnidadesCompradas.AutoSize = true;
-            this.lblUnidadesCompradas.Location = new System.Drawing.Point(194, 131);
-            this.lblUnidadesCompradas.Name = "lblUnidadesCompradas";
-            this.lblUnidadesCompradas.Size = new System.Drawing.Size(51, 16);
-            this.lblUnidadesCompradas.TabIndex = 21;
-            this.lblUnidadesCompradas.Text = "label13";
+            this.pictureBox1.Image = global::pjContabilidadMetodosValuacion.Properties.Resources.Captura_de_pantalla__23_;
+            this.pictureBox1.Location = new System.Drawing.Point(84, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(457, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(90)))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(386, 70);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(492, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(248)))), ((int)(((byte)(160)))));
+            this.panel4.Location = new System.Drawing.Point(-2, 54);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(600, 5);
+            this.panel4.TabIndex = 29;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(248)))), ((int)(((byte)(160)))));
+            this.panel5.Location = new System.Drawing.Point(0, 65);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(550, 5);
+            this.panel5.TabIndex = 30;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(0)))));
+            this.panel6.Location = new System.Drawing.Point(1139, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(5, 600);
+            this.panel6.TabIndex = 31;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(208)))), ((int)(((byte)(0)))));
+            this.panel7.Location = new System.Drawing.Point(1161, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(5, 680);
+            this.panel7.TabIndex = 32;
+            // 
+            // btnMenú
+            // 
+            this.btnMenú.AutoSize = true;
+            this.btnMenú.BackColor = System.Drawing.Color.White;
+            this.btnMenú.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMenú.ForeColor = System.Drawing.Color.Black;
+            this.btnMenú.Location = new System.Drawing.Point(1000, 644);
+            this.btnMenú.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMenú.Name = "btnMenú";
+            this.btnMenú.Size = new System.Drawing.Size(82, 33);
+            this.btnMenú.TabIndex = 35;
+            this.btnMenú.Text = "Menú";
+            this.btnMenú.UseVisualStyleBackColor = false;
+            this.btnMenú.Click += new System.EventHandler(this.btnMenú_Click);
             // 
             // frmPEPS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.pepss;
-            this.ClientSize = new System.Drawing.Size(923, 495);
-            this.Controls.Add(this.gbTotales);
+            this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.FondoFranjaRoja;
+            this.ClientSize = new System.Drawing.Size(1188, 688);
+            this.Controls.Add(this.btnMenú);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnFinalizar);
+            this.Controls.Add(this.pTotales);
             this.Controls.Add(this.gbDatosIngresados);
             this.Controls.Add(this.gbSalidas);
             this.Controls.Add(this.gbCompras);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmPEPS";
-            this.Text = "frmPEPS";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "PEPS";
             this.gbCompras.ResumeLayout(false);
             this.gbCompras.PerformLayout();
             this.gbSalidas.ResumeLayout(false);
@@ -470,6 +559,10 @@
             this.gbDatosIngresados.ResumeLayout(false);
             this.gbTotales.ResumeLayout(false);
             this.gbTotales.PerformLayout();
+            this.pTotales.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,9 +577,6 @@
         private Button btnRegistrarUtilizados;
         private Label label1;
         private Label label2;
-        private Label label3;
-        private Label label4;
-        private PictureBox pictureBox1;
         private GroupBox gbCompras;
         private Label label5;
         private ColumnHeader columnHeader1;
@@ -513,5 +603,16 @@
         private Label label12;
         private Label lblCostoPeriodo;
         private Label label10;
+        private Panel pTotales;
+        private Panel panel3;
+        private Panel panel1;
+        private PictureBox pictureBox1;
+        private Panel panel2;
+        private PictureBox pictureBox2;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
+        private Panel panel7;
+        private Button btnMenú;
     }
 }

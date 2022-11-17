@@ -4,11 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using Clases;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.DirectoryServices.ActiveDirectory;
+using Clases;
 
 namespace pjContabilidadMetodosValuacion
 {
@@ -21,8 +21,10 @@ namespace pjContabilidadMetodosValuacion
         public frmMetodoPuntoAltoBajo()
         {
             InitializeComponent();
+            this.Tmensaje.SetToolTip(this.mtbCostoPeriodo, "Solo números mayores que 0");
+            this.Tmensaje.SetToolTip(this.mtbNivelActividad, "Solo números mayores que 0");
         }
-        public void iniciar() //Pruebas
+        public void iniciar()
         {
             altoBajo.Meses[0] = new Mes("Enero", 166000, 6700);
             altoBajo.Meses[1] = new Mes("Febrero", 170000, 7000);
@@ -39,10 +41,9 @@ namespace pjContabilidadMetodosValuacion
         }
         private void frmMetodoPuntoAltoBajo_Load(object sender, EventArgs e)
         {
-            
+
             lblCostoFijo.Text = "0.00";
             lblTasaVariable.Text = "0.00";
-
             lvInfo.Items.Clear();
             lvAltoBajo.Visible = false;
             for (int i = 0; i < altoBajo.Meses.Length; i++)
@@ -59,7 +60,7 @@ namespace pjContabilidadMetodosValuacion
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            iniciar();
+            //iniciar();
             Mes a = new Mes();
             a.Nombre = cbMes.Text;
             try
@@ -69,74 +70,72 @@ namespace pjContabilidadMetodosValuacion
             }
             catch (FormatException)
             {
-                MessageBox.Show("Ingrese un valor entero", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Rellene las casillas con información valida", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtbCostoPeriodo.Clear();
                 mtbNivelActividad.Clear();
+                return;
             }
-            for (int i = 0; i < altoBajo.Meses.Length; i++)
+            if (double.Parse(mtbCostoPeriodo.Text) < 999999 && int.Parse(mtbNivelActividad.Text) < 999999)
             {
-                if (altoBajo.Meses[i].Nombre == cbMes.Text)
-                    altoBajo.Meses[i] = a;
-            }
-            if (Comprobando())
-            {
-                frmMetodoPuntoAltoBajo_Load(sender, e);
-                DialogResult r = MessageBox.Show("Verifique la informacion, ¿Desea hacer el calculo con la informacion ingresada?", "Notificacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (r == DialogResult.Yes)
+                if (double.Parse(mtbCostoPeriodo.Text) > 0 && int.Parse(mtbNivelActividad.Text) > 0)
                 {
-                    lvAltoBajo.Visible = true; Calcular();
+                    for (int i = 0; i < altoBajo.Meses.Length; i++)
+                    {
+                        if (altoBajo.Meses[i].Nombre == cbMes.Text)
+                            altoBajo.Meses[i] = a;
+                    }
+                    frmMetodoPuntoAltoBajo_Load(sender, e);
+                    mtbCostoPeriodo.Clear();
+                    mtbNivelActividad.Clear();
+                    cbMes.Focus();
                 }
                 else
-                    gbTasaVariable.Visible = false;
+                {
+                    MessageBox.Show("Solo puedes ingresar números mayores que 0", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    mtbCostoPeriodo.Clear();
+                    mtbNivelActividad.Clear();
+                    return;
+                }
+                mtbCostoPeriodo.Clear();
+                mtbNivelActividad.Clear();
             }
             else
             {
-                frmMetodoPuntoAltoBajo_Load(sender, e);
+                MessageBox.Show("Números demasiado grandes", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtbCostoPeriodo.Clear();
                 mtbNivelActividad.Clear();
-                cbMes.Focus();
+                return;
             }
+
         }
-        public bool Comprobando()
-        {
-            bool comprobante = false;
-            foreach (Mes a in altoBajo.Meses)
-            {
-                if (a.Horas > 0 && a.Valor > 0)
-                    comprobante = true;
-                else
-                    return false;
-            }
-            return comprobante;
-        }
-        public enum Meses
-        {
-            Enero = 0,
-            Febrero = 1,
-            Marzo = 2,
-            Abril = 3,
-            Mayo = 4,
-            Junio = 5,
-            Julio = 6,
-            Agosto = 7,
-            Septiembre = 8,
-            Octubre = 9,
-            Noviembre = 10,
-            Diciembre = 11
-        }
+
         private void Calcular()
         {
+            double TasaVariable = altoBajo.CostoVariableUnitario();
+            double CostoFijo = altoBajo.CostoFijoTotal();
             gbTasaVariable.Visible = true;
-            lblTasaVariable.Text = altoBajo.CostoVariableUnitario().ToString("0.00");
-            lblCostoFijo.Text = altoBajo.CostoFijoTotal().ToString("0.00");
+            lblTasaVariable.Text = TasaVariable.ToString("0.00");
+            lblCostoFijo.Text = CostoFijo.ToString("0.00");
             lvAltoBajo.Items.Clear();
             for (int i = 0; i < altoBajo.Meses.Length; i++)
             {
-                String[] info = new string[2];
-                info[0] = altoBajo.Meses[i].Nombre;
-                info[1] = (altoBajo.CostoVariableTotal(i) + altoBajo.CostoFijoTotal()).ToString("0.00");
-                ListViewItem list = new ListViewItem(info);
-                lvAltoBajo.Items.Add(list);
+                if (altoBajo.Meses[i].Valor != 0)
+                {
+                    String[] info = new string[2];
+                    info[0] = altoBajo.Meses[i].Nombre;
+                    info[1] = (altoBajo.CostoVariableTotal(i) + CostoFijo).ToString("0.00");
+                    ListViewItem list = new ListViewItem(info);
+                    lvAltoBajo.Items.Add(list);
+                }
+                else
+                {
+                    String[] info = new string[2];
+                    info[0] = altoBajo.Meses[i].Nombre;
+                    info[1] = 0.ToString("0.00");
+                    ListViewItem list = new ListViewItem(info);
+                    lvAltoBajo.Items.Add(list);
+                }
+
             }
         }
 
@@ -147,6 +146,39 @@ namespace pjContabilidadMetodosValuacion
             lvAltoBajo.Visible = false;
             altoBajo = new PuntoBajoPuntoAlto();
             frmMetodoPuntoAltoBajo_Load(sender, e);
+            cbMes.Text = "(Seleccione)";
+            panelIngresados.Size = new Size(385, 304);
+        }
+
+        private void btnMenú_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Hide();
+            frmPrincipal Menu = new frmPrincipal();
+            Menu.ShowDialog();
+
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            altoBajo.OrdenarMeses();
+
+            if (altoBajo.MesAlto != null && altoBajo.MesBajo != null)
+            {
+                if (altoBajo.MesAlto != altoBajo.MesBajo)
+                {
+                    lvAltoBajo.Visible = true; Calcular();
+                    panelIngresados.Size = new Size(675, 304);
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese más valores a la tabla", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese valores a la tabla", "¡Error!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

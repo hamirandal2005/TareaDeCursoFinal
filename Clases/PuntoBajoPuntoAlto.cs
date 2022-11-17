@@ -52,39 +52,41 @@ namespace Clases
                 if (meses[i].Valor > mayor.Valor)
                 {
                     mayor = meses[i];
+                    this.mesAlto = mayor;
                 }
                 if (meses[i].Valor < menor.Valor)
                 {
-                    menor = meses[i];
+                    if (meses[i].Valor != 0)
+                    {
+                        menor = meses[i];
+                        this.mesBajo = menor;
+                    }
                 }
             }
-            this.mesBajo = menor;
-            this.mesAlto = mayor;
         }
 
         public double CostoVariableTotal(int a)
         {
-            OrdenarMeses();
             return CostoVariableUnitario() * meses[a].Horas;
         }
         public double CostoVariableUnitario()
         {
-            OrdenarMeses();
-            return (mesAlto.Valor - mesBajo.Valor) / (mesAlto.Horas - mesBajo.Horas);
+            double VariableUnit = (mesAlto.Valor - mesBajo.Valor) / (mesAlto.Horas - mesBajo.Horas);
+            return double.Parse(VariableUnit.ToString("0.00"));
         }
 
         public double CostoFijoTotal()
         {
-            OrdenarMeses();
-            double MmesAlto = (mesAlto.Valor) - (mesAlto.Horas * CostoVariableUnitario());
-            double MmesBajo = (mesBajo.Valor) - (mesBajo.Horas * CostoVariableUnitario());
+            double costo = CostoVariableUnitario();
+            double MmesAlto = (mesAlto.Valor) - (mesAlto.Horas * costo);
+            double MmesBajo = (mesBajo.Valor) - (mesBajo.Horas * costo);
             double diferencia = MmesAlto - MmesBajo;
-            if (diferencia < 60)
+            if (diferencia < 100)
             {
                 return MmesAlto;
             }
             return 0;
         }
-        
+
     }
 }
