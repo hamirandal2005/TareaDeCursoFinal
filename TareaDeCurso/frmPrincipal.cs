@@ -86,55 +86,53 @@
         }
 
         private void btnEspecifica_Click(object sender, EventArgs e)
-        {
-            Visible = false; 
+        {this.Hide();   
             formularioIdentificacionEspecifica.ShowDialog();
-            Visible = true;
+            this.Close();
         }
 
         private void btnPonderado_Click(object sender, EventArgs e)
         {
-            Visible = false;
+            this.Hide();
             formularioPonderado.ShowDialog();
-            Visible = true;
+            this.Close();
         }
 
         private void btnSimple_Click(object sender, EventArgs e)
         {
-            Visible = false;
+            this.Hide();
             formularioValuacionPromedioSimple.ShowDialog();
-            Visible = true;
+            this.Close();
         }
 
         private void btnUEPS_Click(object sender, EventArgs e)
-        {
+        {this.Hide();
             formularioUEPS.ShowDialog();
+            this.Close();
         }
 
         private void btnPEPS_Click(object sender, EventArgs e)
         {
-            Visible = false;
+           
+            this.Hide();
             formularioPEPS.ShowDialog();
-            Visible = true; 
+            this.Close();
         }
 
         private void btnAltoBajo_Click(object sender, EventArgs e)
         {
-            Visible = false;
+            this.Hide();
             formularioPuntoAltoBajo.ShowDialog();
-            Visible = true;
+            this.Close();
         }
 
         private void btnEstadistico_Click(object sender, EventArgs e)
         {
-            Visible = false;
+            this.Hide();   
             formularioMetodoEstadistico.ShowDialog();
-            Visible = true;
+            this.Close();
         }
 
-        private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

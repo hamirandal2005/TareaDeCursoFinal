@@ -47,40 +47,47 @@
             this.mtbUsadas = new System.Windows.Forms.MaskedTextBox();
             this.mtbCantidad = new System.Windows.Forms.MaskedTextBox();
             this.mtbCosto = new System.Windows.Forms.MaskedTextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnMenú = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(4, 29);
+            this.label1.Location = new System.Drawing.Point(6, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 18);
+            this.label1.Size = new System.Drawing.Size(94, 23);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Unidades : ";
+            this.label1.Text = "Unidades :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(21, 66);
+            this.label2.Location = new System.Drawing.Point(200, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 18);
+            this.label2.Size = new System.Drawing.Size(71, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "Costo : ";
             // 
@@ -90,14 +97,14 @@
             this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button1.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(192, 61);
+            this.button1.Location = new System.Drawing.Point(383, 30);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 28);
+            this.button1.Size = new System.Drawing.Size(94, 33);
             this.button1.TabIndex = 5;
             this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // columnHeader1
             // 
@@ -113,7 +120,7 @@
             this.columnHeader7});
             this.lvPromedio.Font = new System.Drawing.Font("Sitka Text", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lvPromedio.GridLines = true;
-            this.lvPromedio.Location = new System.Drawing.Point(12, 38);
+            this.lvPromedio.Location = new System.Drawing.Point(5, 7);
             this.lvPromedio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvPromedio.Name = "lvPromedio";
             this.lvPromedio.Size = new System.Drawing.Size(272, 162);
@@ -141,14 +148,14 @@
             this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button2.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(329, 38);
+            this.button2.Location = new System.Drawing.Point(311, 32);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 28);
+            this.button2.Size = new System.Drawing.Size(141, 33);
             this.button2.TabIndex = 6;
             this.button2.Text = "Calcular costos";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.btnCalculaar_Click);
             // 
             // lvCostos
             // 
@@ -161,7 +168,7 @@
             this.lvCostos.Location = new System.Drawing.Point(29, 32);
             this.lvCostos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvCostos.Name = "lvCostos";
-            this.lvCostos.Size = new System.Drawing.Size(433, 163);
+            this.lvCostos.Size = new System.Drawing.Size(434, 163);
             this.lvCostos.TabIndex = 7;
             this.lvCostos.UseCompatibleStateImageBehavior = false;
             this.lvCostos.View = System.Windows.Forms.View.Details;
@@ -169,7 +176,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Costo Materiales usados";
-            this.columnHeader2.Width = 150;
+            this.columnHeader2.Width = 170;
             // 
             // columnHeader3
             // 
@@ -188,14 +195,14 @@
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(481, 266);
+            this.groupBox1.Location = new System.Drawing.Point(569, 247);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Size = new System.Drawing.Size(491, 228);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos Ingresados";
+            this.groupBox1.Text = "Resultados";
             // 
             // panel3
             // 
@@ -210,52 +217,37 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(44, 42);
+            this.label4.Location = new System.Drawing.Point(18, 37);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 18);
+            this.label4.Size = new System.Drawing.Size(155, 23);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Unidades Usadas:";
+            this.label4.Text = "Unidades Usadas :";
             // 
             // mtbUsadas
             // 
-            this.mtbUsadas.Location = new System.Drawing.Point(197, 38);
+            this.mtbUsadas.Location = new System.Drawing.Point(175, 36);
             this.mtbUsadas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mtbUsadas.Mask = "9999999999999999999";
             this.mtbUsadas.Name = "mtbUsadas";
-            this.mtbUsadas.Size = new System.Drawing.Size(76, 22);
+            this.mtbUsadas.Size = new System.Drawing.Size(76, 26);
             this.mtbUsadas.TabIndex = 13;
             this.mtbUsadas.ValidatingType = typeof(int);
             // 
             // mtbCantidad
             // 
-            this.mtbCantidad.Location = new System.Drawing.Point(92, 28);
+            this.mtbCantidad.Location = new System.Drawing.Point(104, 30);
             this.mtbCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mtbCantidad.Mask = "999999999999999999";
             this.mtbCantidad.Name = "mtbCantidad";
-            this.mtbCantidad.Size = new System.Drawing.Size(76, 25);
+            this.mtbCantidad.Size = new System.Drawing.Size(75, 29);
             this.mtbCantidad.TabIndex = 15;
             this.mtbCantidad.ValidatingType = typeof(int);
             // 
             // mtbCosto
             // 
-            this.mtbCosto.Location = new System.Drawing.Point(92, 63);
+            this.mtbCosto.Location = new System.Drawing.Point(277, 29);
             this.mtbCosto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mtbCosto.Mask = "9999999999999999";
             this.mtbCosto.Name = "mtbCosto";
-            this.mtbCosto.Size = new System.Drawing.Size(76, 25);
+            this.mtbCosto.Size = new System.Drawing.Size(75, 29);
             this.mtbCosto.TabIndex = 16;
-            this.mtbCosto.ValidatingType = typeof(int);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(146, 67);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(236, 23);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Costo Promedio Ponderado";
             // 
             // groupBox2
             // 
@@ -271,76 +263,34 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(297, 107);
+            this.groupBox2.Size = new System.Drawing.Size(497, 80);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Ingreso Datos";
+            this.groupBox2.Text = "Unidades Compradas";
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.lvPromedio);
             this.groupBox3.Controls.Add(this.panel4);
             this.groupBox3.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(84, 266);
+            this.groupBox3.Location = new System.Drawing.Point(109, 247);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Size = new System.Drawing.Size(297, 228);
             this.groupBox3.TabIndex = 22;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Resultados";
+            this.groupBox3.Text = "Datos Ingresados";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Tomato;
+            this.panel4.Controls.Add(this.lvPromedio);
             this.panel4.Location = new System.Drawing.Point(6, 32);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(285, 173);
             this.panel4.TabIndex = 26;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Tomato;
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(75, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 50);
-            this.panel1.TabIndex = 23;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(45, 2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 42);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Sistema V";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(275, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 50);
-            this.panel2.TabIndex = 24;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Candara", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.Tomato;
-            this.label9.Location = new System.Drawing.Point(-8, 2);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(144, 42);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "aluacion";
             // 
             // groupBox4
             // 
@@ -349,30 +299,130 @@
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.mtbUsadas);
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(473, 135);
+            this.groupBox4.Location = new System.Drawing.Point(598, 135);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(499, 107);
+            this.groupBox4.Size = new System.Drawing.Size(512, 80);
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
+            this.groupBox4.Text = "Unidades Utilizadas";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(629, 50);
+            this.panel1.TabIndex = 26;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::pjContabilidadMetodosValuacion.Properties.Resources.Captura_de_pantalla__23_;
+            this.pictureBox1.Location = new System.Drawing.Point(84, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(457, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(45)))), ((int)(((byte)(44)))));
+            this.pictureBox2.Image = global::pjContabilidadMetodosValuacion.Properties.Resources.Captura_de_pantalla__24_;
+            this.pictureBox2.Location = new System.Drawing.Point(317, 56);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(540, 62);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(1)))), ((int)(((byte)(1)))));
+            this.panel2.Location = new System.Drawing.Point(0, 540);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1100, 5);
+            this.panel2.TabIndex = 27;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(1)))), ((int)(((byte)(1)))));
+            this.panel5.Location = new System.Drawing.Point(0, 560);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1150, 5);
+            this.panel5.TabIndex = 28;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(33)))), ((int)(((byte)(225)))));
+            this.panel7.Location = new System.Drawing.Point(1, 65);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(250, 5);
+            this.panel7.TabIndex = 30;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(33)))), ((int)(((byte)(225)))));
+            this.panel6.Location = new System.Drawing.Point(1, 54);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(310, 5);
+            this.panel6.TabIndex = 29;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(88)))), ((int)(((byte)(4)))));
+            this.panel8.Location = new System.Drawing.Point(1129, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(5, 500);
+            this.panel8.TabIndex = 31;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(88)))), ((int)(((byte)(4)))));
+            this.panel9.Location = new System.Drawing.Point(1155, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(5, 550);
+            this.panel9.TabIndex = 32;
+            // 
+            // btnMenú
+            // 
+            this.btnMenú.AutoSize = true;
+            this.btnMenú.BackColor = System.Drawing.Color.White;
+            this.btnMenú.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMenú.ForeColor = System.Drawing.Color.Black;
+            this.btnMenú.Location = new System.Drawing.Point(1015, 530);
+            this.btnMenú.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMenú.Name = "btnMenú";
+            this.btnMenú.Size = new System.Drawing.Size(82, 33);
+            this.btnMenú.TabIndex = 35;
+            this.btnMenú.Text = "Menú";
+            this.btnMenú.UseVisualStyleBackColor = false;
+            this.btnMenú.Click += new System.EventHandler(this.btnMenú_Click);
             // 
             // frmCostoPromedioPonderado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.FondoFranjaRoja;
-            this.ClientSize = new System.Drawing.Size(1119, 623);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1172, 597);
+            this.Controls.Add(this.btnMenú);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmCostoPromedioPonderado";
             this.Text = "frmCostoPromedioPonderado";
@@ -380,12 +430,12 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -410,15 +460,20 @@
         private MaskedTextBox mtbUsadas;
         private MaskedTextBox mtbCantidad;
         private MaskedTextBox mtbCosto;
-        private Label label8;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
-        private Panel panel1;
-        private Label label6;
-        private Panel panel2;
-        private Label label9;
         private Panel panel3;
         private Panel panel4;
         private GroupBox groupBox4;
+        private Panel panel1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private Panel panel2;
+        private Panel panel5;
+        private Panel panel7;
+        private Panel panel6;
+        private Panel panel8;
+        private Panel panel9;
+        private Button btnMenú;
     }
 }
