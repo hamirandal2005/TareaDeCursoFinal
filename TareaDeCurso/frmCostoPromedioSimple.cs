@@ -14,11 +14,9 @@ namespace pjContabilidadMetodosValuacion
     {
 
         //Variables Globales
-        string fecha;
-        double unidadesCompradas;
-        double costoUnitario;
-        double unidadesUtilizadas;
-        string fecha2;
+        string fecha,fecha2;
+        double unidadesCompradas,costoUnitario,unidadesUtilizadas;
+        
 
         public frmCostoPromedioSimple()
         {
@@ -35,15 +33,13 @@ namespace pjContabilidadMetodosValuacion
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
 
-
             try
             {
                 try
                 {
-                    if(double.Parse(txtUnidadesCompradas.Text )>0 && double.Parse(txtCostoUnitario.Text)>0 )
+                    if (double.Parse(txtUnidadesCompradas.Text) > 0 && double.Parse(txtCostoUnitario.Text) > 0 )
                     {
                         //Obteniendo Datos
-
                         fecha = dtFecha.Text;
                         unidadesCompradas = double.Parse(txtUnidadesCompradas.Text);
                         costoUnitario = double.Parse(txtCostoUnitario.Text);

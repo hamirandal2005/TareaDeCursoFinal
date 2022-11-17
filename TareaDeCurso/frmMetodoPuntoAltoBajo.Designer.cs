@@ -98,7 +98,7 @@
             this.mtbNivelActividad.Location = new System.Drawing.Point(622, 32);
             this.mtbNivelActividad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbNivelActividad.Name = "mtbNivelActividad";
-            this.mtbNivelActividad.Size = new System.Drawing.Size(76, 25);
+            this.mtbNivelActividad.Size = new System.Drawing.Size(76, 29);
             this.mtbNivelActividad.TabIndex = 3;
             // 
             // mtbCostoPeriodo
@@ -106,7 +106,7 @@
             this.mtbCostoPeriodo.Location = new System.Drawing.Point(353, 31);
             this.mtbCostoPeriodo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mtbCostoPeriodo.Name = "mtbCostoPeriodo";
-            this.mtbCostoPeriodo.Size = new System.Drawing.Size(76, 25);
+            this.mtbCostoPeriodo.Size = new System.Drawing.Size(76, 29);
             this.mtbCostoPeriodo.TabIndex = 2;
             // 
             // btnRegistrar
@@ -130,7 +130,7 @@
             this.label4.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(451, 36);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 18);
+            this.label4.Size = new System.Drawing.Size(165, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "Nivel de actividad : ";
             // 
@@ -140,7 +140,7 @@
             this.label3.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(190, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 18);
+            this.label3.Size = new System.Drawing.Size(169, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Costo del periodo : ";
             // 
@@ -163,7 +163,7 @@
             this.cbMes.Location = new System.Drawing.Point(81, 31);
             this.cbMes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbMes.Name = "cbMes";
-            this.cbMes.Size = new System.Drawing.Size(103, 28);
+            this.cbMes.Size = new System.Drawing.Size(103, 32);
             this.cbMes.TabIndex = 1;
             this.cbMes.Text = "(Seleccione)";
             // 
@@ -173,7 +173,7 @@
             this.label2.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(25, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 18);
+            this.label2.Size = new System.Drawing.Size(57, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mes : ";
             // 
@@ -207,7 +207,7 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "Nivel de actividad";
-            this.columnHeader3.Width = 120;
+            this.columnHeader3.Width = 160;
             // 
             // lvAltoBajo
             // 
@@ -242,7 +242,7 @@
             this.lblTasaVariable.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTasaVariable.Location = new System.Drawing.Point(163, 31);
             this.lblTasaVariable.Name = "lblTasaVariable";
-            this.lblTasaVariable.Size = new System.Drawing.Size(46, 18);
+            this.lblTasaVariable.Size = new System.Drawing.Size(59, 23);
             this.lblTasaVariable.TabIndex = 7;
             this.lblTasaVariable.Text = "label5";
             // 
@@ -253,7 +253,7 @@
             this.label6.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(19, 31);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 18);
+            this.label6.Size = new System.Drawing.Size(127, 23);
             this.label6.TabIndex = 8;
             this.label6.Text = "Tasa variable : ";
             // 
@@ -297,7 +297,7 @@
             this.label7.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(19, 87);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 18);
+            this.label7.Size = new System.Drawing.Size(102, 23);
             this.label7.TabIndex = 10;
             this.label7.Text = "Costo fijo : ";
             // 
@@ -307,7 +307,7 @@
             this.lblCostoFijo.Font = new System.Drawing.Font("Candara", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCostoFijo.Location = new System.Drawing.Point(163, 87);
             this.lblCostoFijo.Name = "lblCostoFijo";
-            this.lblCostoFijo.Size = new System.Drawing.Size(46, 18);
+            this.lblCostoFijo.Size = new System.Drawing.Size(59, 23);
             this.lblCostoFijo.TabIndex = 9;
             this.lblCostoFijo.Text = "label5";
             // 
@@ -430,7 +430,7 @@
             // 
             // frmMetodoPuntoAltoBajo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::pjContabilidadMetodosValuacion.Properties.Resources.FondoAmarillo;
             this.ClientSize = new System.Drawing.Size(1208, 658);
