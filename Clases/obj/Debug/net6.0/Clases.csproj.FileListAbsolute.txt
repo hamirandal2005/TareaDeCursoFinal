@@ -149,8 +149,6 @@ C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.
 C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\refint\Clases.dll
 C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\Clases.pdb
 C:\Users\JADPA-19\Source\Repos\TareaDeCursoFinal\Clases\obj\Debug\net6.0\ref\Clases.dll
-<<<<<<< HEAD
-=======
 C:\Users\carva\Source\Repos\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.deps.json
 C:\Users\carva\Source\Repos\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.dll
 C:\Users\carva\Source\Repos\TareaDeCursoFinal\Clases\bin\Debug\net6.0\Clases.pdb
