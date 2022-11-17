@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "u/t7hrG6pB7uDcSOFhkPrv8QvcK9JMwj7BBjucDrPS/nrQDZxIXfaIiI8bhuWliWIMcWw6AP3poqACPOL+ZK3Q==",
+  "dgSpecHash": "q3wPOMwt0KPr8Kdk1mrWCHs87P52Qluxr2ETLKPshT+0OsuE6CcaHM6cH+xmZ/9kp17dGk2omykab7/v2ZQXeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\GP\\Desktop\\TareaDeCursoFinal\\Clases\\Clases.csproj",
+  "projectFilePath": "C:\\Users\\hamir\\source\\repos\\Clases\\Clases.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\hamir\\source\\repos\\Clases\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Clases;
 
 namespace pjContabilidadMetodosValuacion
 {
@@ -17,22 +19,20 @@ namespace pjContabilidadMetodosValuacion
         double variableX;
         double variableY;
         string mes;
-        List<string> Mes = new List<string>();
+
+        List<Mes> Datos = new();
         public frmMétodoEstadístico()
         {
             InitializeComponent();
 
             this.ttMensajeVariable.SetToolTip(this.txtVariableX, "* X * es la actividad en torno a la cual cambia el costo Variable");
             this.ttMensajeVariable.SetToolTip(this.txtVariableY, "* Y * son los Costos Totales");
-
-            
         }
 
         private void frmMétodoEstadístico_Load(object sender, EventArgs e)
         {
             txtCostoUnitario.Text = "0.00";
             txtCostoTotal.Text = "0.00";
-
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -42,25 +42,62 @@ namespace pjContabilidadMetodosValuacion
                 try
                 {
 
-                    if (double.Parse(txtVariableX.Text)>0 && double.Parse(txtVariableY.Text) > 0)
+                    if (double.Parse(txtVariableX.Text) > 0 && double.Parse(txtVariableY.Text) > 0)
                     {
-
-                        Mes.Add(mes);
                         //Capturando Datos
                         variableX = double.Parse(this.txtVariableX.Text);
                         variableY = double.Parse(this.txtVariableY.Text);
                         mes = cboMes.Text;
+                        bool Verificacion = false;
 
+                        for (int i=0; i<Datos.Count; i++)
+                        {
+                            if (mes == Datos[i].Month)
+                            {
+                                Verificacion = true;
+                                DialogResult Comprobacion= MessageBox.Show("Ya se han ingresado valores en el mes estipulado. Desea remplazarlos (Si), sumarlos (No), " +
+                                    "o continuar sin hacer cambios (Cancelar)", 
+                                    "Información", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                                
+                                if(Comprobacion == DialogResult.Yes)
+                                {
+                                    Datos.RemoveAt(i);
+                                    Datos.Add(new Mes() { Month = mes, VariableX = variableX, VariableY = variableY });
+                                    ActualizarTabla();
 
-                        //Pasando Datos a lv
-                        ListViewItem fila = new ListViewItem(mes);
-                        fila.SubItems.Add(variableX.ToString("0.00"));
-                        fila.SubItems.Add(variableY.ToString("0.00"));
-                        lvDatos.Items.Add(fila);
+                                }
+                                else if(Comprobacion == DialogResult.No)
+                                {
+                                    Datos[i].VariableX += variableX;
+                                    Datos[i].VariableY += variableY;
+
+                                    ActualizarTabla();
+                                } else if(Comprobacion != DialogResult.Cancel)
+                                {
+                                    variableX = Datos[i].VariableX;
+                                    variableY = Datos[i].VariableY;
+
+                                    Datos.Add(new Mes() { Month = mes, VariableX = variableX, VariableY = variableY });
+                                    ActualizarTabla();
+                                }
+                                break;
+                            }
+                        }
+                        if(Datos.Count == 0)
+                        {
+                            Datos.Add(new Mes() { Month = mes, VariableX = variableX, VariableY = variableY });
+                            ActualizarTabla();
+                            Verificacion = true;
+                        }
+                        if (Verificacion == false)
+                        {
+                            Datos.Add(new Mes() { Month = mes, VariableX = variableX, VariableY = variableY });
+                            ActualizarTabla();
+                        }
+
                         txtVariableX.Clear();
                         txtVariableY.Clear();
                         txtVariableX.Focus();
-
                     }
                     else
                     {
@@ -153,7 +190,7 @@ namespace pjContabilidadMetodosValuacion
 
         }
 
-        private double CalculoSumatoria(double variable,int n)
+        private double CalculoSumatoria(double variable, int n)
         {
             variable = 0;
             for (int i = 0; i < lvDatos.Items.Count; i++)
@@ -174,6 +211,18 @@ namespace pjContabilidadMetodosValuacion
             this.Hide();
             frmPrincipal Menu = new frmPrincipal();
             Menu.ShowDialog();
+        }
+
+        private void ActualizarTabla()
+        {
+            lvDatos.Items.Clear();
+            foreach (Mes NewTable in Datos)
+            {
+                ListViewItem Fila = new ListViewItem(NewTable.Month);
+                Fila.SubItems.Add(NewTable.VariableX.ToString("0.00"));
+                Fila.SubItems.Add(NewTable.VariableY.ToString("0.00"));
+                lvDatos.Items.Add(Fila);
+            }
         }
     }
 
